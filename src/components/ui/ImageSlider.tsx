@@ -11,24 +11,17 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/slide1.jpg',
+    image: '/lovable-uploads/49147b52-8023-4f1e-a115-4f8810cffed1.png',
     caption: 'We build your dream around you',
   },
   {
-    image: '/slide2.jpg',
+    image: '/lovable-uploads/ec48c5ef-6f5a-48d9-9e47-2f7afc552716.png',
     caption: 'Your vision. Our innovation',
   },
   {
-    image: '/slide3.jpg',
+    image: '/lovable-uploads/5b939f6b-4243-4c19-b7b2-a343659e1656.png',
     caption: 'Where creativity meets perfection',
   },
-];
-
-// Using placeholder images for now
-const placeholderImages = [
-  'https://images.unsplash.com/photo-1492684223066-81342ee5ff30',
-  'https://images.unsplash.com/photo-1511795409834-ef04bbd61622',
-  'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf',
 ];
 
 const ImageSlider: React.FC = () => {
@@ -64,7 +57,7 @@ const ImageSlider: React.FC = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center" 
             style={{ 
-              backgroundImage: `url(${placeholderImages[index % placeholderImages.length]}?auto=format&fit=crop&w=1920&h=1080)`,
+              backgroundImage: `url(${slide.image})`,
             }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-50" />
