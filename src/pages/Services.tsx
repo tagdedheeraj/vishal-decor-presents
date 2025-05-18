@@ -1,0 +1,66 @@
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ImageSlider from '@/components/ui/ImageSlider';
+import { Button } from '@/components/ui/button';
+
+const ServiceCard = ({ title, description, link }: { title: string; description: string; link: string }) => (
+  <div className="bg-white rounded-lg shadow-lg p-8 service-card">
+    <h3 className="text-2xl font-bold mb-4">{title}</h3>
+    <p className="text-gray-600 mb-6">{description}</p>
+    <Link to={link}>
+      <Button className="bg-gold hover:bg-gold-dark text-white">Read More</Button>
+    </Link>
+  </div>
+);
+
+const Services = () => {
+  return (
+    <main>
+      {/* Hero Section with Image Slider */}
+      <section>
+        <ImageSlider />
+      </section>
+
+      {/* Services List Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-gold text-lg font-medium">check our services list</p>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">what we're offering</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard 
+              title="Government" 
+              description="​At Vishal Decor & Event, we specialize in delivering exceptional" 
+              link="/services/government"
+            />
+            <ServiceCard 
+              title="Corporate" 
+              description="At Vishal Decor & Event we specialize in custom stall fabrication" 
+              link="/services/corporate"
+            />
+            <ServiceCard 
+              title="Stall Design Fabrication" 
+              description="Innovative is Engaged in providing stall fabrication services such as exhibition" 
+              link="/services/stall-design-fabrication"
+            />
+            <ServiceCard 
+              title="Other Event" 
+              description="We specialize in crafting captivating and immersive wedding exhibition booths that" 
+              link="/services/other-event"
+            />
+            <ServiceCard 
+              title="Wedding" 
+              description="We specialize in crafting captivating and immersive wedding exhibition booths that" 
+              link="/services/wedding"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default Services;
