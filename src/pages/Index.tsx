@@ -159,7 +159,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Our Clients</h2>
             <p className="text-xl text-gray-600">Trusted by leading organizations</p>
           </div>
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto h-32">
             <ClientLogoCarousel />
           </div>
         </div>

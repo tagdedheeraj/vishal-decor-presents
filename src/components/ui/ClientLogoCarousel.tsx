@@ -27,36 +27,29 @@ const clientLogos = [
 
 const ClientLogoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 4;
-  const totalPages = Math.ceil(clientLogos.length / itemsPerPage);
+  const itemsPerRow = 4;
+  const totalSets = Math.ceil(clientLogos.length / itemsPerRow);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
-    }, 2000); // Changed to 2 seconds as requested
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSets);
+    }, 2000); // Update every 2 seconds
 
     return () => clearInterval(interval);
-  }, [totalPages]);
+  }, [totalSets]);
 
-  // Create sets of 4 logos for each page
-  const logoPages = Array.from({ length: totalPages }, (_, i) => {
-    const startIdx = i * itemsPerPage;
-    return clientLogos.slice(startIdx, startIdx + itemsPerPage);
-  });
-
+  // Get the current 4 logos to display
+  const startIdx = currentIndex * itemsPerRow;
+  const currentLogos = clientLogos.slice(startIdx, startIdx + itemsPerRow);
+  
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden py-4">
       <div 
-        className="transition-transform duration-500 ease-in-out" 
-        style={{ transform: `translateY(-${currentIndex * 100}%)` }}
+        className="transition-all duration-500 ease-in-out flex flex-row justify-between gap-6"
       >
-        {logoPages.map((page, pageIndex) => (
-          <div key={pageIndex} className="py-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {page.map((logo, logoIndex) => (
-                <ClientLogo key={logoIndex} src={logo.src} alt={logo.alt} />
-              ))}
-            </div>
+        {currentLogos.map((logo, logoIndex) => (
+          <div key={`${currentIndex}-${logoIndex}`} className="w-1/4">
+            <ClientLogo src={logo.src} alt={logo.alt} />
           </div>
         ))}
       </div>
