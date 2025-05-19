@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -58,9 +59,9 @@ export default {
 					dark: '#FF8C00' // Changed to dark orange
 				},
 				navy: {
-					DEFAULT: '#FEF7CD', // Changed to yellow cream
+					DEFAULT: '#FFA500', // Changed to orange
 					light: '#FFF8DC', // Changed to cream color
-					dark: '#FDE1D3' // Changed to soft peach
+					dark: '#FF8C00' // Changed to dark orange
 				},
 				cream: {
 					DEFAULT: '#FFF8DC',
@@ -71,11 +72,6 @@ export default {
 					DEFAULT: '#FFA500',
 					light: '#FFD700',
 					dark: '#FF8C00',
-				},
-				yellowCream: {
-					DEFAULT: '#FEF7CD',
-					light: '#FFFEF0',
-					dark: '#F5EFD7',
 				},
 			},
 			borderRadius: {

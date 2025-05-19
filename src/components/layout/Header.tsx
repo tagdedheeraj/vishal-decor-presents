@@ -24,35 +24,35 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-yellowCream bg-opacity-95' : 'bg-gradient-to-b from-yellowCream/80 via-yellowCream/60 to-transparent'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-navy bg-opacity-95' : 'transparent-header'}`}>
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <h1 className="text-orange text-2xl md:text-3xl font-bold">VISHAL <span className="text-gold">DECOR</span></h1>
+            <h1 className="text-white text-2xl md:text-3xl font-bold">VISHAL <span className="text-gold">DECOR</span></h1>
           </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-orange hover:text-gold transition-colors">Home</Link>
-            <Link to="/about" className="text-orange hover:text-gold transition-colors">About</Link>
-            <Link to="/services" className="text-orange hover:text-gold transition-colors">Services</Link>
-            <Link to="/gallery" className="text-orange hover:text-gold transition-colors">Gallery</Link>
-            <Link to="/clients" className="text-orange hover:text-gold transition-colors">Clients</Link>
-            <Link to="/contact" className="text-orange hover:text-gold transition-colors">Contact</Link>
+            <Link to="/" className="text-white hover:text-gold transition-colors">Home</Link>
+            <Link to="/about" className="text-white hover:text-gold transition-colors">About</Link>
+            <Link to="/services" className="text-white hover:text-gold transition-colors">Services</Link>
+            <Link to="/gallery" className="text-white hover:text-gold transition-colors">Gallery</Link>
+            <Link to="/clients" className="text-white hover:text-gold transition-colors">Clients</Link>
+            <Link to="/contact" className="text-white hover:text-gold transition-colors">Contact</Link>
           </nav>
           
           {/* Social Media Icons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-gold transition-colors">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
               <Facebook size={20} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-gold transition-colors">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
               <Instagram size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-gold transition-colors">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-gold transition-colors">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
               <Youtube size={20} />
             </a>
           </div>
@@ -62,7 +62,7 @@ const Header = () => {
             <Button 
               variant="ghost" 
               size="icon"
-              className="text-orange"
+              className="text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -77,27 +77,27 @@ const Header = () => {
       
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-yellowCream bg-opacity-95 py-4">
+        <div className="lg:hidden bg-navy bg-opacity-95 py-4">
           <nav className="flex flex-col">
-            <Link to="/" className="text-orange hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link to="/about" className="text-orange hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link to="/services" className="text-orange hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Services</Link>
-            <Link to="/gallery" className="text-orange hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
-            <Link to="/clients" className="text-orange hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Clients</Link>
-            <Link to="/contact" className="text-orange hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            <Link to="/" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            <Link to="/about" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link to="/services" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Services</Link>
+            <Link to="/gallery" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
+            <Link to="/clients" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Clients</Link>
+            <Link to="/contact" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</Link>
             
             {/* Social icons for mobile */}
             <div className="flex items-center space-x-4 px-4 mt-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-gold transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-gold transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-gold transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-gold transition-colors">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
                 <Youtube size={20} />
               </a>
             </div>
