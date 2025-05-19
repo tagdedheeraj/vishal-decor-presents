@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import ClientLogo from './ClientLogo';
 
@@ -23,6 +22,14 @@ const clientLogos = [
   { src: "/lovable-uploads/69065be8-ca95-4366-9ae3-a2867191e561.png", alt: "IIM" },
   { src: "/lovable-uploads/d95cc0e8-ee0c-4fcf-b03f-d9568e7befa7.png", alt: "Science City" },
   { src: "/lovable-uploads/2f6ac047-44ef-4817-8a16-9296f84cf90b.png", alt: "ABEC Asian Business Exhibition & Conferences Ltd." },
+  { src: "/lovable-uploads/026bc53b-7de8-48d9-819d-f452a40983b0.png", alt: "4C Affairs" },
+  { src: "/lovable-uploads/c8baaba3-dd73-4e08-8a0f-db6019a5e368.png", alt: "Cadila Pharmaceuticals Limited" },
+  { src: "/lovable-uploads/4c287663-b59f-4d19-850e-a70f1b9df062.png", alt: "Pharmadev Infrastructure Limited" },
+  { src: "/lovable-uploads/f36ade70-c79f-49a1-b6a2-5cadf64076ca.png", alt: "Divya Buildcon" },
+  { src: "/lovable-uploads/20f2de2a-f755-4542-bcce-9af984e74ada.png", alt: "Gujarat - The Agri Business Destination" },
+  { src: "/lovable-uploads/3e624599-7fff-4616-bebd-b34051be9a99.png", alt: "Marketing Unlimited" },
+  { src: "/lovable-uploads/1cc066d4-1859-44e9-9392-718d5f4ba8c8.png", alt: "Rajyash - Excellence Endures" },
+  { src: "/lovable-uploads/2a6dd2ab-6b1e-4da7-9a06-7352b1bffbb8.png", alt: "Ravi Group" },
 ];
 
 const ClientLogoCarousel = () => {
