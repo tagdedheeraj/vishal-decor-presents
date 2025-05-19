@@ -29,7 +29,9 @@ const ClientLogoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const itemsPerRow = 4;
-  const totalSets = Math.ceil(clientLogos.length / itemsPerRow);
+  const columnsCount = 2;
+  const itemsPerPage = itemsPerRow * columnsCount;
+  const totalSets = Math.ceil(clientLogos.length / itemsPerPage);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,21 +49,39 @@ const ClientLogoCarousel = () => {
     return () => clearInterval(interval);
   }, [totalSets]);
 
-  // Get the current 4 logos to display
-  const startIdx = currentIndex * itemsPerRow;
-  const currentLogos = clientLogos.slice(startIdx, startIdx + itemsPerRow);
+  // Get the current logos to display (8 logos: 2 columns x 4 rows)
+  const startIdx = currentIndex * itemsPerPage;
+  const currentLogos = clientLogos.slice(startIdx, startIdx + itemsPerPage);
+  
+  // Split logos into two columns
+  const firstColumnLogos = currentLogos.slice(0, itemsPerRow);
+  const secondColumnLogos = currentLogos.slice(itemsPerRow, itemsPerPage);
   
   return (
-    <div className="overflow-hidden h-32 relative">
+    <div className="overflow-hidden h-64 relative">
       <div 
-        className={`flex flex-row justify-between gap-6 transition-all duration-500 ease-in-out absolute w-full
+        className={`transition-all duration-500 ease-in-out absolute w-full
           ${animating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}
       >
-        {currentLogos.map((logo, logoIndex) => (
-          <div key={`${currentIndex}-${logoIndex}`} className="w-1/4">
-            <ClientLogo src={logo.src} alt={logo.alt} />
+        <div className="flex flex-row gap-6 justify-between">
+          {/* First Column */}
+          <div className="w-1/2 flex flex-col gap-4">
+            {firstColumnLogos.map((logo, logoIndex) => (
+              <div key={`${currentIndex}-col1-${logoIndex}`} className="w-full">
+                <ClientLogo src={logo.src} alt={logo.alt} />
+              </div>
+            ))}
           </div>
-        ))}
+          
+          {/* Second Column */}
+          <div className="w-1/2 flex flex-col gap-4">
+            {secondColumnLogos.map((logo, logoIndex) => (
+              <div key={`${currentIndex}-col2-${logoIndex}`} className="w-full">
+                <ClientLogo src={logo.src} alt={logo.alt} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
