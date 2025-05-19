@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -41,6 +41,22 @@ const Header = () => {
             <Link to="/contact" className="text-white hover:text-gold transition-colors">Contact</Link>
           </nav>
           
+          {/* Social Media Icons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+              <Facebook size={20} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+              <Instagram size={20} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+              <Linkedin size={20} />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+              <Youtube size={20} />
+            </a>
+          </div>
+          
           {/* Mobile Navigation Trigger */}
           <div className="lg:hidden">
             <Button 
@@ -69,6 +85,22 @@ const Header = () => {
             <Link to="/gallery" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
             <Link to="/clients" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Clients</Link>
             <Link to="/contact" className="text-white hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            
+            {/* Social icons for mobile */}
+            <div className="flex items-center space-x-4 px-4 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+                <Facebook size={20} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+                <Youtube size={20} />
+              </a>
+            </div>
           </nav>
         </div>
       )}

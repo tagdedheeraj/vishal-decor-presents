@@ -80,6 +80,13 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
+              <img 
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&h=600" 
+                alt="Vishal Decor & Event Team" 
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div>
               <h2 className="text-2xl font-medium text-gold mb-2">Our Introductions</h2>
               <h3 className="text-3xl md:text-4xl font-bold mb-6">WELCOME TO VISHAL DECOR & EVENT PVT LTD</h3>
               <p className="mb-4">
@@ -94,13 +101,6 @@ const Index = () => {
               <p>
                 Backed by over 25 years of experience, our legacy of excellence is reflected in the glowing smiles of our clients—captured beautifully in our gallery.
               </p>
-            </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&h=600" 
-                alt="Vishal Decor & Event Team" 
-                className="rounded-lg shadow-lg"
-              />
             </div>
           </div>
         </div>

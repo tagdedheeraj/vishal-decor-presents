@@ -66,11 +66,6 @@ const ImageSlider: React.FC = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-shadow animate-fade-in-down">
               {slide.caption}
             </h2>
-            <Link to="/about">
-              <Button className="bg-orange hover:bg-orange-dark text-white animate-fade-in-up" size="lg">
-                Read More
-              </Button>
-            </Link>
           </div>
         </div>
       ))}
@@ -90,7 +85,7 @@ const ImageSlider: React.FC = () => {
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -100,6 +95,15 @@ const ImageSlider: React.FC = () => {
             }`}
           />
         ))}
+      </div>
+      
+      {/* Read More button at bottom */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <Link to="/about">
+          <Button className="bg-orange hover:bg-orange-dark text-white animate-fade-in-up" size="lg">
+            Read More
+          </Button>
+        </Link>
       </div>
     </div>
   );
