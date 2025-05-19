@@ -67,7 +67,7 @@ const ImageSlider: React.FC = () => {
               {slide.caption}
             </h2>
             <Link to="/about">
-              <Button className="bg-gold hover:bg-gold-dark text-white animate-fade-in-up" size="lg">
+              <Button className="bg-orange hover:bg-orange-dark text-white animate-fade-in-up" size="lg">
                 Read More
               </Button>
             </Link>
@@ -78,13 +78,13 @@ const ImageSlider: React.FC = () => {
       {/* Navigation buttons */}
       <button 
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-70 transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-orange bg-opacity-70 p-2 rounded-full text-white hover:bg-opacity-90 transition"
       >
         <ChevronLeft size={24} />
       </button>
       <button 
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-70 transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-orange bg-opacity-70 p-2 rounded-full text-white hover:bg-opacity-90 transition"
       >
         <ChevronRight size={24} />
       </button>
@@ -96,7 +96,7 @@ const ImageSlider: React.FC = () => {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? 'bg-gold' : 'bg-white bg-opacity-50'
+              index === currentIndex ? 'bg-orange' : 'bg-white bg-opacity-50'
             }`}
           />
         ))}

@@ -54,14 +54,24 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				gold: {
-					DEFAULT: '#D4AF37',
-					light: '#F5E7A9',
-					dark: '#8B7513'
+					DEFAULT: '#FFA500', // Changed from #D4AF37 to orange
+					light: '#FFD700', // Changed to yellow
+					dark: '#FF8C00' // Changed to dark orange
 				},
 				navy: {
-					DEFAULT: '#0A2463',
-					light: '#3E5C97',
-					dark: '#061639'
+					DEFAULT: '#FFA500', // Changed to orange
+					light: '#FFF8DC', // Changed to cream color
+					dark: '#FF8C00' // Changed to dark orange
+				},
+				cream: {
+					DEFAULT: '#FFF8DC',
+					light: '#FFFAF0',
+					dark: '#FFE4B5',
+				},
+				orange: {
+					DEFAULT: '#FFA500',
+					light: '#FFD700',
+					dark: '#FF8C00',
 				},
 			},
 			borderRadius: {
