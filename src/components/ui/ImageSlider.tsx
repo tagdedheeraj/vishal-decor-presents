@@ -85,7 +85,7 @@ const ImageSlider: React.FC = () => {
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-28 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -97,10 +97,10 @@ const ImageSlider: React.FC = () => {
         ))}
       </div>
       
-      {/* Know About Us button - moved to absolute bottom */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        <Link to="/about">
-          <Button className="bg-orange hover:bg-orange-dark text-white animate-fade-in-up rounded-none" size="lg">
+      {/* Know About Us button - fixed to stick to the bottom */}
+      <div className="absolute bottom-0 left-0 right-0 w-full">
+        <Link to="/about" className="block w-full">
+          <Button className="bg-orange hover:bg-orange-dark text-white w-full py-6 rounded-none" size="lg">
             Know About Us
           </Button>
         </Link>
