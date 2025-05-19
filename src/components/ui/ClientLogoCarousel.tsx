@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from 'react';
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import ClientLogo from './ClientLogo';
 
 const clientLogos = [
