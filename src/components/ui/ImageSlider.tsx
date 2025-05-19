@@ -97,10 +97,10 @@ const ImageSlider: React.FC = () => {
         ))}
       </div>
       
-      {/* Know About Us button - fixed to stick to the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 w-full">
-        <Link to="/about" className="block w-full">
-          <Button className="bg-orange hover:bg-orange-dark text-white w-full py-6 rounded-none" size="lg">
+      {/* Know About Us button - now auto-width instead of full width */}
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+        <Link to="/about">
+          <Button className="bg-orange hover:bg-orange-dark text-white py-6 rounded-none" size="lg">
             Know About Us
           </Button>
         </Link>
