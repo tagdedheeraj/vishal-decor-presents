@@ -27,12 +27,21 @@ const clientLogos = [
 
 const ClientLogoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
   const itemsPerRow = 4;
   const totalSets = Math.ceil(clientLogos.length / itemsPerRow);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSets);
+      // Start the animation
+      setAnimating(true);
+      
+      // After animation completes, change the index
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSets);
+        setAnimating(false);
+      }, 450); // slightly less than the animation duration
+      
     }, 2000); // Update every 2 seconds
 
     return () => clearInterval(interval);
@@ -43,9 +52,10 @@ const ClientLogoCarousel = () => {
   const currentLogos = clientLogos.slice(startIdx, startIdx + itemsPerRow);
   
   return (
-    <div className="overflow-hidden py-4">
+    <div className="overflow-hidden h-32 relative">
       <div 
-        className="transition-all duration-500 ease-in-out flex flex-row justify-between gap-6"
+        className={`flex flex-row justify-between gap-6 transition-all duration-500 ease-in-out absolute w-full
+          ${animating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}
       >
         {currentLogos.map((logo, logoIndex) => (
           <div key={`${currentIndex}-${logoIndex}`} className="w-1/4">
