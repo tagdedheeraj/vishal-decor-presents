@@ -34,7 +34,7 @@ const ClientLogoCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
-    }, 3000); // 3 seconds interval
+    }, 2000); // Changed to 2 seconds as requested
 
     return () => clearInterval(interval);
   }, [totalPages]);
@@ -46,26 +46,22 @@ const ClientLogoCarousel = () => {
   });
 
   return (
-    <Carousel
-      opts={{
-        align: "start",
-        axis: "y", // Vertical scrolling
-      }}
-      className="w-full"
-      orientation="vertical"
-    >
-      <CarouselContent className="h-[600px]">
+    <div className="overflow-hidden">
+      <div 
+        className="transition-transform duration-500 ease-in-out" 
+        style={{ transform: `translateY(-${currentIndex * 100}%)` }}
+      >
         {logoPages.map((page, pageIndex) => (
-          <CarouselItem key={pageIndex} className={`flex flex-col gap-6 pt-0 ${pageIndex === currentIndex ? 'animate-fade-in' : ''}`}>
+          <div key={pageIndex} className="py-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {page.map((logo, logoIndex) => (
                 <ClientLogo key={logoIndex} src={logo.src} alt={logo.alt} />
               ))}
             </div>
-          </CarouselItem>
+          </div>
         ))}
-      </CarouselContent>
-    </Carousel>
+      </div>
+    </div>
   );
 };
 

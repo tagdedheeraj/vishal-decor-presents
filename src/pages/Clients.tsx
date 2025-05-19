@@ -20,7 +20,7 @@ const Clients = () => {
           </div>
           
           {/* Client Logo Carousel */}
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto h-[400px]">
             <ClientLogoCarousel />
           </div>
         </div>
