@@ -114,7 +114,15 @@ const Index = () => {
 
       {/* YouTube Video Section */}
       <section className="py-20 relative overflow-hidden h-[600px]">
-        <VideoMap />
+        {/* Replace the VideoMap with a background image */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black/50 z-0"></div>
+          <img 
+            src="/lovable-uploads/95146a72-40fc-425a-b02b-818c29b48849.png"
+            alt="Vishal Decor Event Background"
+            className="absolute inset-0 w-full h-full object-cover z-[-1]"
+          />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-2 text-white text-shadow">Leading Decore & Event Management Company</h2>
