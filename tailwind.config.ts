@@ -64,12 +64,12 @@ export default {
 					dark: '#FF8C00' // Changed to dark orange
 				},
 				cream: {
-					DEFAULT: '#FFF8DC',
+					DEFAULT: '#FFF8DC', // White cream color
 					light: '#FFFAF0',
 					dark: '#FFE4B5',
 				},
 				orange: {
-					DEFAULT: '#FFA500',
+					DEFAULT: '#FFA500', // Yellow cream color for text (was light black)
 					light: '#FFD700',
 					dark: '#FF8C00',
 				},
