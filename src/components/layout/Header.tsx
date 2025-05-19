@@ -24,7 +24,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-cream' : 'transparent-header'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-cream' : 'bg-cream bg-opacity-95'}`}>
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
@@ -77,7 +77,7 @@ const Header = () => {
       
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-cream bg-opacity-95 py-4">
+        <div className="lg:hidden bg-cream py-4">
           <nav className="flex flex-col">
             <Link to="/" className="text-orange hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link to="/about" className="text-orange hover:text-gold py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
