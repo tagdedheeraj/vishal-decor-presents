@@ -5,12 +5,12 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-cream-DEFAULT text-navy-DEFAULT">
+    <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {/* Contact Info - Now First */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-orange-dark">Contact Info</h3>
+            <h3 className="text-xl font-bold mb-4 text-orange-DEFAULT">Contact Info</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 mt-1 text-orange-DEFAULT flex-shrink-0" />
@@ -18,7 +18,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-orange-DEFAULT flex-shrink-0" />
-                <a href="mailto:digital.vishaldecor@gmail.com" className="hover:text-orange-dark transition-colors">digital.vishaldecor@gmail.com</a>
+                <a href="mailto:digital.vishaldecor@gmail.com" className="hover:text-orange-light transition-colors">digital.vishaldecor@gmail.com</a>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-orange-DEFAULT flex-shrink-0" />
@@ -29,33 +29,33 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-orange-dark">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4 text-orange-DEFAULT">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:text-orange-dark transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-orange-dark transition-colors">About</Link></li>
-              <li><Link to="/services" className="hover:text-orange-dark transition-colors">Services</Link></li>
-              <li><Link to="/gallery" className="hover:text-orange-dark transition-colors">Gallery</Link></li>
-              <li><Link to="/clients" className="hover:text-orange-dark transition-colors">Clients</Link></li>
-              <li><Link to="/contact" className="hover:text-orange-dark transition-colors">Contact</Link></li>
+              <li><Link to="/" className="hover:text-orange-light transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-orange-light transition-colors">About</Link></li>
+              <li><Link to="/services" className="hover:text-orange-light transition-colors">Services</Link></li>
+              <li><Link to="/gallery" className="hover:text-orange-light transition-colors">Gallery</Link></li>
+              <li><Link to="/clients" className="hover:text-orange-light transition-colors">Clients</Link></li>
+              <li><Link to="/contact" className="hover:text-orange-light transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-orange-dark">Our Services</h3>
+            <h3 className="text-xl font-bold mb-4 text-orange-DEFAULT">Our Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services/government" className="hover:text-orange-dark transition-colors">Government</Link></li>
-              <li><Link to="/services/corporate" className="hover:text-orange-dark transition-colors">Corporate</Link></li>
-              <li><Link to="/services/stall-design-fabrication" className="hover:text-orange-dark transition-colors">Stall Design Fabrication</Link></li>
-              <li><Link to="/services/wedding" className="hover:text-orange-dark transition-colors">Wedding</Link></li>
-              <li><Link to="/services/other-event" className="hover:text-orange-dark transition-colors">Other Event</Link></li>
+              <li><Link to="/services/government" className="hover:text-orange-light transition-colors">Government</Link></li>
+              <li><Link to="/services/corporate" className="hover:text-orange-light transition-colors">Corporate</Link></li>
+              <li><Link to="/services/stall-design-fabrication" className="hover:text-orange-light transition-colors">Stall Design Fabrication</Link></li>
+              <li><Link to="/services/wedding" className="hover:text-orange-light transition-colors">Wedding</Link></li>
+              <li><Link to="/services/other-event" className="hover:text-orange-light transition-colors">Other Event</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-orange-light/30 pt-6 text-center">
-          <p className="text-navy-dark">Copyright © 2025 Vishaldecor | All rights reserved.</p>
-          <p className="mt-2 text-navy-dark">
+        <div className="border-t border-gray-700 pt-6 text-center">
+          <p className="text-white">Copyright © 2025 Vishaldecor | All rights reserved.</p>
+          <p className="mt-2 text-white">
             Design by <a href="https://socilet.com" target="_blank" rel="noopener noreferrer" className="text-orange-DEFAULT hover:underline">hp design studio</a>
           </p>
         </div>
