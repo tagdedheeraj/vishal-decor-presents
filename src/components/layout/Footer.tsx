@@ -8,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-          {/* Contact Info - Now First */}
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Contact Info */}
+          <div className="md:pr-4">
             <h3 className="text-xl font-bold mb-4 text-orange-DEFAULT">Contact Info</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -29,9 +29,9 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="relative">
+          <div className="relative md:px-4">
             <h3 className="text-xl font-bold mb-4 text-orange-DEFAULT">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-6">
               <li><Link to="/" className="hover:text-orange-light transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-orange-light transition-colors">About</Link></li>
               <li><Link to="/services" className="hover:text-orange-light transition-colors">Services</Link></li>
@@ -40,12 +40,12 @@ const Footer = () => {
               <li><Link to="/contact" className="hover:text-orange-light transition-colors">Contact</Link></li>
             </ul>
             
-            {/* Orange separator line - visible on all screens and properly positioned */}
-            <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-orange-DEFAULT"></div>
+            {/* Separator line between Quick Links and Services */}
+            <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[1px] bg-orange-DEFAULT"></div>
           </div>
 
           {/* Services */}
-          <div>
+          <div className="md:pl-4">
             <h3 className="text-xl font-bold mb-4 text-orange-DEFAULT">Our Services</h3>
             <ul className="space-y-2">
               <li><Link to="/services/government" className="hover:text-orange-light transition-colors">Government</Link></li>
