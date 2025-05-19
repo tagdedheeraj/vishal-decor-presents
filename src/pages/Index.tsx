@@ -81,8 +81,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&h=600" 
-                alt="Vishal Decor & Event Team" 
+                src="/lovable-uploads/80b51345-67cb-4af8-9739-ec4b36c04bff.png" 
+                alt="Vishal Decor & Event Speaker" 
                 className="rounded-lg shadow-lg"
               />
             </div>
