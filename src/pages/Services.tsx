@@ -9,7 +9,7 @@ const ServiceCard = ({ title, description, link }: { title: string; description:
     <h3 className="text-2xl font-bold mb-4">{title}</h3>
     <p className="text-gray-600 mb-6">{description}</p>
     <Link to={link}>
-      <Button className="bg-gold hover:bg-gold-dark text-white">Read More</Button>
+      <Button className="bg-gold hover:bg-gold-dark text-white rounded-none">Know About Us</Button>
     </Link>
   </div>
 );

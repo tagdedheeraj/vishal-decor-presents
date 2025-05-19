@@ -97,11 +97,11 @@ const ImageSlider: React.FC = () => {
         ))}
       </div>
       
-      {/* Read More button at bottom */}
+      {/* Know About Us button at bottom - updated from "Read More" */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
         <Link to="/about">
-          <Button className="bg-orange hover:bg-orange-dark text-white animate-fade-in-up" size="lg">
-            Read More
+          <Button className="bg-orange hover:bg-orange-dark text-white animate-fade-in-up rounded-none" size="lg">
+            Know About Us
           </Button>
         </Link>
       </div>
