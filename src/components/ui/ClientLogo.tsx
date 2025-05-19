@@ -8,11 +8,11 @@ type ClientLogoProps = {
 
 const ClientLogo: React.FC<ClientLogoProps> = ({ src, alt }) => {
   return (
-    <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow flex items-center justify-center h-32">
+    <div className="p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow flex items-center justify-center h-24">
       <img 
         src={src} 
         alt={alt} 
-        className="max-h-24 max-w-full object-contain" 
+        className="max-h-18 max-w-full object-contain" 
       />
     </div>
   );
