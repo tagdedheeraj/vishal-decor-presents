@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="relative">
             <h3 className="text-xl font-bold mb-4 text-orange-DEFAULT">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/" className="hover:text-orange-light transition-colors">Home</Link></li>
@@ -40,10 +40,8 @@ const Footer = () => {
               <li><Link to="/contact" className="hover:text-orange-light transition-colors">Contact</Link></li>
             </ul>
             
-            {/* Orange separator line - visible only on desktop */}
-            <div className="hidden lg:block absolute right-0 top-0 bottom-0">
-              <Separator className="h-full w-[1px] bg-orange-DEFAULT opacity-50" orientation="vertical" />
-            </div>
+            {/* Orange separator line - visible on all screens and properly positioned */}
+            <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-orange-DEFAULT"></div>
           </div>
 
           {/* Services */}
