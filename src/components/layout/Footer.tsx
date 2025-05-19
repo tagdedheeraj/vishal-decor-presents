@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   return (
@@ -38,6 +39,11 @@ const Footer = () => {
               <li><Link to="/clients" className="hover:text-orange-light transition-colors">Clients</Link></li>
               <li><Link to="/contact" className="hover:text-orange-light transition-colors">Contact</Link></li>
             </ul>
+            
+            {/* Orange separator line - visible only on desktop */}
+            <div className="hidden lg:block absolute right-0 top-0 bottom-0">
+              <Separator className="h-full w-[1px] bg-orange-DEFAULT opacity-50" orientation="vertical" />
+            </div>
           </div>
 
           {/* Services */}
