@@ -1,8 +1,10 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import ImageSlider from '@/components/ui/ImageSlider';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Play } from 'lucide-react';
+import VideoMap from '@/components/ui/VideoMap';
 
 const ServiceCard = ({ title, icon, description, link }: { title: string; icon: string; description: string; link: string }) => (
   <div className="bg-white rounded-lg shadow-lg p-6 service-card">
@@ -22,6 +24,8 @@ const ServiceCard = ({ title, icon, description, link }: { title: string; icon: 
 );
 
 const Index = () => {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
     <main>
       {/* Hero Section with Image Slider */}
@@ -107,25 +111,44 @@ const Index = () => {
       </section>
 
       {/* YouTube Video Section */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative overflow-hidden h-[600px]">
+        <VideoMap />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Leading Decore & Event Management Company</h2>
-            <p className="text-xl text-gray-300">Watch our government event showcase</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-white text-shadow">Leading Decore & Event Management Company</h2>
+            <p className="text-xl text-white text-shadow">Watch our government event showcase</p>
           </div>
-          <div className="max-w-4xl mx-auto aspect-w-16 aspect-h-9">
-            <div className="w-full h-0 pb-[56.25%] relative">
+          <div className="max-w-4xl mx-auto flex items-center justify-center">
+            <button 
+              onClick={() => setVideoOpen(true)}
+              className="relative group"
+              aria-label="Play video"
+            >
+              <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center
+                group-hover:scale-110 transition-transform duration-300">
+                <div className="relative w-20 h-20 rounded-full bg-primary flex items-center justify-center
+                  animate-pulse group-hover:animate-none">
+                  <Play className="h-10 w-10 text-white fill-white ml-2" />
+                </div>
+              </div>
+              <span className="block mt-4 text-white font-medium text-shadow">Watch Video</span>
+            </button>
+          </div>
+        </div>
+
+        <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
+          <DialogContent className="sm:max-w-[900px] p-0 bg-black">
+            <div className="aspect-video">
               <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/UFhINns9l4s?autoplay=${videoOpen ? '1' : '0'}`}
                 title="Vishal Decor Event Showcase"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-          </div>
-        </div>
+          </DialogContent>
+        </Dialog>
       </section>
 
       {/* Clients Section */}
