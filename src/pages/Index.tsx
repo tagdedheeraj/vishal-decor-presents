@@ -4,14 +4,14 @@ import ImageSlider from '@/components/ui/ImageSlider';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Play } from 'lucide-react';
+import { Play, Award, Briefcase, Layers, Music, Image } from 'lucide-react';
 import VideoMap from '@/components/ui/VideoMap';
 import ClientLogoCarousel from '@/components/ui/ClientLogoCarousel';
 
-const ServiceCard = ({ title, icon, description, link }: { title: string; icon: string; description: string; link: string }) => (
+const ServiceCard = ({ title, icon, description, link }: { title: string; icon: React.ReactNode; description: string; link: string }) => (
   <div className="bg-white rounded-lg shadow-lg p-6 service-card">
     <div className="w-16 h-16 bg-navy rounded-full flex items-center justify-center mb-4 mx-auto">
-      <span className="text-white text-2xl">{icon}</span>
+      {icon}
     </div>
     <h3 className="text-xl font-bold text-center mb-2">{title}</h3>
     <p className="text-gray-600 text-center mb-4">{description}</p>
@@ -36,12 +36,12 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-orange-500">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Our Services</h2>
-            <p className="text-xl text-gray-600">We Shape the Perfect Solution</p>
-            <p className="mt-4 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-white">Our Services</h2>
+            <p className="text-xl text-white">We Shape the Perfect Solution</p>
+            <p className="mt-4 max-w-2xl mx-auto text-white">
               To redefine excellence by creating perfect solutions that inspire our customers and uplift our team.
             </p>
           </div>
@@ -49,31 +49,31 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             <ServiceCard 
               title="Government" 
-              icon="🏛️" 
+              icon={<Award size={28} className="text-white" />} 
               description="Exceptional decoration services for government exhibitions and events."
               link="/services/government"
             />
             <ServiceCard 
               title="Corporate" 
-              icon="🏢" 
+              icon={<Briefcase size={28} className="text-white" />} 
               description="Custom stall fabrication and design for corporate events."
               link="/services/corporate"
             />
             <ServiceCard 
               title="Stall Design Fabrication" 
-              icon="🎨" 
+              icon={<Layers size={28} className="text-white" />} 
               description="Innovative exhibition design and stall fabrication services."
               link="/services/stall-design-fabrication"
             />
             <ServiceCard 
               title="Other Event" 
-              icon="🎭" 
+              icon={<Music size={28} className="text-white" />} 
               description="Comprehensive solutions for various event types."
               link="/services/other-event"
             />
             <ServiceCard 
               title="Wedding" 
-              icon="💍" 
+              icon={<Image size={28} className="text-white" />} 
               description="Creating captivating wedding exhibition booths and decorations."
               link="/services/wedding"
             />

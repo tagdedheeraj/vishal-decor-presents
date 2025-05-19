@@ -9,7 +9,7 @@ const ServiceCard = ({ title, description, link }: { title: string; description:
     <h3 className="text-2xl font-bold mb-4">{title}</h3>
     <p className="text-gray-600 mb-6">{description}</p>
     <Link to={link}>
-      <Button className="bg-gold hover:bg-gold-dark text-white rounded-none">Know About Us</Button>
+      <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-none">Know About Us</Button>
     </Link>
   </div>
 );
@@ -23,7 +23,7 @@ const Services = () => {
       </section>
 
       {/* Services List Section */}
-      <section className="py-20">
+      <section className="py-20 bg-orange-500 bg-opacity-5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-gold text-lg font-medium">check our services list</p>

@@ -28,7 +28,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <h1 className="text-orange text-2xl md:text-3xl font-bold">VISHAL <span className="text-gold">DECOR</span></h1>
+            <img 
+              src="/lovable-uploads/fb0e2e81-768f-474e-a868-a068ec13db8c.png" 
+              alt="Vishal Decor Logo" 
+              className="h-12" 
+            />
           </Link>
           
           {/* Desktop Navigation */}
