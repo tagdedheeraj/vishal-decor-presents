@@ -8,11 +8,17 @@ type ClientLogoProps = {
 
 const ClientLogo: React.FC<ClientLogoProps> = ({ src, alt }) => {
   return (
-    <div className="p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow flex items-center justify-center h-24">
+    <div className="p-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow flex items-center justify-center h-20">
       <img 
         src={src} 
-        alt={alt} 
-        className="max-h-18 max-w-full object-contain" 
+        alt={alt}
+        className="max-h-16 max-w-full object-contain" 
+        loading="lazy"
+        onError={(e) => {
+          // Use a transparent placeholder if image fails to load
+          (e.target as HTMLImageElement).src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+          console.error(`Failed to load image: ${src}`);
+        }}
       />
     </div>
   );

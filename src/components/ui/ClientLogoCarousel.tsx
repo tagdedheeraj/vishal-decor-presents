@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import ClientLogo from './ClientLogo';
 
@@ -51,7 +52,7 @@ const ClientLogoCarousel = () => {
         setAnimating(false);
       }, 450); // slightly less than the animation duration
       
-    }, 2000); // Update every 2 seconds
+    }, 3000); // Update every 3 seconds (increased from 2 seconds)
 
     return () => clearInterval(interval);
   }, [totalSets]);
@@ -60,16 +61,25 @@ const ClientLogoCarousel = () => {
   const startIdx = currentIndex * itemsPerSet;
   const currentLogos = clientLogos.slice(startIdx, startIdx + itemsPerSet);
   
-  // Split logos into two rows of 5 each
+  // Ensure we always have enough logos for display
   const firstRowLogos = currentLogos.slice(0, itemsPerRow);
   const secondRowLogos = currentLogos.slice(itemsPerRow, itemsPerSet);
+  
+  // Fill empty slots if needed
+  while (firstRowLogos.length < itemsPerRow) {
+    firstRowLogos.push(clientLogos[firstRowLogos.length % clientLogos.length]);
+  }
+  
+  while (secondRowLogos.length < itemsPerRow) {
+    secondRowLogos.push(clientLogos[(itemsPerRow + secondRowLogos.length) % clientLogos.length]);
+  }
   
   return (
     <div className="overflow-hidden h-64 relative">
       <div className={`transition-all duration-500 ease-in-out absolute w-full
             ${animating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
         {/* First row */}
-        <div className="flex flex-row justify-between gap-6 mb-4">
+        <div className="flex flex-row justify-between gap-4 mb-6">
           {firstRowLogos.map((logo, logoIndex) => (
             <div key={`${currentIndex}-row1-${logoIndex}`} className="w-1/5">
               <ClientLogo src={logo.src} alt={logo.alt} />
@@ -78,7 +88,7 @@ const ClientLogoCarousel = () => {
         </div>
         
         {/* Second row */}
-        <div className="flex flex-row justify-between gap-6 mt-2">
+        <div className="flex flex-row justify-between gap-4">
           {secondRowLogos.map((logo, logoIndex) => (
             <div key={`${currentIndex}-row2-${logoIndex}`} className="w-1/5">
               <ClientLogo src={logo.src} alt={logo.alt} />

@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import ImageSlider from '@/components/ui/ImageSlider';
 
 const categories = [
   'Government Event', 
@@ -24,9 +23,13 @@ const Gallery = () => {
 
   return (
     <main>
-      {/* Hero Section with Image Slider */}
-      <section>
-        <ImageSlider />
+      {/* Page Header Section */}
+      <section className="relative h-[40vh] flex items-center justify-center">
+        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0"></div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Gallery</h1>
+          <p className="text-xl text-white mb-6">Explore Our Creative Work</p>
+        </div>
       </section>
 
       {/* Gallery Section */}

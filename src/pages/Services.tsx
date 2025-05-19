@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ImageSlider from '@/components/ui/ImageSlider';
 import { Button } from '@/components/ui/button';
 
 const ServiceCard = ({ title, description, link }: { title: string; description: string; link: string }) => (
@@ -9,7 +8,7 @@ const ServiceCard = ({ title, description, link }: { title: string; description:
     <h3 className="text-2xl font-bold mb-4">{title}</h3>
     <p className="text-gray-600 mb-6">{description}</p>
     <Link to={link}>
-      <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-none">Know About Us</Button>
+      <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-none">Know More</Button>
     </Link>
   </div>
 );
@@ -17,9 +16,13 @@ const ServiceCard = ({ title, description, link }: { title: string; description:
 const Services = () => {
   return (
     <main>
-      {/* Hero Section with Image Slider */}
-      <section>
-        <ImageSlider />
+      {/* Page Header Section */}
+      <section className="relative h-[40vh] flex items-center justify-center">
+        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0"></div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services</h1>
+          <p className="text-xl text-white mb-6">We Shape the Perfect Solution</p>
+        </div>
       </section>
 
       {/* Services List Section */}

@@ -1,15 +1,25 @@
 
 import React from 'react';
-import ImageSlider from '@/components/ui/ImageSlider';
 import ClientLogoCarousel from '@/components/ui/ClientLogoCarousel';
 import VideoMap from '@/components/ui/VideoMap';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Clients = () => {
   return (
     <main>
-      {/* Hero Section with Image Slider */}
-      <section>
-        <ImageSlider />
+      {/* Page Header Section */}
+      <section className="relative h-[40vh] flex items-center justify-center">
+        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0"></div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Clients</h1>
+          <p className="text-xl text-white mb-6">Trusted by Leading Organizations Across India</p>
+          <div className="flex justify-center">
+            <Link to="/contact">
+              <Button className="bg-orange hover:bg-orange-dark text-white">Contact Us</Button>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Clients Section */}
