@@ -55,21 +55,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              
-              {/* Map */}
-              <div className="mt-8 h-80 bg-gray-200 rounded-lg">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9268773278946!2d72.5619!3d23.03006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84e8f8295a89%3A0x87e0935c07a996f1!2sC.%20G.%20Road%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1652258324126!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Vishal Decor & Event Location"
-                  className="rounded-lg"
-                ></iframe>
-              </div>
             </div>
             
             {/* Contact Form */}
@@ -124,6 +109,20 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Full-width Map Section */}
+      <section className="w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9268773278946!2d72.5619!3d23.03006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84e8f8295a89%3A0x87e0935c07a996f1!2sC.%20G.%20Road%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1652258324126!5m2!1sen!2sin"
+          width="100%"
+          height="500"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Vishal Decor & Event Location"
+        ></iframe>
       </section>
     </main>
   );
