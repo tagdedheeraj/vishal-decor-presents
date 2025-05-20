@@ -3,34 +3,56 @@ import React, { useState, useEffect } from 'react';
 import { Target, Lightbulb, Book } from 'lucide-react';
 
 const MissionVisionSection = () => {
-  const [missionVisible, setMissionVisible] = useState(false);
-
+  const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
-    const missionTimer = setTimeout(() => {
-      setMissionVisible(true);
-    }, 600);
+    const handleScroll = () => {
+      const section = document.getElementById('mission-vision-section');
+      if (section) {
+        const sectionPosition = section.getBoundingClientRect();
+        if (sectionPosition.top < window.innerHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    // Trigger once on component mount
+    handleScroll();
     
     return () => {
-      clearTimeout(missionTimer);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <section className="py-20 bg-orange-500">
+    <section id="mission-vision-section" className="py-20 bg-orange-500">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Mission & Vision</h2>
-          <div className="w-24 h-1 bg-white mx-auto"></div>
+          <h2 
+            className={`text-3xl md:text-4xl font-bold text-white mb-4 transition-all duration-700 transform ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
+            Mission & Vision
+          </h2>
+          <div 
+            className={`w-24 h-1 bg-white mx-auto transition-all duration-700 delay-300 transform ${
+              isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+            }`}
+          ></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* The Tenet */}
           <div 
             className={`bg-white rounded-lg shadow-lg p-8 transition-all duration-700 transform ${
-              missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            } text-center flex flex-col items-center`}
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+            } text-center flex flex-col items-center hover:shadow-xl hover:-translate-y-2`}
           >
-            <Target className="h-12 w-12 text-orange-DEFAULT mb-4" />
+            <Target className={`h-12 w-12 text-orange-DEFAULT mb-4 transition-transform duration-500 ${
+              isVisible ? 'rotate-0' : '-rotate-90'
+            }`} />
             <h3 className="text-2xl font-bold mb-4 text-orange-500">The Tenet</h3>
             <p className="mb-4">
               Vishal Decor derives its tenet from the promoter's passion and belief in communication and marketing as a tool for building and sustaining image and brand.
@@ -43,10 +65,12 @@ const MissionVisionSection = () => {
           {/* The Mission */}
           <div 
             className={`bg-white rounded-lg shadow-lg p-8 transition-all duration-700 delay-300 transform ${
-              missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            } text-center flex flex-col items-center`}
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+            } text-center flex flex-col items-center hover:shadow-xl hover:-translate-y-2`}
           >
-            <Lightbulb className="h-12 w-12 text-orange-DEFAULT mb-4" />
+            <Lightbulb className={`h-12 w-12 text-orange-DEFAULT mb-4 transition-all duration-500 ${
+              isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
+            }`} />
             <h3 className="text-2xl font-bold mb-4 text-orange-500">The Mission</h3>
             <p className="mb-4">
               Vishal Decor is organized on total 'Quality' principles which are directed towards their clients through powerful and effective implementation of projects in a very subtle way.
@@ -59,10 +83,12 @@ const MissionVisionSection = () => {
           {/* Synopsis */}
           <div 
             className={`bg-white rounded-lg shadow-lg p-8 transition-all duration-700 delay-600 transform ${
-              missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            } text-center flex flex-col items-center`}
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+            } text-center flex flex-col items-center hover:shadow-xl hover:-translate-y-2`}
           >
-            <Book className="h-12 w-12 text-orange-DEFAULT mb-4" />
+            <Book className={`h-12 w-12 text-orange-DEFAULT mb-4 transition-all duration-500 ${
+              isVisible ? 'opacity-100 rotate-0' : 'opacity-0 rotate-90'
+            }`} />
             <h3 className="text-2xl font-bold mb-4 text-orange-500">Synopsis</h3>
             <p className="mb-4">
               With years of experience to fall back on, organizing and managing large size special events, corporate events, exhibitions and experiential marketing activities are like second nature to the seasoned team of Vishal Decor.

@@ -30,17 +30,24 @@ const slides: Slide[] = [
 
 const ImageSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
 
   const goToPrevious = () => {
+    if (animating) return;
+    setAnimating(true);
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
+    setTimeout(() => setAnimating(false), 1000);
   };
 
   const goToNext = () => {
+    if (animating) return;
+    setAnimating(true);
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
+    setTimeout(() => setAnimating(false), 1000);
   };
 
   useEffect(() => {
@@ -59,15 +66,19 @@ const ImageSlider: React.FC = () => {
           }`}
         >
           <div 
-            className="absolute inset-0 bg-cover bg-center" 
+            className="absolute inset-0 bg-cover bg-center transform transition-transform duration-2000"
             style={{ 
               backgroundImage: `url(${slide.image})`,
+              transform: index === currentIndex ? 'scale(1.05)' : 'scale(1)',
             }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-shadow animate-fade-in-down">
+            <h2 
+              className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-shadow
+                ${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}
+            >
               {slide.caption}
             </h2>
           </div>
@@ -77,13 +88,13 @@ const ImageSlider: React.FC = () => {
       {/* Navigation buttons */}
       <button 
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-orange bg-opacity-70 p-2 rounded-full text-white hover:bg-opacity-90 transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-orange bg-opacity-70 p-2 rounded-full text-white hover:bg-opacity-90 transition hover:scale-110"
       >
         <ChevronLeft size={24} />
       </button>
       <button 
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-orange bg-opacity-70 p-2 rounded-full text-white hover:bg-opacity-90 transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-orange bg-opacity-70 p-2 rounded-full text-white hover:bg-opacity-90 transition hover:scale-110"
       >
         <ChevronRight size={24} />
       </button>
@@ -94,17 +105,22 @@ const ImageSlider: React.FC = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? 'bg-orange' : 'bg-white bg-opacity-50'
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentIndex 
+                ? 'bg-orange scale-125' 
+                : 'bg-white bg-opacity-50 hover:bg-opacity-75'
             }`}
           />
         ))}
       </div>
       
-      {/* Know About Us button - now auto-width instead of full width */}
+      {/* Know About Us button - now with animation */}
       <div className="absolute bottom-0 left-0 right-0 flex justify-center">
         <Link to="/about">
-          <Button className="bg-orange hover:bg-orange-dark text-white py-6 rounded-none" size="lg">
+          <Button 
+            className="bg-orange hover:bg-orange-dark text-white py-6 rounded-none transform transition-transform hover:-translate-y-1 hover:shadow-lg"
+            size="lg"
+          >
             Know About Us
           </Button>
         </Link>
