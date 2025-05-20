@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ClientLogo from './ClientLogo';
 
 const clientLogos = [
@@ -36,51 +36,14 @@ const clientLogos = [
 const ClientLogoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const [initialLoad, setInitialLoad] = useState(true);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   const itemsPerRow = 5;
   const rowsToShow = 2;
   const itemsPerSet = itemsPerRow * rowsToShow;
   const totalSets = Math.ceil(clientLogos.length / itemsPerSet);
 
-  // Preload all images on component mount
   useEffect(() => {
-    const preloadImages = () => {
-      let loadedCount = 0;
-      const totalImages = clientLogos.length;
-      
-      clientLogos.forEach(logo => {
-        const img = new Image();
-        img.onload = () => {
-          loadedCount++;
-          if (loadedCount === totalImages) {
-            setImagesLoaded(true);
-          }
-        };
-        img.onerror = () => {
-          loadedCount++;
-          console.error(`Failed to load image: ${logo.src}`);
-          if (loadedCount === totalImages) {
-            setImagesLoaded(true);
-          }
-        };
-        img.src = logo.src;
-      });
-    };
-    
-    preloadImages();
-  }, []);
-
-  useEffect(() => {
-    // Mark as loaded after initial render
-    const timer = setTimeout(() => {
-      setInitialLoad(false);
-    }, 300);
-    
     const interval = setInterval(() => {
-      if (!imagesLoaded) return; // Don't start animation until images are loaded
-      
       // Start the animation
       setAnimating(true);
       
@@ -93,10 +56,9 @@ const ClientLogoCarousel = () => {
     }, 5000); // Update every 5 seconds
 
     return () => {
-      clearTimeout(timer);
       clearInterval(interval);
     };
-  }, [totalSets, imagesLoaded]);
+  }, [totalSets]);
 
   // Get the current logos to display (10 logos: 5 in each row)
   const startIdx = currentIndex * itemsPerSet;
@@ -118,7 +80,7 @@ const ClientLogoCarousel = () => {
   return (
     <div className="overflow-hidden h-64 relative">
       <div className={`transition-all duration-500 ease-in-out absolute w-full
-            ${!initialLoad && animating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
+            ${animating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
         {/* First row */}
         <div className="flex flex-row justify-between gap-4 mb-6">
           {firstRowLogos.map((logo, logoIndex) => (
