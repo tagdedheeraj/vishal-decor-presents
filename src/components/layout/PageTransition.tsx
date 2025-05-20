@@ -7,6 +7,11 @@ const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) =
   const [displayLocation, setDisplayLocation] = useState(location);
   const [transitionStage, setTransitionStage] = useState("fadeIn");
 
+  // Scroll to top whenever location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   useEffect(() => {
     if (location.pathname !== displayLocation.pathname) {
       setTransitionStage("fadeOut");
