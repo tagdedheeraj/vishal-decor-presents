@@ -6,13 +6,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
   image: string;
-  showSpecialLayout?: boolean;
 }
 
 const slides: Slide[] = [
   {
     image: '/lovable-uploads/5a3c62dd-5bd8-4a07-9574-cb922241681e.png',
-    showSpecialLayout: true,
   },
   {
     image: '/lovable-uploads/88967152-7df3-4af1-8122-7acc4318b6a0.png',
@@ -69,22 +67,12 @@ const ImageSlider: React.FC = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-            {slide.showSpecialLayout ? (
-              <div className={`${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}>
-                <p className="text-lg md:text-xl uppercase tracking-wider mb-2 font-light">WELCOME TO</p>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">VISHAL DECOR & EVENT PVT LTD</h1>
-                <div className="w-24 h-0.5 bg-orange mx-auto mb-3"></div>
-                <p className="text-sm md:text-base uppercase tracking-wide font-light">STEP BEYOND YOUR EXPECTATIONS</p>
-              </div>
-            ) : (
-              <h2 
-                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-shadow
-                  ${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}
-              >
-                {index === 1 ? "Elevating Events with Style" : 
-                 "Creating Unforgettable Experiences"}
-              </h2>
-            )}
+            <div className={`${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}>
+              <p className="text-lg md:text-xl uppercase tracking-wider mb-2 font-light">WELCOME TO</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">VISHAL DECOR & EVENT PVT LTD</h1>
+              <div className="w-24 h-0.5 bg-orange mx-auto mb-3"></div>
+              <p className="text-sm md:text-base uppercase tracking-wide font-light">STEP BEYOND YOUR EXPECTATIONS</p>
+            </div>
           </div>
         </div>
       ))}
@@ -118,7 +106,7 @@ const ImageSlider: React.FC = () => {
         ))}
       </div>
       
-      {/* Know About Us button - centered with fixed width at bottom */}
+      {/* Know About Us button - centered at bottom */}
       <div className="absolute bottom-0 left-0 right-0 flex justify-center">
         <Link to="/about">
           <Button 
