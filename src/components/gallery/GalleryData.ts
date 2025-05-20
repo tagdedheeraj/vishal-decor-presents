@@ -57,10 +57,23 @@ export const institutionImages = [
   '/lovable-uploads/b3ab6db1-4321-411c-ab92-8b22cf31520f.png'  // Shopping festival entrance gate
 ];
 
+// Exhibition specific images
+export const exhibitionImages = [
+  '/lovable-uploads/d3386e6f-2f84-4208-ac13-38d455fb6d4b.png', // Tribal festival entrance with red carpet
+  '/lovable-uploads/b70a899b-62f9-484f-9ddd-76cd6263da6e.png', // Cultural performers lined up at event
+  '/lovable-uploads/af4a9ade-05fa-4e7e-bee1-bcee7a7ca7e2.png', // Exhibition stall with handicrafts
+  '/lovable-uploads/eaf6a6cb-2ea1-4740-bd52-b99110176fba.png', // Cultural dance performance on stage
+  '/lovable-uploads/059ae245-12f3-42fb-a162-372f3118cac5.png', // Exhibition tent with red carpet entrance
+  '/lovable-uploads/baea1173-c1d4-4648-ab0c-eeacaaff8181.png', // Traditional dance with fire pots
+  '/lovable-uploads/148d8538-3b66-4785-a74a-b98800cf6859.png', // Exhibition hall with stalls
+  '/lovable-uploads/3be7990c-3a08-401b-9927-10e1c111846c.png', // Exhibition stalls with jewelry and crafts
+];
+
 // Helper function to get images based on active tab
 export const getDisplayImages = (activeTab: string): string[] => {
   if (activeTab === 'Wedding') return weddingImages;
   if (activeTab === 'Institution') return institutionImages;
   if (activeTab === 'Government Event') return governmentImages;
+  if (activeTab === 'Exhibition') return exhibitionImages;
   return placeholderImages;
 };
