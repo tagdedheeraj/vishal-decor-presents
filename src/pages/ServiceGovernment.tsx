@@ -5,14 +5,18 @@ import ServiceTabs from '@/components/ui/ServiceTabs';
 const ServiceGovernment = () => {
   const serviceContent = {
     title: "Government",
-    content: "​At Vishal Decor & Event, we specialize in delivering exceptional decoration services for government exhibitions and events. Our expertise lies in transforming venues into immersive environments that effectively communicate governmental messages and values. Our commitment to excellence ensures that every detail is planned and executed. We provide good results in government exhibitions that are both approachable, stunning and superior too."
+    content: "Vishal Decor & Event takes pride in serving government departments across various states of India. We specialize in organizing impactful government events including conferences, seminars, inaugurations, and public programs. Our team excels at handling protocol requirements, security arrangements, and ensuring flawless execution of government functions with attention to detail. From heritage tourism policy launches to ministerial conferences, we deliver professional event management services tailored to the unique requirements of government organizations."
   };
 
   return (
     <main>
       {/* Page Header Section */}
       <section className="relative h-[40vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center z-0" 
+          style={{ backgroundImage: "url('/lovable-uploads/4262bc9c-81e6-4c6f-a90d-c8b76f8f9f02.png')" }}
+        ></div>
+        <div className="absolute inset-0 bg-navy bg-opacity-70 z-0"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Government Services</h1>
           <p className="text-xl text-white mb-6">Expert Event Management for Government Organizations</p>
