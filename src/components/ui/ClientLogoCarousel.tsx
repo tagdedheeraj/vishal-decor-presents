@@ -42,9 +42,19 @@ const ClientLogoCarousel = () => {
   const itemsPerSet = itemsPerRow * rowsToShow;
   const totalSets = Math.ceil(clientLogos.length / itemsPerSet);
 
+  // Preload all images on component mount
+  useEffect(() => {
+    clientLogos.forEach(logo => {
+      const img = new Image();
+      img.src = logo.src;
+    });
+  }, []);
+
   useEffect(() => {
     // Mark as loaded after initial render
-    setInitialLoad(false);
+    const timer = setTimeout(() => {
+      setInitialLoad(false);
+    }, 300);
     
     const interval = setInterval(() => {
       // Start the animation
@@ -58,7 +68,10 @@ const ClientLogoCarousel = () => {
       
     }, 5000); // Update every 5 seconds
 
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, [totalSets]);
 
   // Get the current logos to display (10 logos: 5 in each row)

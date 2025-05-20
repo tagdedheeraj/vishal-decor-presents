@@ -18,6 +18,22 @@ const IntroductionSection = () => {
   return (
     <section className="py-20 overflow-hidden">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-10">
+          <h2 
+            className={`text-2xl font-medium text-gold mb-2 transition-all duration-700 delay-300 transform ${
+              introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
+            Our Introductions
+          </h2>
+          <h3 
+            className={`text-3xl md:text-4xl font-bold mb-6 transition-all duration-700 delay-500 transform ${
+              introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
+            WELCOME TO VISHAL DECOR & EVENT PVT LTD
+          </h3>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div 
             className={`transition-all duration-1000 delay-100 transform ${
@@ -31,20 +47,6 @@ const IntroductionSection = () => {
             />
           </div>
           <div>
-            <h2 
-              className={`text-2xl font-medium text-gold mb-2 transition-all duration-700 delay-300 transform ${
-                introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
-            >
-              Our Introductions
-            </h2>
-            <h3 
-              className={`text-3xl md:text-4xl font-bold mb-6 transition-all duration-700 delay-500 transform ${
-                introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
-            >
-              WELCOME TO VISHAL DECOR & EVENT PVT LTD
-            </h3>
             <p 
               className={`mb-4 transition-all duration-700 delay-700 transform ${
                 introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'

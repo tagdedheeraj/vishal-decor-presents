@@ -13,11 +13,6 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-6">
-              <img 
-                src="/lovable-uploads/fb0e2e81-768f-474e-a868-a068ec13db8c.png" 
-                alt="Vishal Decor Logo" 
-                className="h-16 mb-4" 
-              />
               <p className="text-sm text-gray-300 mt-4">
                 Creating unforgettable experiences through exceptional event decoration and planning since 2001.
               </p>
