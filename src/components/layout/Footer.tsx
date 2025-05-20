@@ -73,12 +73,6 @@ const Footer = () => {
                   Clients
                 </Link>
               </li>
-              <li>
-                <Link to="/contact" className="text-sm hover:text-orange-light transition-colors flex items-center">
-                  <span className="bg-orange-DEFAULT h-1.5 w-1.5 rounded-full mr-2"></span>
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
 

@@ -118,11 +118,11 @@ const ImageSlider: React.FC = () => {
         ))}
       </div>
       
-      {/* Know About Us button - now with position at the bottom edge */}
+      {/* Know About Us button - now with standard width and positioned at bottom edge */}
       <div className="absolute bottom-0 left-0 right-0">
         <Link to="/about" className="block">
           <Button 
-            className="bg-orange hover:bg-orange-dark text-white py-6 w-full rounded-none"
+            className="bg-orange hover:bg-orange-dark text-white py-6 mx-auto px-10 rounded-none"
             size="lg"
           >
             Know About Us
