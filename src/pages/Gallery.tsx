@@ -1,5 +1,8 @@
 
 import React, { useState } from 'react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
 
 const categories = [
   'Government Event', 
@@ -30,9 +33,42 @@ const weddingImages = [
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('Government Event');
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Determine which images to display based on the active tab
   const displayImages = activeTab === 'Wedding' ? weddingImages : placeholderImages;
+
+  // Open the popup with the selected image
+  const openImagePopup = (index: number) => {
+    setCurrentImageIndex(index);
+    setPopupOpen(true);
+  };
+
+  // Navigate to the previous image
+  const goToPreviousImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? displayImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Navigate to the next image
+  const goToNextImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === displayImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  // Handle keyboard navigation
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') {
+      goToPreviousImage();
+    } else if (e.key === 'ArrowRight') {
+      goToNextImage();
+    } else if (e.key === 'Escape') {
+      setPopupOpen(false);
+    }
+  };
 
   return (
     <main>
@@ -75,7 +111,11 @@ const Gallery = () => {
             {activeTab === 'Wedding' ? (
               // Display wedding images when Wedding tab is active
               weddingImages.map((img, index) => (
-                <div key={index} className="overflow-hidden rounded-lg shadow-lg group">
+                <div 
+                  key={index} 
+                  className="overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                  onClick={() => openImagePopup(index)}
+                >
                   <div className="relative pb-[75%]">
                     <img
                       src={img}
@@ -93,7 +133,11 @@ const Gallery = () => {
             ) : (
               // Display placeholder images for other tabs
               [...Array(9)].map((_, index) => (
-                <div key={index} className="overflow-hidden rounded-lg shadow-lg group">
+                <div 
+                  key={index} 
+                  className="overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                  onClick={() => openImagePopup(index)}
+                >
                   <div className="relative pb-[75%]">
                     <img
                       src={`${placeholderImages[index % placeholderImages.length]}?auto=format&fit=crop&w=800&h=600&q=80`}
@@ -112,6 +156,61 @@ const Gallery = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Popup Dialog */}
+      <Dialog open={popupOpen} onOpenChange={setPopupOpen}>
+        <DialogContent 
+          className="max-w-4xl p-0 bg-black/95 border-none" 
+          onKeyDown={handleKeyDown}
+          onInteractOutside={() => setPopupOpen(false)}
+        >
+          <div className="relative w-full h-full flex items-center justify-center">
+            {/* Close button */}
+            <Button 
+              variant="ghost" 
+              className="absolute right-4 top-4 z-50 rounded-full p-2 bg-black/50 hover:bg-black/70 text-white"
+              onClick={() => setPopupOpen(false)}
+            >
+              <X className="h-6 w-6" />
+              <span className="sr-only">Close</span>
+            </Button>
+
+            {/* Image container */}
+            <div className="w-full h-[80vh] flex items-center justify-center relative">
+              <img 
+                src={displayImages[currentImageIndex]} 
+                alt={`Expanded gallery image ${currentImageIndex + 1}`}
+                className="max-h-full max-w-full object-contain"
+              />
+              
+              {/* Navigation buttons */}
+              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between items-center px-4">
+                <Button 
+                  variant="ghost" 
+                  className="rounded-full p-2 bg-black/50 hover:bg-black/70 text-white"
+                  onClick={goToPreviousImage}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  <span className="sr-only">Previous</span>
+                </Button>
+                
+                <Button 
+                  variant="ghost" 
+                  className="rounded-full p-2 bg-black/50 hover:bg-black/70 text-white"
+                  onClick={goToNextImage}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span className="sr-only">Next</span>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 };
