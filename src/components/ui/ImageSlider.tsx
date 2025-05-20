@@ -15,13 +15,10 @@ const slides: Slide[] = [
     showSpecialLayout: true,
   },
   {
-    image: '/lovable-uploads/49147b52-8023-4f1e-a115-4f8810cffed1.png',
+    image: '/lovable-uploads/88967152-7df3-4af1-8122-7acc4318b6a0.png',
   },
   {
-    image: '/lovable-uploads/ec48c5ef-6f5a-48d9-9e47-2f7afc552716.png',
-  },
-  {
-    image: '/lovable-uploads/5b939f6b-4243-4c19-b7b2-a343659e1656.png',
+    image: '/lovable-uploads/c485ea0b-405d-473c-a210-dbeba829db16.png',
   },
 ];
 
@@ -84,9 +81,8 @@ const ImageSlider: React.FC = () => {
                 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-shadow
                   ${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}
               >
-                {index === 1 ? "We build your dream around you" : 
-                 index === 2 ? "Your vision. Our innovation" : 
-                 "Where creativity meets perfection"}
+                {index === 1 ? "Elevating Events with Style" : 
+                 "Creating Unforgettable Experiences"}
               </h2>
             )}
           </div>
