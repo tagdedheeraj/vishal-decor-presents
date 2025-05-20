@@ -6,7 +6,12 @@ const About = () => {
     <main>
       {/* Page Header Section */}
       <section className="relative h-[40vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0"></div>
+        {/* Background image with overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center z-0" 
+          style={{ backgroundImage: "url('/lovable-uploads/8d4af39d-0594-4344-83df-ad312744db22.png')" }}
+        ></div>
+        <div className="absolute inset-0 bg-navy bg-opacity-70 z-0"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Us</h1>
           <p className="text-xl text-white mb-6">Discover Our Story and Vision</p>
