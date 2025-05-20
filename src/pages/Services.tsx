@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const ServiceCard = ({ title, description, link }: { title: string; description: string; link: string }) => (
-  <div className="bg-white rounded-lg shadow-lg p-8 service-card">
+  <div className="bg-white rounded-lg shadow-lg p-8 service-card text-center">
     <h3 className="text-2xl font-bold mb-4">{title}</h3>
     <p className="text-gray-600 mb-6">{description}</p>
     <Link to={link}>
