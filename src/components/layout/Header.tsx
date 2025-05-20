@@ -1,13 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const location = useLocation();
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -23,6 +24,10 @@ const Header = () => {
     };
   }, []);
 
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-cream/95 shadow-sm' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-3">
@@ -37,12 +42,42 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-orange hover:text-black hover:font-medium transition-colors">Home</Link>
-            <Link to="/about" className="text-orange hover:text-black hover:font-medium transition-colors">About</Link>
-            <Link to="/services" className="text-orange hover:text-black hover:font-medium transition-colors">Services</Link>
-            <Link to="/gallery" className="text-orange hover:text-black hover:font-medium transition-colors">Gallery</Link>
-            <Link to="/clients" className="text-orange hover:text-black hover:font-medium transition-colors">Clients</Link>
-            <Link to="/contact" className="text-orange hover:text-black hover:font-medium transition-colors">Contact</Link>
+            <Link 
+              to="/" 
+              className={`transition-colors ${isActive('/') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              className={`transition-colors ${isActive('/about') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+            >
+              About
+            </Link>
+            <Link 
+              to="/services" 
+              className={`transition-colors ${isActive('/services') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+            >
+              Services
+            </Link>
+            <Link 
+              to="/gallery" 
+              className={`transition-colors ${isActive('/gallery') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+            >
+              Gallery
+            </Link>
+            <Link 
+              to="/clients" 
+              className={`transition-colors ${isActive('/clients') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+            >
+              Clients
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`transition-colors ${isActive('/contact') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+            >
+              Contact
+            </Link>
           </nav>
           
           {/* Social Media Icons */}
@@ -83,12 +118,48 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-cream py-4">
           <nav className="flex flex-col">
-            <Link to="/" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link to="/about" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link to="/services" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Services</Link>
-            <Link to="/gallery" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
-            <Link to="/clients" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Clients</Link>
-            <Link to="/contact" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            <Link 
+              to="/" 
+              className={`py-2 px-4 transition-colors ${isActive('/') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              className={`py-2 px-4 transition-colors ${isActive('/about') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              to="/services" 
+              className={`py-2 px-4 transition-colors ${isActive('/services') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Services
+            </Link>
+            <Link 
+              to="/gallery" 
+              className={`py-2 px-4 transition-colors ${isActive('/gallery') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+            <Link 
+              to="/clients" 
+              className={`py-2 px-4 transition-colors ${isActive('/clients') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Clients
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`py-2 px-4 transition-colors ${isActive('/contact') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
             
             {/* Social icons for mobile */}
             <div className="flex items-center space-x-4 px-4 mt-4">
