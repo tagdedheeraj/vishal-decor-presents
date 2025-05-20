@@ -31,13 +31,34 @@ const weddingImages = [
   '/lovable-uploads/391a7656-4feb-4201-9de0-e764fac1262b.png',
 ];
 
+// Institution specific images
+const institutionImages = [
+  '/lovable-uploads/14e4e6f6-f8d2-49e3-995c-5983fc2e5a3d.png', // Convocation with officials at podium
+  '/lovable-uploads/27319270-def0-4a66-963b-dcecf1487927.png', // University entrance with standees
+  '/lovable-uploads/325691d8-b847-479d-8a9b-76215afc98af.png', // University graduation group photo
+  '/lovable-uploads/8df2f2af-081d-40d3-97ea-a13f81dad2b7.png', // Aerial view of institution event
+  '/lovable-uploads/faed8f9b-47fa-4899-88d7-a411f36d0132.png', // Officials at institution ceremony
+  '/lovable-uploads/fccbad39-1c4e-4a5b-972d-16f20afbfd47.png', // Shopping festival entrance
+  '/lovable-uploads/88055602-b115-4e04-b73b-32a8c0c05e84.png', // Illuminated structure display
+  '/lovable-uploads/7cbdac2a-ece3-4665-a889-f56b1064ab6d.png', // Fashion show stage
+  '/lovable-uploads/42d7aaa7-a595-4742-9d17-8a883a3b15ad.png', // Outdoor event stage setup
+  '/lovable-uploads/b5ef5927-bc9f-4346-8620-49acb88e6215.png', // Event branding walls
+  '/lovable-uploads/b3ab6db1-4321-411c-ab92-8b22cf31520f.png'  // Shopping festival entrance gate
+];
+
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('Government Event');
   const [popupOpen, setPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Determine which images to display based on the active tab
-  const displayImages = activeTab === 'Wedding' ? weddingImages : placeholderImages;
+  const getDisplayImages = () => {
+    if (activeTab === 'Wedding') return weddingImages;
+    if (activeTab === 'Institution') return institutionImages;
+    return placeholderImages;
+  };
+
+  const displayImages = getDisplayImages();
 
   // Open the popup with the selected image
   const openImagePopup = (index: number) => {
@@ -108,51 +129,26 @@ const Gallery = () => {
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {activeTab === 'Wedding' ? (
-              // Display wedding images when Wedding tab is active
-              weddingImages.map((img, index) => (
-                <div 
-                  key={index} 
-                  className="overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                  onClick={() => openImagePopup(index)}
-                >
-                  <div className="relative pb-[75%]">
-                    <img
-                      src={img}
-                      alt={`Wedding decoration image ${index + 1}`}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity flex items-center justify-center">
-                      <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        <p className="text-white text-lg font-bold">Wedding Decoration</p>
-                      </div>
+            {displayImages.map((img, index) => (
+              <div 
+                key={index} 
+                className="overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                onClick={() => openImagePopup(index)}
+              >
+                <div className="relative pb-[75%]">
+                  <img
+                    src={img}
+                    alt={`${activeTab} image ${index + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity flex items-center justify-center">
+                    <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                      <p className="text-white text-lg font-bold">{activeTab}</p>
                     </div>
                   </div>
                 </div>
-              ))
-            ) : (
-              // Display placeholder images for other tabs
-              [...Array(9)].map((_, index) => (
-                <div 
-                  key={index} 
-                  className="overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                  onClick={() => openImagePopup(index)}
-                >
-                  <div className="relative pb-[75%]">
-                    <img
-                      src={`${placeholderImages[index % placeholderImages.length]}?auto=format&fit=crop&w=800&h=600&q=80`}
-                      alt={`Gallery image ${index + 1}`}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity flex items-center justify-center">
-                      <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        <p className="text-white text-lg font-bold">{activeTab}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))
-            )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
