@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Decor Installation Check</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .success { color: green; }
+    .error { color: red; }
+    .checklist { margin: 20px 0; }
+    .checklist li { margin-bottom: 10px; }
+    button { background: #ff9800; color: white; border: none; padding: 10px 15px; cursor: pointer; }
+    button:hover { background: #e67e00; }
+  </style>
+</head>
+<body>
+  <h1>Vishal Decor Website Installation Checker</h1>
+  <p>This tool will check if your Vishal Decor website installation is working correctly.</p>
+  
+  <div class="checklist">
+    <h2>Installation Checklist:</h2>
+    <ul>
+      <li id="htaccess">Checking .htaccess configuration... <span></span></li>
+      <li id="assets">Checking static assets... <span></span></li>
+      <li id="routing">Checking routing... <span></span></li>
+    </ul>
+  </div>
+  
+  <button id="checkButton">Run Installation Check</button>
+  
+  <div id="results" style="margin-top: 20px;"></div>
+  
+  <script>
+    document.getElementById('checkButton').addEventListener('click', async function() {
+      // Reset results
+      document.querySelector('#htaccess span').textContent = 'Checking...';
+      document.querySelector('#assets span').textContent = 'Checking...';
+      document.querySelector('#routing span').textContent = 'Checking...';
+      document.getElementById('results').innerHTML = '';
+      
+      // Check .htaccess
+      try {
+        const routeResponse = await fetch('./non-existent-page-test-123');
+        if (routeResponse.url.includes('non-existent-page-test-123') && !routeResponse.url.includes('404.html')) {
+          document.querySelector('#htaccess span').textContent = '✅ Good';
+          document.querySelector('#htaccess span').className = 'success';
+        } else {
+          document.querySelector('#htaccess span').textContent = '❌ Issue detected';
+          document.querySelector('#htaccess span').className = 'error';
+        }
+      } catch (e) {
+        document.querySelector('#htaccess span').textContent = '❌ Error';
+        document.querySelector('#htaccess span').className = 'error';
+      }
+      
+      // Check assets
+      try {
+        const imgResponse = await fetch('./assets/index-*.js');
+        if (imgResponse.ok) {
+          document.querySelector('#assets span').textContent = '✅ Good';
+          document.querySelector('#assets span').className = 'success';
+        } else {
+          document.querySelector('#assets span').textContent = '❌ Issue detected';
+          document.querySelector('#assets span').className = 'error';
+        }
+      } catch (e) {
+        document.querySelector('#assets span').textContent = '❌ Error';
+        document.querySelector('#assets span').className = 'error';
+      }
+      
+      // Check routing
+      try {
+        const homeResponse = await fetch('./');
+        if (homeResponse.ok) {
+          document.querySelector('#routing span').textContent = '✅ Good';
+          document.querySelector('#routing span').className = 'success';
+        } else {
+          document.querySelector('#routing span').textContent = '❌ Issue detected';
+          document.querySelector('#routing span').className = 'error';
+        }
+      } catch (e) {
+        document.querySelector('#routing span').textContent = '❌ Error';
+        document.querySelector('#routing span').className = 'error';
+      }
+      
+      // Show overall results
+      const allChecks = document.querySelectorAll('.checklist span');
+      const allPassed = Array.from(allChecks).every(span => span.className === 'success');
+      
+      if (allPassed) {
+        document.getElementById('results').innerHTML = 
+          '<h3 class="success">✅ All checks passed! Your website appears to be installed correctly.</h3>' +
+          '<p>You can now visit your main website to see it in action.</p>';
+      } else {
+        document.getElementById('results').innerHTML = 
+          '<h3 class="error">⚠️ Some checks failed. Your installation may have issues.</h3>' +
+          '<p>Please review the INSTALLATION.md file for troubleshooting tips.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

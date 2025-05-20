@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Decor Website - Detailed Installation Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #FF9800;
+    }
+    .container {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    .step {
+      margin-bottom: 30px;
+      border-left: 3px solid #FF9800;
+      padding-left: 15px;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      margin: 10px 0;
+    }
+    .warning {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 10px;
+      margin: 15px 0;
+    }
+    .tip {
+      background-color: #d1ecf1;
+      border-left: 4px solid #17a2b8;
+      padding: 10px;
+      margin: 15px 0;
+    }
+    @media print {
+      body {
+        font-size: 12pt;
+      }
+      h1 {
+        font-size: 18pt;
+        page-break-before: always;
+      }
+      h2 {
+        font-size: 16pt;
+      }
+      .no-break {
+        page-break-inside: avoid;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vishal Decor Website - Installation Guide</h1>
+    <p>Version 1.0 | Last Updated: May 2025</p>
+  </div>
+
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#preparation">Preparation</a></li>
+    <li><a href="#uploading">Uploading Files</a></li>
+    <li><a href="#cpanel">cPanel Installation</a></li>
+    <li><a href="#plesk">Plesk Installation</a></li>
+    <li><a href="#subfolder">Installing in a Subfolder</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#maintenance">Maintenance and Updates</a></li>
+  </ol>
+
+  <div id="prerequisites" class="step no-break">
+    <h2>1. Prerequisites</h2>
+    <p>Before you begin the installation process, ensure you have:</p>
+    <ul>
+      <li>Access to your hosting control panel (cPanel, Plesk, etc.)</li>
+      <li>FTP account details (if you plan to use FTP for uploading)</li>
+      <li>Your domain name properly pointed to your hosting</li>
+      <li>The <code>vishal-decor-installation.zip</code> file</li>
+    </ul>
+    <div class="tip">
+      <p><strong>Tip:</strong> Make a backup of your existing website files if you're replacing an existing website.</p>
+    </div>
+  </div>
+
+  <div id="preparation" class="step no-break">
+    <h2>2. Preparation</h2>
+    <p>Extract the <code>vishal-decor-installation.zip</code> file on your computer. You should see:</p>
+    <ul>
+      <li>A <code>dist</code> folder containing all website files</li>
+      <li>This installation guide</li>
+    </ul>
+    <p>The <code>dist</code> folder contains all the files you need to upload to your hosting account.</p>
+  </div>
+
+  <div id="uploading" class="step no-break">
+    <h2>3. Uploading Files</h2>
+    <h3>Using FTP (FileZilla, etc.)</h3>
+    <ol>
+      <li>Connect to your hosting using your FTP credentials</li>
+      <li>Navigate to the public HTML folder (usually called <code>public_html</code>, <code>www</code>, or <code>htdocs</code>)</li>
+      <li>Upload <strong>all contents</strong> of the <code>dist</code> folder to this directory</li>
+      <li>Make sure the <code>.htaccess</code> file is uploaded (it might be hidden by default)</li>
+    </ol>
+    
+    <h3>Using Hosting File Manager</h3>
+    <ol>
+      <li>Log in to your hosting control panel</li>
+      <li>Find and click on the File Manager tool</li>
+      <li>Navigate to the public HTML folder</li>
+      <li>Click the "Upload" button and select all the files from the <code>dist</code> folder</li>
+      <li>If you need to upload many files, consider creating a ZIP file, uploading it, and then extracting it on the server</li>
+    </ol>
+  </div>
+
+  <div id="cpanel" class="step no-break">
+    <h2>4. cPanel Installation</h2>
+    <ol>
+      <li>Log in to your cPanel account</li>
+      <li>Click on the "File Manager" icon</li>
+      <li>Navigate to <code>public_html</code> folder</li>
+      <li>If replacing an existing site, consider backing up or renaming old files</li>
+      <li>Click "Upload" and select all files from your <code>dist</code> folder</li>
+      <li>Alternatively, upload the ZIP file and extract it in the public_html directory</li>
+      <li>Check that the <code>.htaccess</code> file was uploaded properly</li>
+    </ol>
+    
+    <div class="warning">
+      <p><strong>Important:</strong> If the .htaccess file is not showing, you may need to enable "Show Hidden Files" in File Manager settings.</p>
+    </div>
+  </div>
+
+  <div id="plesk" class="step no-break">
+    <h2>5. Plesk Installation</h2>
+    <ol>
+      <li>Log in to your Plesk control panel</li>
+      <li>Go to "Websites & Domains" and find your domain</li>
+      <li>Click on "File Manager"</li>
+      <li>Navigate to the <code>httpdocs</code> folder</li>
+      <li>Use the "Upload" button to upload all files from the <code>dist</code> folder</li>
+      <li>Make sure the <code>.htaccess</code> file is uploaded correctly</li>
+    </ol>
+  </div>
+
+  <div id="subfolder" class="step no-break">
+    <h2>6. Installing in a Subfolder</h2>
+    <p>If you want to install Vishal Decor website in a subfolder (e.g., yourdomain.com/vishaldecor):</p>
+    <ol>
+      <li>Create the subfolder in your hosting's public directory</li>
+      <li>Upload all files from the <code>dist</code> folder to this subfolder</li>
+      <li>You may need to modify the <code>.htaccess</code> file to work in a subfolder by adding the line:</li>
+    </ol>
+    <code>RewriteBase /your-subfolder-name/</code>
+    <p>Add this line after the <code>RewriteEngine On</code> line in the .htaccess file.</p>
+  </div>
+
+  <div id="troubleshooting" class="step no-break">
+    <h2>7. Troubleshooting</h2>
+    <h3>Common Issues and Solutions</h3>
+    
+    <h4>404 Page Not Found Errors</h4>
+    <p>If you're getting 404 errors when navigating the site:</p>
+    <ul>
+      <li>Make sure the .htaccess file was uploaded correctly</li>
+      <li>Check if your server supports mod_rewrite (ask your hosting provider)</li>
+      <li>If installing in a subfolder, make sure you've added the RewriteBase directive</li>
+    </ul>
+    
+    <h4>Missing Images or Styles</h4>
+    <p>If your site is missing images or appears without styling:</p>
+    <ul>
+      <li>Ensure all files were uploaded completely</li>
+      <li>Check the browser console for specific errors (press F12 in most browsers)</li>
+      <li>Verify file permissions (files should be 644, directories 755)</li>
+    </ul>
+    
+    <h4>Server Error 500</h4>
+    <p>If you're getting internal server errors:</p>
+    <ul>
+      <li>Check your server's error logs</li>
+      <li>Verify your .htaccess file for syntax errors</li>
+      <li>Contact your hosting provider for assistance</li>
+    </ul>
+  </div>
+
+  <div id="maintenance" class="step no-break">
+    <h2>8. Maintenance and Updates</h2>
+    <p>To update your website in the future:</p>
+    <ul>
+      <li>Always back up your existing site before updating</li>
+      <li>Replace the files with new versions as needed</li>
+      <li>Keep a copy of your customized .htaccess if you've modified it</li>
+    </ul>
+    <div class="tip">
+      <p><strong>Recommendation:</strong> Use the included <code>check-installation.html</code> file to verify your installation is working correctly. Simply navigate to yourdomain.com/check-installation.html after uploading.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Need Further Assistance?</h2>
+    <p>If you encounter any issues not covered in this guide, please contact your web developer or hosting provider for additional support.</p>
+    <p><strong>Vishal Decor & Event Pvt Ltd</strong><br>
+    Website Installation Guide v1.0</p>
+  </div>
+</body>
+</html>
