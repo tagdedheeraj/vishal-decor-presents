@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import WhatsAppPopup from "./components/ui/WhatsAppPopup";
+import PageTransition from "./components/layout/PageTransition";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -29,20 +30,22 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/government" element={<ServiceGovernment />} />
-          <Route path="/services/corporate" element={<ServiceCorporate />} />
-          <Route path="/services/stall-design-fabrication" element={<ServiceStallDesignFabrication />} />
-          <Route path="/services/wedding" element={<ServiceWedding />} />
-          <Route path="/services/other-event" element={<ServiceOtherEvent />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/clients" element={<Clients />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <PageTransition>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/government" element={<ServiceGovernment />} />
+            <Route path="/services/corporate" element={<ServiceCorporate />} />
+            <Route path="/services/stall-design-fabrication" element={<ServiceStallDesignFabrication />} />
+            <Route path="/services/wedding" element={<ServiceWedding />} />
+            <Route path="/services/other-event" element={<ServiceOtherEvent />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </PageTransition>
         <Footer />
         <WhatsAppPopup />
       </BrowserRouter>
