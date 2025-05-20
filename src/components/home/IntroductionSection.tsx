@@ -31,7 +31,7 @@ const IntroductionSection = () => {
             />
           </div>
           <div>
-            <div className="mb-8 flex flex-col items-center">
+            <div className="mb-8 flex flex-col items-center text-center">
               <h2 
                 className={`text-2xl font-medium text-gold mb-2 transition-all duration-700 delay-300 transform ${
                   introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
