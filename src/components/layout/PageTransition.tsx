@@ -8,24 +8,27 @@ const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) =
   const [transitionStage, setTransitionStage] = useState("fadeIn");
 
   useEffect(() => {
-    if (location !== displayLocation) {
+    if (location.pathname !== displayLocation.pathname) {
       setTransitionStage("fadeOut");
     }
   }, [location, displayLocation]);
 
-  const handleAnimationEnd = () => {
+  useEffect(() => {
     if (transitionStage === "fadeOut") {
-      setTransitionStage("fadeIn");
-      setDisplayLocation(location);
+      const timeout = setTimeout(() => {
+        setTransitionStage("fadeIn");
+        setDisplayLocation(location);
+      }, 300); // Match this with the CSS duration
+      
+      return () => clearTimeout(timeout);
     }
-  };
+  }, [transitionStage, location]);
 
   return (
     <div
-      className={`transition-opacity duration-300 ${
+      className={`w-full transition-opacity duration-300 ${
         transitionStage === "fadeIn" ? "opacity-100" : "opacity-0"
       }`}
-      onAnimationEnd={handleAnimationEnd}
     >
       {children}
     </div>
