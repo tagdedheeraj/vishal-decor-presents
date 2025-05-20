@@ -1,15 +1,19 @@
 
 import React from 'react';
-import ImageSlider from '@/components/ui/ImageSlider';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Contact = () => {
   return (
     <main>
-      {/* Hero Section with Image Slider */}
-      <section>
-        <ImageSlider />
+      {/* Header Section */}
+      <section className="bg-gray-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <p className="text-xl max-w-2xl mx-auto">
+            We'd love to hear from you. Reach out to us for any questions or inquiries.
+          </p>
+        </div>
       </section>
 
       {/* Contact Section */}
