@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import GalleryTabs from '@/components/gallery/GalleryTabs';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
@@ -33,6 +32,7 @@ const Gallery = () => {
   };
 
   return (
+    
     <main>
       {/* Page Header Section */}
       <section className="relative h-[40vh] flex items-center justify-center">

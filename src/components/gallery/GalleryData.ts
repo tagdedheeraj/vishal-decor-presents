@@ -69,11 +69,20 @@ export const exhibitionImages = [
   '/lovable-uploads/3be7990c-3a08-401b-9927-10e1c111846c.png', // Exhibition stalls with jewelry and crafts
 ];
 
+// Stall Fabrication specific images
+export const stallFabricationImages = [
+  '/lovable-uploads/b43417b2-73f0-46af-ace2-c23bafcdd95c.png', // Gujarat Offshore Wind Blocks exhibit with windmill models
+  '/lovable-uploads/340f60f8-d5de-45ea-a0a9-1eb14a8dc91f.png', // Gujarat Power Corporation exhibition booth with hydrogen station model
+  '/lovable-uploads/a1f7d92c-78f6-4dd1-9658-56dfff94c576.png', // Energy exhibition stall with India map display and solar panels
+  '/lovable-uploads/9a3bd467-02d8-455f-b78e-711d4b927fb3.png', // Gujarat Power Corporation booth with visitors viewing displays
+];
+
 // Helper function to get images based on active tab
 export const getDisplayImages = (activeTab: string): string[] => {
   if (activeTab === 'Wedding') return weddingImages;
   if (activeTab === 'Institution') return institutionImages;
   if (activeTab === 'Government Event') return governmentImages;
   if (activeTab === 'Exhibition') return exhibitionImages;
+  if (activeTab === 'Stall Fabrication') return stallFabricationImages;
   return placeholderImages;
 };
