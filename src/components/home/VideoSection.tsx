@@ -14,7 +14,7 @@ const VideoSection = () => {
         <img 
           src="/lovable-uploads/95146a72-40fc-425a-b02b-818c29b48849.png"
           alt="Vishal Decor Event Background"
-          className="absolute inset-0 w-full h-full object-cover z-[-1]"
+          className="absolute inset-0 w-full h-full object-cover z-[-1] filter grayscale"
         />
       </div>
       <div className="container mx-auto px-4 relative z-10">
