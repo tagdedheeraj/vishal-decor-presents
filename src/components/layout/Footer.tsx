@@ -8,6 +8,19 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white w-full">
       <div className="container mx-auto px-4 py-10">
+        <div className="flex flex-col items-center mb-6">
+          {/* Logo */}
+          <div className="mb-4">
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/2f6ac047-44ef-4817-8a16-9296f84cf90b.png" 
+                alt="Vishal Decor Logo" 
+                className="h-16 object-contain"
+              />
+            </Link>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {/* Contact Info */}
           <div className="md:pr-4">
