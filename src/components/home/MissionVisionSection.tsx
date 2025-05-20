@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Target, Lightbulb, Book } from 'lucide-react';
 
 const MissionVisionSection = () => {
   const [missionVisible, setMissionVisible] = useState(false);
@@ -27,8 +28,9 @@ const MissionVisionSection = () => {
           <div 
             className={`bg-white rounded-lg shadow-lg p-8 transition-all duration-700 transform ${
               missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            } text-center flex flex-col items-center`}
           >
+            <Target className="h-12 w-12 text-orange-DEFAULT mb-4" />
             <h3 className="text-2xl font-bold mb-4 text-orange-500">The Tenet</h3>
             <p className="mb-4">
               Vishal Decor derives its tenet from the promoter's passion and belief in communication and marketing as a tool for building and sustaining image and brand.
@@ -42,8 +44,9 @@ const MissionVisionSection = () => {
           <div 
             className={`bg-white rounded-lg shadow-lg p-8 transition-all duration-700 delay-300 transform ${
               missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            } text-center flex flex-col items-center`}
           >
+            <Lightbulb className="h-12 w-12 text-orange-DEFAULT mb-4" />
             <h3 className="text-2xl font-bold mb-4 text-orange-500">The Mission</h3>
             <p className="mb-4">
               Vishal Decor is organized on total 'Quality' principles which are directed towards their clients through powerful and effective implementation of projects in a very subtle way.
@@ -57,8 +60,9 @@ const MissionVisionSection = () => {
           <div 
             className={`bg-white rounded-lg shadow-lg p-8 transition-all duration-700 delay-600 transform ${
               missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-            }`}
+            } text-center flex flex-col items-center`}
           >
+            <Book className="h-12 w-12 text-orange-DEFAULT mb-4" />
             <h3 className="text-2xl font-bold mb-4 text-orange-500">Synopsis</h3>
             <p className="mb-4">
               With years of experience to fall back on, organizing and managing large size special events, corporate events, exhibitions and experiential marketing activities are like second nature to the seasoned team of Vishal Decor.

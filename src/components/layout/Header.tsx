@@ -37,26 +37,26 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-orange hover:text-orange-DEFAULT hover:font-medium transition-colors">Home</Link>
-            <Link to="/about" className="text-orange hover:text-orange-DEFAULT hover:font-medium transition-colors">About</Link>
-            <Link to="/services" className="text-orange hover:text-orange-DEFAULT hover:font-medium transition-colors">Services</Link>
-            <Link to="/gallery" className="text-orange hover:text-orange-DEFAULT hover:font-medium transition-colors">Gallery</Link>
-            <Link to="/clients" className="text-orange hover:text-orange-DEFAULT hover:font-medium transition-colors">Clients</Link>
-            <Link to="/contact" className="text-orange hover:text-orange-DEFAULT hover:font-medium transition-colors">Contact</Link>
+            <Link to="/" className="text-orange hover:text-black hover:font-medium transition-colors">Home</Link>
+            <Link to="/about" className="text-orange hover:text-black hover:font-medium transition-colors">About</Link>
+            <Link to="/services" className="text-orange hover:text-black hover:font-medium transition-colors">Services</Link>
+            <Link to="/gallery" className="text-orange hover:text-black hover:font-medium transition-colors">Gallery</Link>
+            <Link to="/clients" className="text-orange hover:text-black hover:font-medium transition-colors">Clients</Link>
+            <Link to="/contact" className="text-orange hover:text-black hover:font-medium transition-colors">Contact</Link>
           </nav>
           
           {/* Social Media Icons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange-DEFAULT transition-colors">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
               <Facebook size={20} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange-DEFAULT transition-colors">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
               <Instagram size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange-DEFAULT transition-colors">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange-DEFAULT transition-colors">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
               <Youtube size={20} />
             </a>
           </div>
@@ -83,25 +83,25 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-cream py-4">
           <nav className="flex flex-col">
-            <Link to="/" className="text-orange hover:text-orange-DEFAULT hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link to="/about" className="text-orange hover:text-orange-DEFAULT hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link to="/services" className="text-orange hover:text-orange-DEFAULT hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Services</Link>
-            <Link to="/gallery" className="text-orange hover:text-orange-DEFAULT hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
-            <Link to="/clients" className="text-orange hover:text-orange-DEFAULT hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Clients</Link>
-            <Link to="/contact" className="text-orange hover:text-orange-DEFAULT hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            <Link to="/" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            <Link to="/about" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link to="/services" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Services</Link>
+            <Link to="/gallery" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
+            <Link to="/clients" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Clients</Link>
+            <Link to="/contact" className="text-orange hover:text-black hover:font-medium py-2 px-4 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</Link>
             
             {/* Social icons for mobile */}
             <div className="flex items-center space-x-4 px-4 mt-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange-DEFAULT transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange-DEFAULT transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange-DEFAULT transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange-DEFAULT transition-colors">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
                 <Youtube size={20} />
               </a>
             </div>

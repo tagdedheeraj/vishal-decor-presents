@@ -8,7 +8,15 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white w-full">
       <div className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div className="text-center mb-8">
+          <img 
+            src="/lovable-uploads/fb0e2e81-768f-474e-a868-a068ec13db8c.png" 
+            alt="Vishal Decor Logo" 
+            className="h-16 mx-auto mb-4" 
+          />
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           {/* Contact Info */}
           <div className="md:pr-4">
             <h3 className="text-xl font-bold mb-3 text-orange-DEFAULT">Contact Info</h3>
@@ -29,7 +37,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="relative">
+          <div className="relative md:px-2">
             <h3 className="text-xl font-bold mb-3 text-orange-DEFAULT">Quick Links</h3>
             <ul className="space-y-2 mb-4">
               <li><Link to="/" className="text-sm hover:text-orange-light transition-colors">Home</Link></li>
@@ -39,13 +47,10 @@ const Footer = () => {
               <li><Link to="/clients" className="text-sm hover:text-orange-light transition-colors">Clients</Link></li>
               <li><Link to="/contact" className="text-sm hover:text-orange-light transition-colors">Contact</Link></li>
             </ul>
-            
-            {/* Separator only on medium screens and above */}
-            <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[1px] bg-orange-DEFAULT"></div>
           </div>
 
           {/* Services */}
-          <div className="md:pl-4">
+          <div className="md:pl-2">
             <h3 className="text-xl font-bold mb-3 text-orange-DEFAULT">Our Services</h3>
             <ul className="space-y-2">
               <li><Link to="/services/government" className="text-sm hover:text-orange-light transition-colors">Government</Link></li>
