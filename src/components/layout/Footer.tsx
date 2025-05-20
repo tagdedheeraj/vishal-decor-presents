@@ -10,9 +10,14 @@ const Footer = () => {
     <footer className="bg-black text-white w-full">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-          {/* Company Info */}
+          {/* Company Info with Logo */}
           <div>
-            <div className="mb-6">
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/42ad349b-3839-422e-8813-126713cc104e.png" 
+                alt="Vishal Decor Logo" 
+                className="h-16 w-auto mb-3"
+              />
               <p className="text-sm text-gray-300 mt-4">
                 Creating unforgettable experiences through exceptional event decoration and planning since 2001.
               </p>
