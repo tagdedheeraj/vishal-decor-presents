@@ -13,7 +13,7 @@ const ClientLogo: React.FC<ClientLogoProps> = ({ src, alt }) => {
         src={src} 
         alt={alt}
         className="max-h-16 max-w-full object-contain" 
-        loading="lazy"
+        loading="eager" // Changed from lazy to eager loading
         onError={(e) => {
           // Use a transparent placeholder if image fails to load
           (e.target as HTMLImageElement).src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';

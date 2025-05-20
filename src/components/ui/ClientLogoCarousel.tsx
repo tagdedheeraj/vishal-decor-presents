@@ -36,12 +36,16 @@ const clientLogos = [
 const ClientLogoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(true);
   const itemsPerRow = 5;
   const rowsToShow = 2;
   const itemsPerSet = itemsPerRow * rowsToShow;
   const totalSets = Math.ceil(clientLogos.length / itemsPerSet);
 
   useEffect(() => {
+    // Mark as loaded after initial render
+    setInitialLoad(false);
+    
     const interval = setInterval(() => {
       // Start the animation
       setAnimating(true);
@@ -52,7 +56,7 @@ const ClientLogoCarousel = () => {
         setAnimating(false);
       }, 450); // slightly less than the animation duration
       
-    }, 5000); // Update every 5 seconds (changed from 3 seconds)
+    }, 5000); // Update every 5 seconds
 
     return () => clearInterval(interval);
   }, [totalSets]);
@@ -77,7 +81,7 @@ const ClientLogoCarousel = () => {
   return (
     <div className="overflow-hidden h-64 relative">
       <div className={`transition-all duration-500 ease-in-out absolute w-full
-            ${animating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
+            ${!initialLoad && animating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
         {/* First row */}
         <div className="flex flex-row justify-between gap-4 mb-6">
           {firstRowLogos.map((logo, logoIndex) => (
