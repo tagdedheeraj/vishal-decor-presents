@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -11,8 +10,8 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/lovable-uploads/0d382b66-fd11-436a-b353-d5f9210c0a85.png',
-    caption: 'Premium event decoration by professionals',
+    image: '/lovable-uploads/5a3c62dd-5bd8-4a07-9574-cb922241681e.png',
+    caption: 'Creating memorable government events',
   },
   {
     image: '/lovable-uploads/49147b52-8023-4f1e-a115-4f8810cffed1.png',
