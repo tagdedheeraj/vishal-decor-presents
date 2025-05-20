@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ImageSlider from '@/components/ui/ImageSlider';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -27,6 +26,16 @@ const ServiceCard = ({ title, icon, description, link }: { title: string; icon: 
 
 const Index = () => {
   const [videoOpen, setVideoOpen] = useState(false);
+  const [introVisible, setIntroVisible] = useState(false);
+
+  // Add effect to trigger animation when component mounts
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIntroVisible(true);
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <main>
@@ -35,11 +44,15 @@ const Index = () => {
         <ImageSlider />
       </section>
 
-      {/* Introduction Section - Moved to appear right after the slider */}
-      <section className="py-20">
+      {/* Introduction Section - Now with animations */}
+      <section className="py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div 
+              className={`transition-all duration-1000 delay-100 transform ${
+                introVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24'
+              }`}
+            >
               <img 
                 src="/lovable-uploads/80b51345-67cb-4af8-9739-ec4b36c04bff.png" 
                 alt="Vishal Decor & Event Speaker" 
@@ -47,18 +60,46 @@ const Index = () => {
               />
             </div>
             <div>
-              <h2 className="text-2xl font-medium text-gold mb-2">Our Introductions</h2>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6">WELCOME TO VISHAL DECOR & EVENT PVT LTD</h3>
-              <p className="mb-4">
+              <h2 
+                className={`text-2xl font-medium text-gold mb-2 transition-all duration-700 delay-300 transform ${
+                  introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                Our Introductions
+              </h2>
+              <h3 
+                className={`text-3xl md:text-4xl font-bold mb-6 transition-all duration-700 delay-500 transform ${
+                  introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                WELCOME TO VISHAL DECOR & EVENT PVT LTD
+              </h3>
+              <p 
+                className={`mb-4 transition-all duration-700 delay-700 transform ${
+                  introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
                 Vishal Décor And Event Pvt. Ltd. is your one-stop destination for all event solutions. We transform our clients' imaginations into stunning realities, delivering events that leave lasting impressions.
               </p>
-              <p className="mb-4">
+              <p 
+                className={`mb-4 transition-all duration-700 delay-900 transform ${
+                  introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
                 With a passion for creativity and innovation, we bring fresh ideas and unique concepts to every project—ensuring no two events are ever the same.
               </p>
-              <p className="mb-4">
+              <p 
+                className={`mb-4 transition-all duration-700 delay-1100 transform ${
+                  introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
                 From Exhibitions and Trade Fairs to Corporate Events, Government Functions, Road Shows, Agenda-Based Conferences, Product Launches, and a variety of private celebrations such as Weddings, Social Gatherings, and Religious Functions, we handle it all with precision and flair.
               </p>
-              <p>
+              <p 
+                className={`transition-all duration-700 delay-1300 transform ${
+                  introVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
                 Backed by over 25 years of experience, our legacy of excellence is reflected in the glowing smiles of our clients—captured beautifully in our gallery.
               </p>
             </div>
@@ -115,7 +156,7 @@ const Index = () => {
         </Dialog>
       </section>
 
-      {/* Services Section - MOVED to appear after the YouTube Video Section */}
+      {/* Services Section */}
       <section className="py-20 bg-orange-500">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
