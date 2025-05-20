@@ -11,6 +11,10 @@ interface Slide {
 
 const slides: Slide[] = [
   {
+    image: '/lovable-uploads/0d382b66-fd11-436a-b353-d5f9210c0a85.png',
+    caption: 'Premium event decoration by professionals',
+  },
+  {
     image: '/lovable-uploads/49147b52-8023-4f1e-a115-4f8810cffed1.png',
     caption: 'We build your dream around you',
   },
