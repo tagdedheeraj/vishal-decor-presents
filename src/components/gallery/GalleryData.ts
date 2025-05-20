@@ -28,6 +28,20 @@ export const weddingImages = [
   '/lovable-uploads/391a7656-4feb-4201-9de0-e764fac1262b.png',
 ];
 
+// Government Event specific images
+export const governmentImages = [
+  '/lovable-uploads/1c08e6af-be17-4b8a-9211-5c6e516ea3f8.png', // Cultural performance with backdrop
+  '/lovable-uploads/7734053c-3a7b-437d-bd65-09b4a3b3cf55.png', // Government event stage with officials' photos
+  '/lovable-uploads/bfb77914-9e0c-4880-9a4c-18b10398fe7b.png', // Lamp lighting ceremony
+  '/lovable-uploads/8c7b69f7-57c5-4e01-ad19-fddac5f1f2ed.png', // Cultural event with flag
+  '/lovable-uploads/3e889393-cd73-4229-be1b-f9edee733cfa.png', // Tribal festival inauguration
+  '/lovable-uploads/7def0f14-80e1-4782-a12e-b737622c4a54.png', // Heritage tourism policy launch entrance
+  '/lovable-uploads/f802bb79-6835-4d41-b469-abdd68ff4e3e.png', // Policy document launch
+  '/lovable-uploads/f795c471-6a1c-470f-8be9-f61c86a54c9a.png', // Agriculture market stalls
+  '/lovable-uploads/2230d4cb-95c1-4476-b0ca-e505c5989060.png', // Night event stage with LED screen
+  '/lovable-uploads/a4c78739-c5f0-4529-8120-bda33ba0c277.png', // Outdoor event setup with VVIP section
+];
+
 // Institution specific images
 export const institutionImages = [
   '/lovable-uploads/14e4e6f6-f8d2-49e3-995c-5983fc2e5a3d.png', // Convocation with officials at podium
@@ -47,5 +61,6 @@ export const institutionImages = [
 export const getDisplayImages = (activeTab: string): string[] => {
   if (activeTab === 'Wedding') return weddingImages;
   if (activeTab === 'Institution') return institutionImages;
+  if (activeTab === 'Government Event') return governmentImages;
   return placeholderImages;
 };
