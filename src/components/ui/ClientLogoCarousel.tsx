@@ -52,7 +52,7 @@ const ClientLogoCarousel = () => {
         setAnimating(false);
       }, 450); // slightly less than the animation duration
       
-    }, 3000); // Update every 3 seconds (increased from 2 seconds)
+    }, 5000); // Update every 5 seconds (changed from 3 seconds)
 
     return () => clearInterval(interval);
   }, [totalSets]);
