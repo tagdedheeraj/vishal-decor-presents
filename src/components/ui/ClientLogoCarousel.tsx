@@ -37,6 +37,8 @@ const ClientLogoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  
   const itemsPerRow = 5;
   const rowsToShow = 2;
   const itemsPerSet = itemsPerRow * rowsToShow;
@@ -44,10 +46,30 @@ const ClientLogoCarousel = () => {
 
   // Preload all images on component mount
   useEffect(() => {
-    clientLogos.forEach(logo => {
-      const img = new Image();
-      img.src = logo.src;
-    });
+    const preloadImages = () => {
+      let loadedCount = 0;
+      const totalImages = clientLogos.length;
+      
+      clientLogos.forEach(logo => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            setImagesLoaded(true);
+          }
+        };
+        img.onerror = () => {
+          loadedCount++;
+          console.error(`Failed to load image: ${logo.src}`);
+          if (loadedCount === totalImages) {
+            setImagesLoaded(true);
+          }
+        };
+        img.src = logo.src;
+      });
+    };
+    
+    preloadImages();
   }, []);
 
   useEffect(() => {
@@ -57,6 +79,8 @@ const ClientLogoCarousel = () => {
     }, 300);
     
     const interval = setInterval(() => {
+      if (!imagesLoaded) return; // Don't start animation until images are loaded
+      
       // Start the animation
       setAnimating(true);
       
@@ -72,7 +96,7 @@ const ClientLogoCarousel = () => {
       clearTimeout(timer);
       clearInterval(interval);
     };
-  }, [totalSets]);
+  }, [totalSets, imagesLoaded]);
 
   // Get the current logos to display (10 logos: 5 in each row)
   const startIdx = currentIndex * itemsPerSet;
