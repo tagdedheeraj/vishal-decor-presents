@@ -50,7 +50,37 @@
       padding: 10px;
       margin: 15px 0;
     }
+    .download-container {
+      text-align: center;
+      margin: 30px 0;
+      padding: 15px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+    }
+    .download-button {
+      display: inline-block;
+      background-color: #FF9800;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      margin: 10px;
+      transition: background-color 0.3s;
+    }
+    .download-button:hover {
+      background-color: #e68a00;
+    }
+    .print-button {
+      background-color: #4CAF50;
+    }
+    .print-button:hover {
+      background-color: #3e8e41;
+    }
     @media print {
+      .download-container {
+        display: none;
+      }
       body {
         font-size: 12pt;
       }
@@ -72,6 +102,12 @@
   </style>
 </head>
 <body>
+  <div class="download-container">
+    <h3>इंस्टॉलेशन गाइड डाउनलोड करें</h3>
+    <button class="download-button" onclick="generatePDF()">पीडीएफ डाउनलोड करें</button>
+    <button class="download-button print-button" onclick="window.print()">प्रिंट करें</button>
+  </div>
+
   <div class="container">
     <h1>Vishal Decor Website - Installation Guide</h1>
     <p>Version 1.0 | Last Updated: May 2025</p>
@@ -136,42 +172,42 @@
   <div id="cpanel" class="step no-break">
     <h2>4. cPanel Installation</h2>
     <ol>
-      <li>Log in to your cPanel account</li>
-      <li>Click on the "File Manager" icon</li>
-      <li>Navigate to <code>public_html</code> folder</li>
-      <li>If replacing an existing site, consider backing up or renaming old files</li>
-      <li>Click "Upload" and select all files from your <code>dist</code> folder</li>
-      <li>Alternatively, upload the ZIP file and extract it in the public_html directory</li>
-      <li>Check that the <code>.htaccess</code> file was uploaded properly</li>
+      <li>अपने cPanel अकाउंट में लॉग इन करें</li>
+      <li>"File Manager" आइकन पर क्लिक करें</li>
+      <li><code>public_html</code> फोल्डर में जाएँ</li>
+      <li>यदि पुरानी साइट बदल रहे हैं, तो पुरानी फाइलों का बैकअप लें या उन्हें रीनेम करें</li>
+      <li>"Upload" पर क्लिक करें और अपने <code>dist</code> फोल्डर से सभी फाइलें सिलेक्ट करें</li>
+      <li>वैकल्पिक रूप से, ZIP फाइल अपलोड करें और उसे public_html डायरेक्टरी में एक्सट्रैक्ट करें</li>
+      <li>जांचें कि <code>.htaccess</code> फाइल सही तरीके से अपलोड हुई है</li>
     </ol>
     
     <div class="warning">
-      <p><strong>Important:</strong> If the .htaccess file is not showing, you may need to enable "Show Hidden Files" in File Manager settings.</p>
+      <p><strong>महत्वपूर्ण:</strong> यदि .htaccess फाइल नहीं दिख रही है, तो आपको फाइल मैनेजर सेटिंग्स में "Show Hidden Files" को इनेबल करना होगा।</p>
     </div>
   </div>
 
   <div id="plesk" class="step no-break">
     <h2>5. Plesk Installation</h2>
     <ol>
-      <li>Log in to your Plesk control panel</li>
-      <li>Go to "Websites & Domains" and find your domain</li>
-      <li>Click on "File Manager"</li>
-      <li>Navigate to the <code>httpdocs</code> folder</li>
-      <li>Use the "Upload" button to upload all files from the <code>dist</code> folder</li>
-      <li>Make sure the <code>.htaccess</code> file is uploaded correctly</li>
+      <li>अपने Plesk कंट्रोल पैनल में लॉग इन करें</li>
+      <li>"Websites & Domains" पर जाएँ और अपना डोमेन ढूंढें</li>
+      <li>"File Manager" पर क्लिक करें</li>
+      <li><code>httpdocs</code> फोल्डर में जाएँ</li>
+      <li>"Upload" बटन का उपयोग करके <code>dist</code> फोल्डर से सभी फाइलें अपलोड करें</li>
+      <li>सुनिश्चित करें कि <code>.htaccess</code> फाइल सही तरीके से अपलोड हुई है</li>
     </ol>
   </div>
 
   <div id="subfolder" class="step no-break">
     <h2>6. Installing in a Subfolder</h2>
-    <p>If you want to install Vishal Decor website in a subfolder (e.g., yourdomain.com/vishaldecor):</p>
+    <p>यदि आप Vishal Decor वेबसाइट को सबफोल्डर में इंस्टॉल करना चाहते हैं (उदाहरण: yourdomain.com/vishaldecor):</p>
     <ol>
-      <li>Create the subfolder in your hosting's public directory</li>
-      <li>Upload all files from the <code>dist</code> folder to this subfolder</li>
-      <li>You may need to modify the <code>.htaccess</code> file to work in a subfolder by adding the line:</li>
+      <li>अपने होस्टिंग के पब्लिक डायरेक्टरी में सबफोल्डर बनाएं</li>
+      <li><code>dist</code> फोल्डर से सभी फाइलें इस सबफोल्डर में अपलोड करें</li>
+      <li>आपको <code>.htaccess</code> फाइल को सबफोल्डर में काम करने के लिए संशोधित करना पड़ सकता है:</li>
     </ol>
     <code>RewriteBase /your-subfolder-name/</code>
-    <p>Add this line after the <code>RewriteEngine On</code> line in the .htaccess file.</p>
+    <p>इस लाइन को .htaccess फाइल में <code>RewriteEngine On</code> लाइन के बाद जोड़ें।</p>
   </div>
 
   <div id="troubleshooting" class="step no-break">
@@ -179,48 +215,78 @@
     <h3>Common Issues and Solutions</h3>
     
     <h4>404 Page Not Found Errors</h4>
-    <p>If you're getting 404 errors when navigating the site:</p>
+    <p>यदि आपको साइट नेविगेट करते समय 404 एरर मिल रहे हैं:</p>
     <ul>
-      <li>Make sure the .htaccess file was uploaded correctly</li>
-      <li>Check if your server supports mod_rewrite (ask your hosting provider)</li>
-      <li>If installing in a subfolder, make sure you've added the RewriteBase directive</li>
+      <li>सुनिश्चित करें कि .htaccess फाइल सही तरीके से अपलोड हुई है</li>
+      <li>जांचें कि आपका सर्वर mod_rewrite का समर्थन करता है (अपने होस्टिंग प्रदाता से पूछें)</li>
+      <li>यदि सबफोल्डर में इंस्टॉल कर रहे हैं, तो सुनिश्चित करें कि आपने RewriteBase निर्देश जोड़ा है</li>
     </ul>
     
     <h4>Missing Images or Styles</h4>
-    <p>If your site is missing images or appears without styling:</p>
+    <p>यदि आपकी साइट पर इमेज या स्टाइलिंग गायब है:</p>
     <ul>
-      <li>Ensure all files were uploaded completely</li>
-      <li>Check the browser console for specific errors (press F12 in most browsers)</li>
-      <li>Verify file permissions (files should be 644, directories 755)</li>
+      <li>सुनिश्चित करें कि सभी फाइलें पूरी तरह से अपलोड हुई हैं</li>
+      <li>विशिष्ट त्रुटियों के लिए ब्राउज़र कंसोल जांचें (अधिकांश ब्राउज़र में F12 दबाकर)</li>
+      <li>फाइल अनुमतियों को सत्यापित करें (फाइलों का 644, डायरेक्टरीज का 755 होना चाहिए)</li>
     </ul>
     
     <h4>Server Error 500</h4>
-    <p>If you're getting internal server errors:</p>
+    <p>यदि आपको इंटरनल सर्वर एरर मिल रहे हैं:</p>
     <ul>
-      <li>Check your server's error logs</li>
-      <li>Verify your .htaccess file for syntax errors</li>
-      <li>Contact your hosting provider for assistance</li>
+      <li>अपने सर्वर के एरर लॉग देखें</li>
+      <li>सिंटैक्स एरर के लिए अपनी .htaccess फाइल जांचें</li>
+      <li>सहायता के लिए अपने होस्टिंग प्रदाता से संपर्क करें</li>
     </ul>
   </div>
 
   <div id="maintenance" class="step no-break">
     <h2>8. Maintenance and Updates</h2>
-    <p>To update your website in the future:</p>
+    <p>भविष्य में अपनी वेबसाइट अपडेट करने के लिए:</p>
     <ul>
-      <li>Always back up your existing site before updating</li>
-      <li>Replace the files with new versions as needed</li>
-      <li>Keep a copy of your customized .htaccess if you've modified it</li>
+      <li>अपडेट करने से पहले हमेशा अपनी मौजूदा साइट का बैकअप लें</li>
+      <li>आवश्यकतानुसार फाइलों को नए संस्करणों से बदलें</li>
+      <li>यदि आपने इसे संशोधित किया है तो अपने कस्टमाइज्ड .htaccess की एक कॉपी रखें</li>
     </ul>
     <div class="tip">
-      <p><strong>Recommendation:</strong> Use the included <code>check-installation.html</code> file to verify your installation is working correctly. Simply navigate to yourdomain.com/check-installation.html after uploading.</p>
+      <p><strong>सुझाव:</strong> अपलोड करने के बाद अपने इंस्टॉलेशन की जांच करने के लिए शामिल <code>check-installation.html</code> फाइल का उपयोग करें। बस अपलोड के बाद yourdomain.com/check-installation.html पर जाएँ।</p>
     </div>
   </div>
 
   <div class="container">
     <h2>Need Further Assistance?</h2>
-    <p>If you encounter any issues not covered in this guide, please contact your web developer or hosting provider for additional support.</p>
+    <p>यदि आपको इस गाइड में शामिल न की गई किसी समस्या का सामना होता है, तो कृपया अतिरिक्त सहायता के लिए अपने वेब डेवलपर या होस्टिंग प्रदाता से संपर्क करें।</p>
     <p><strong>Vishal Decor & Event Pvt Ltd</strong><br>
     Website Installation Guide v1.0</p>
   </div>
+
+  <script>
+    function generatePDF() {
+      // Set print-specific styles
+      const originalBodyStyle = document.body.style.cssText;
+      document.body.style.width = '210mm';
+      document.body.style.padding = '15mm';
+      
+      // Hide download buttons for PDF generation
+      const downloadContainer = document.querySelector('.download-container');
+      const originalDisplayStyle = downloadContainer.style.display;
+      downloadContainer.style.display = 'none';
+      
+      // Create filename with date
+      const now = new Date();
+      const dateString = now.getFullYear() + '-' + 
+                        String(now.getMonth() + 1).padStart(2, '0') + '-' + 
+                        String(now.getDate()).padStart(2, '0');
+      const filename = 'VishalDecor-Installation-Guide-' + dateString + '.pdf';
+      
+      // Trigger print dialog optimized for saving as PDF
+      window.print();
+      
+      // Restore original styles
+      setTimeout(function() {
+        document.body.style.cssText = originalBodyStyle;
+        downloadContainer.style.display = originalDisplayStyle;
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
