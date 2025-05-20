@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -5,25 +6,22 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
   image: string;
-  caption: string;
+  showSpecialLayout?: boolean;
 }
 
 const slides: Slide[] = [
   {
     image: '/lovable-uploads/5a3c62dd-5bd8-4a07-9574-cb922241681e.png',
-    caption: 'Creating memorable government events',
+    showSpecialLayout: true,
   },
   {
     image: '/lovable-uploads/49147b52-8023-4f1e-a115-4f8810cffed1.png',
-    caption: 'We build your dream around you',
   },
   {
     image: '/lovable-uploads/ec48c5ef-6f5a-48d9-9e47-2f7afc552716.png',
-    caption: 'Your vision. Our innovation',
   },
   {
     image: '/lovable-uploads/5b939f6b-4243-4c19-b7b2-a343659e1656.png',
-    caption: 'Where creativity meets perfection',
   },
 ];
 
@@ -74,12 +72,23 @@ const ImageSlider: React.FC = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-            <h2 
-              className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-shadow
-                ${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}
-            >
-              {slide.caption}
-            </h2>
+            {slide.showSpecialLayout ? (
+              <div className={`${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}>
+                <p className="text-lg md:text-xl uppercase tracking-wider mb-2 font-light">WELCOME TO</p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">VISHAL DECOR & EVENT PVT LTD</h1>
+                <div className="w-24 h-0.5 bg-orange mx-auto mb-3"></div>
+                <p className="text-sm md:text-base uppercase tracking-wide font-light">STEP BEYOND YOUR EXPECTATIONS</p>
+              </div>
+            ) : (
+              <h2 
+                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-shadow
+                  ${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}
+              >
+                {index === 1 ? "We build your dream around you" : 
+                 index === 2 ? "Your vision. Our innovation" : 
+                 "Where creativity meets perfection"}
+              </h2>
+            )}
           </div>
         </div>
       ))}
