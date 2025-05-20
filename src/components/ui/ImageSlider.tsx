@@ -50,7 +50,7 @@ const ImageSlider: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-[100vh] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -118,11 +118,11 @@ const ImageSlider: React.FC = () => {
         ))}
       </div>
       
-      {/* Know About Us button - now with standard width and positioned at bottom edge */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <Link to="/about" className="block">
+      {/* Know About Us button - centered with fixed width at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+        <Link to="/about">
           <Button 
-            className="bg-orange hover:bg-orange-dark text-white py-6 mx-auto px-10 rounded-none"
+            className="bg-orange hover:bg-orange-dark text-white py-6 px-10 rounded-none"
             size="lg"
           >
             Know About Us
