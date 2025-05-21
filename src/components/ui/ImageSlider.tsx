@@ -110,7 +110,7 @@ const ImageSlider: React.FC = () => {
       <div className="absolute bottom-0 left-0 right-0 flex justify-center">
         <Link to="/about">
           <Button 
-            className="bg-orange hover:bg-orange-dark text-white py-6 px-10 rounded-none"
+            className="bg-orange-500 hover:bg-orange-dark text-white py-6 px-10 rounded-none"
             size="lg"
           >
             Know About Us
