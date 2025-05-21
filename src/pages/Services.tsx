@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -22,6 +21,16 @@ const Services = () => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services</h1>
           <p className="text-xl text-white mb-6">We Shape the Perfect Solution</p>
+        </div>
+        
+        {/* Button positioned at the bottom like the about page */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+          <Button 
+            className="bg-orange-500 hover:bg-orange-dark text-white py-6 px-10 rounded-none"
+            size="lg"
+          >
+            Services
+          </Button>
         </div>
       </section>
 

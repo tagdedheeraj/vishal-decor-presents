@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ClientLogoCarousel from '@/components/ui/ClientLogoCarousel';
 import VideoMap from '@/components/ui/VideoMap';
@@ -19,6 +18,16 @@ const Clients = () => {
               <Button className="bg-orange hover:bg-orange-dark text-white">Contact Us</Button>
             </Link>
           </div>
+        </div>
+        
+        {/* Button positioned at the bottom like the about page */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+          <Button 
+            className="bg-orange-500 hover:bg-orange-dark text-white py-6 px-10 rounded-none"
+            size="lg"
+          >
+            Our Clients
+          </Button>
         </div>
       </section>
 

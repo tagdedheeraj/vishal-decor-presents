@@ -3,6 +3,7 @@ import GalleryTabs from '@/components/gallery/GalleryTabs';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
 import ImagePopup from '@/components/gallery/ImagePopup';
 import { categories, getDisplayImages } from '@/components/gallery/GalleryData';
+import { Button } from '@/components/ui/button';
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('Government Event');
@@ -38,8 +39,17 @@ const Gallery = () => {
       <section className="relative h-[40vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-navy bg-opacity-90 z-0"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Gallery</h1>
-          <p className="text-xl text-white mb-6">Explore Our Creative Work</p>
+          {/* Removed the heading */}
+        </div>
+        
+        {/* Button positioned at the bottom like the about page */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+          <Button 
+            className="bg-orange-500 hover:bg-orange-dark text-white py-6 px-10 rounded-none"
+            size="lg"
+          >
+            Gallery
+          </Button>
         </div>
       </section>
 
