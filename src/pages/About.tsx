@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -15,8 +14,7 @@ const About = () => {
         ></div>
         <div className="absolute inset-0 bg-navy bg-opacity-70 z-0"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Us</h1>
-          {/* Removed "Discover Our Story and Vision" text */}
+          {/* Removed the h1 heading "About Us" */}
         </div>
         
         {/* Button positioned at the bottom like the home page slider */}
