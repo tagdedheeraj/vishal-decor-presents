@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const About = () => {
   return (
@@ -14,7 +16,17 @@ const About = () => {
         <div className="absolute inset-0 bg-navy bg-opacity-70 z-0"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Us</h1>
-          <p className="text-xl text-white mb-6">Discover Our Story and Vision</p>
+          {/* Removed "Discover Our Story and Vision" text */}
+        </div>
+        
+        {/* Button positioned at the bottom like the home page slider */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+          <Button 
+            className="bg-orange-500 hover:bg-orange-dark text-white py-6 px-10 rounded-none"
+            size="lg"
+          >
+            About Us
+          </Button>
         </div>
       </section>
 
