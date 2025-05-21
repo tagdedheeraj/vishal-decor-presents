@@ -1,23 +1,23 @@
+
 import React from 'react';
 import ClientLogoCarousel from '@/components/ui/ClientLogoCarousel';
 import VideoMap from '@/components/ui/VideoMap';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const Clients = () => {
   return (
     <main>
-      {/* Page Header Section */}
+      {/* Page Header Section with new background image */}
       <section className="relative h-[40vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0"></div>
+        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0">
+          <img 
+            src="/lovable-uploads/a4af9d91-6680-43f1-99c1-e11d3eb2d1dd.png" 
+            alt="Decorated venue seating" 
+            className="w-full h-full object-cover opacity-50"
+          />
+        </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Clients</h1>
-          <p className="text-xl text-white mb-6">Trusted by Leading Organizations Across India</p>
-          <div className="flex justify-center">
-            <Link to="/contact">
-              <Button className="bg-orange hover:bg-orange-dark text-white">Contact Us</Button>
-            </Link>
-          </div>
+          {/* Removed headings and Contact Us button */}
         </div>
         
         {/* Button positioned at the bottom like the about page */}
