@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { X, MessageCircle } from 'lucide-react';
+import { X, MessageCircle, WhatsApp } from 'lucide-react';
 
 const WhatsAppPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +36,7 @@ const WhatsAppPopup = () => {
           onClick={handleOpen}
           className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center transition-all duration-300 animate-bounce"
         >
-          <MessageCircle className="h-6 w-6" />
+          <WhatsApp className="h-6 w-6" />
         </button>
       ) : (
         <div className="bg-white rounded-lg shadow-xl p-4 w-72 transition-all duration-300 animate-fade-in">
@@ -51,7 +51,7 @@ const WhatsAppPopup = () => {
             onClick={handleWhatsAppClick}
             className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full w-full flex items-center justify-center gap-2"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsApp className="h-5 w-5" />
             <span>+91 97253 04050</span>
           </button>
         </div>
