@@ -7,12 +7,26 @@ const Contact = () => {
   return (
     <main>
       {/* Header Section */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            We'd love to hear from you. Reach out to us for any questions or inquiries.
-          </p>
+      <section className="relative h-[40vh] flex items-center justify-center">
+        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0">
+          <img 
+            src="/lovable-uploads/a4af9d91-6680-43f1-99c1-e11d3eb2d1dd.png" 
+            alt="Decorated venue seating" 
+            className="w-full h-full object-cover opacity-50"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          {/* Removed the paragraph text as requested */}
+        </div>
+        
+        {/* Button positioned at the bottom like the other pages */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+          <Button 
+            className="bg-orange-500 hover:bg-orange-dark text-white py-6 px-10 rounded-none"
+            size="lg"
+          >
+            Contact Us
+          </Button>
         </div>
       </section>
 
