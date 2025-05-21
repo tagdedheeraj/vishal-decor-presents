@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import GalleryTabs from '@/components/gallery/GalleryTabs';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
@@ -37,7 +38,13 @@ const Gallery = () => {
     <main>
       {/* Page Header Section */}
       <section className="relative h-[40vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0"></div>
+        <div className="absolute inset-0 bg-navy bg-opacity-90 z-0">
+          <img 
+            src="/lovable-uploads/a4af9d91-6680-43f1-99c1-e11d3eb2d1dd.png" 
+            alt="Decorated venue seating" 
+            className="w-full h-full object-cover opacity-50"
+          />
+        </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           {/* Removed the heading */}
         </div>

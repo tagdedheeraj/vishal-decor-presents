@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -8,11 +9,13 @@ const About = () => {
       {/* Page Header Section */}
       <section className="relative h-[40vh] flex items-center justify-center">
         {/* Background image with overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center z-0" 
-          style={{ backgroundImage: "url('/lovable-uploads/8d4af39d-0594-4344-83df-ad312744db22.png')" }}
-        ></div>
-        <div className="absolute inset-0 bg-navy bg-opacity-70 z-0"></div>
+        <div className="absolute inset-0 bg-navy bg-opacity-70 z-0">
+          <img 
+            src="/lovable-uploads/a4af9d91-6680-43f1-99c1-e11d3eb2d1dd.png" 
+            alt="Decorated venue seating" 
+            className="w-full h-full object-cover opacity-50"
+          />
+        </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           {/* Removed the h1 heading "About Us" */}
         </div>
