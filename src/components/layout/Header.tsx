@@ -44,37 +44,37 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <Link 
               to="/" 
-              className={`transition-colors ${isActive('/') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`transition-colors ${isActive('/') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className={`transition-colors ${isActive('/about') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`transition-colors ${isActive('/about') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
             >
               About
             </Link>
             <Link 
               to="/services" 
-              className={`transition-colors ${isActive('/services') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`transition-colors ${isActive('/services') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
             >
               Services
             </Link>
             <Link 
               to="/gallery" 
-              className={`transition-colors ${isActive('/gallery') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`transition-colors ${isActive('/gallery') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
             >
               Gallery
             </Link>
             <Link 
               to="/clients" 
-              className={`transition-colors ${isActive('/clients') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`transition-colors ${isActive('/clients') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
             >
               Clients
             </Link>
             <Link 
               to="/contact" 
-              className={`transition-colors ${isActive('/contact') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`transition-colors ${isActive('/contact') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
             >
               Contact
             </Link>
@@ -82,16 +82,16 @@ const Header = () => {
           
           {/* Social Media Icons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
               <Facebook size={20} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
               <Instagram size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
               <Youtube size={20} />
             </a>
           </div>
@@ -101,7 +101,7 @@ const Header = () => {
             <Button 
               variant="ghost" 
               size="icon"
-              className="text-orange"
+              className="text-orange-500"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -120,42 +120,42 @@ const Header = () => {
           <nav className="flex flex-col">
             <Link 
               to="/" 
-              className={`py-2 px-4 transition-colors ${isActive('/') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`py-2 px-4 transition-colors ${isActive('/') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className={`py-2 px-4 transition-colors ${isActive('/about') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`py-2 px-4 transition-colors ${isActive('/about') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               to="/services" 
-              className={`py-2 px-4 transition-colors ${isActive('/services') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`py-2 px-4 transition-colors ${isActive('/services') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
               to="/gallery" 
-              className={`py-2 px-4 transition-colors ${isActive('/gallery') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`py-2 px-4 transition-colors ${isActive('/gallery') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Gallery
             </Link>
             <Link 
               to="/clients" 
-              className={`py-2 px-4 transition-colors ${isActive('/clients') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`py-2 px-4 transition-colors ${isActive('/clients') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Clients
             </Link>
             <Link 
               to="/contact" 
-              className={`py-2 px-4 transition-colors ${isActive('/contact') ? 'text-black font-medium' : 'text-orange hover:text-black hover:font-medium'}`}
+              className={`py-2 px-4 transition-colors ${isActive('/contact') ? 'text-black font-medium' : 'text-orange-500 hover:text-black hover:font-medium'}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
@@ -163,16 +163,16 @@ const Header = () => {
             
             {/* Social icons for mobile */}
             <div className="flex items-center space-x-4 px-4 mt-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-black transition-colors">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
                 <Youtube size={20} />
               </a>
             </div>
