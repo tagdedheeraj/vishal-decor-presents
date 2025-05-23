@@ -43,7 +43,8 @@ export const govtEventsSubCategories = [
   'Rann Utsav - Dhordo',
   'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar',
   'Indo - Israel Meet - Dholera',
-  'Indo - Japan Culture Road Show - Ahmedabd'
+  'Indo - Japan Culture Road Show - Ahmedabd',
+  'Madhavpur Ghed Festival - Madhavpur'
 ];
 
 // Placeholder images for default usage

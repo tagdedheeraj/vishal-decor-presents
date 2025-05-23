@@ -20,7 +20,8 @@ import {
   rannUtsavImages,
   heritageTourismPolicyLaunchImages,
   indoIsraelMeetDholeraImages,
-  indoJapanCultureRoadShowImages
+  indoJapanCultureRoadShowImages,
+  madhavpurGhedFestivalImages
 } from './governmentImages';
 
 // Import other category images
@@ -61,6 +62,7 @@ export {
   heritageTourismPolicyLaunchImages,
   indoIsraelMeetDholeraImages,
   indoJapanCultureRoadShowImages,
+  madhavpurGhedFestivalImages,
   institutionImages,
   stallFabricationImages
 };
@@ -105,8 +107,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Indo - Japan Culture Road Show - Ahmedabd') {
       return indoJapanCultureRoadShowImages;
     }
+    if (subCategory === 'Madhavpur Ghed Festival - Madhavpur') {
+      return madhavpurGhedFestivalImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages]
+      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages]
       : governmentImages;
   }
   

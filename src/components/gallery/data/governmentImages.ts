@@ -1,4 +1,3 @@
-
 // Government events and exhibitions images organized by subcategory
 
 // UAE President Welcome - Ahmedabad specific images
@@ -55,6 +54,13 @@ export const indoJapanCultureRoadShowImages = [
   '/lovable-uploads/fd89c8d6-2043-49ee-8173-be7d49cd5867.png', // Event poster with PM Modi and PM Shinzo Abe
   '/lovable-uploads/f5262dff-a0a4-4f4d-9249-aed9db23e919.png', // PM Modi and PM Shinzo Abe walking on red carpet with cultural performers
   '/lovable-uploads/94fdd288-e961-4ae7-a86f-644386e6e175.png', // PM Modi, PM Shinzo Abe and wife at historical monument
+];
+
+// Madhavpur Ghed Festival - Madhavpur images
+export const madhavpurGhedFestivalImages = [
+  '/lovable-uploads/270536e3-6493-4d95-8fbc-23aafb72b856.png', // Event poster with PM Modi and state dignitaries
+  '/lovable-uploads/e3bcfc74-5783-4bf2-a7f0-18cf5cf71f7e.png', // Officials speaking at festival podium collage
+  '/lovable-uploads/462559f6-ceb5-4437-b413-4e60cb3543fb.png', // Lamp lighting and inauguration ceremony collage
 ];
 
 // General government events images (combined with Exhibition images)
