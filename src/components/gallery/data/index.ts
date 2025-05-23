@@ -1,18 +1,8 @@
 
 // Main gallery data index file that exports everything needed
 
-// Export categories and helper functions
-export { 
-  categories,
-  hasSubCategories,
-  getSubCategories,
-  weddingSubCategories,
-  govtEventsSubCategories,
-  placeholderImages 
-} from './categories';
-
-// Export wedding images
-export {
+// Import wedding images
+import {
   weddingImages,
   choriWeddingImages,
   gateWeddingImages,
@@ -21,8 +11,8 @@ export {
   stageWeddingImages
 } from './weddingImages';
 
-// Export government event images
-export {
+// Import government event images
+import {
   governmentImages,
   exhibitionImages,
   uaePresidentWelcomeImages,
@@ -30,11 +20,44 @@ export {
   rannUtsavImages
 } from './governmentImages';
 
-// Export other category images
-export {
+// Import other category images
+import {
   institutionImages,
   stallFabricationImages
 } from './otherImages';
+
+// Import categories and helper functions
+import { 
+  categories,
+  hasSubCategories,
+  getSubCategories,
+  weddingSubCategories,
+  govtEventsSubCategories,
+  placeholderImages 
+} from './categories';
+
+// Export all imported items
+export {
+  categories,
+  hasSubCategories,
+  getSubCategories,
+  weddingSubCategories,
+  govtEventsSubCategories,
+  placeholderImages,
+  weddingImages,
+  choriWeddingImages,
+  gateWeddingImages,
+  mandapWeddingImages,
+  passageWeddingImages,
+  stageWeddingImages,
+  governmentImages,
+  exhibitionImages,
+  uaePresidentWelcomeImages,
+  nationalMangoFestivalImages,
+  rannUtsavImages,
+  institutionImages,
+  stallFabricationImages
+};
 
 // Helper function to get images based on active tab
 export const getDisplayImages = (activeTab: string, subCategory?: string): string[] => {
