@@ -50,6 +50,13 @@ export const indoIsraelMeetDholeraImages = [
   '/lovable-uploads/848f967d-2ef7-4158-8632-7d49c62f26e2.png', // Leaders handshake at ceremony with floral backdrop
 ];
 
+// Indo - Japan Culture Road Show - Ahmedabad images
+export const indoJapanCultureRoadShowImages = [
+  '/lovable-uploads/fd89c8d6-2043-49ee-8173-be7d49cd5867.png', // Event poster with PM Modi and PM Shinzo Abe
+  '/lovable-uploads/f5262dff-a0a4-4f4d-9249-aed9db23e919.png', // PM Modi and PM Shinzo Abe walking on red carpet with cultural performers
+  '/lovable-uploads/94fdd288-e961-4ae7-a86f-644386e6e175.png', // PM Modi, PM Shinzo Abe and wife at historical monument
+];
+
 // General government events images (combined with Exhibition images)
 export const governmentImages = [
   '/lovable-uploads/1c08e6af-be17-4b8a-9211-5c6e516ea3f8.png', // Cultural performance with backdrop

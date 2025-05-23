@@ -19,7 +19,8 @@ import {
   nationalMangoFestivalImages,
   rannUtsavImages,
   heritageTourismPolicyLaunchImages,
-  indoIsraelMeetDholeraImages
+  indoIsraelMeetDholeraImages,
+  indoJapanCultureRoadShowImages
 } from './governmentImages';
 
 // Import other category images
@@ -59,6 +60,7 @@ export {
   rannUtsavImages,
   heritageTourismPolicyLaunchImages,
   indoIsraelMeetDholeraImages,
+  indoJapanCultureRoadShowImages,
   institutionImages,
   stallFabricationImages
 };
@@ -100,8 +102,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Indo - Israel Meet - Dholera') {
       return indoIsraelMeetDholeraImages;
     }
+    if (subCategory === 'Indo - Japan Culture Road Show - Ahmedabd') {
+      return indoJapanCultureRoadShowImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages]
+      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages]
       : governmentImages;
   }
   

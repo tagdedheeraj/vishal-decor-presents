@@ -42,7 +42,8 @@ export const govtEventsSubCategories = [
   'National Mango Festival - Gandhinagar',
   'Rann Utsav - Dhordo',
   'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar',
-  'Indo - Israel Meet - Dholera'
+  'Indo - Israel Meet - Dholera',
+  'Indo - Japan Culture Road Show - Ahmedabd'
 ];
 
 // Placeholder images for default usage
