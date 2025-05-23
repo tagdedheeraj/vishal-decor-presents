@@ -1,9 +1,7 @@
-
 // Gallery data categories and images
 
 export const categories = [
-  'Government Event', 
-  'Exhibition', 
+  'Govt. Events - Exhibitions', 
   'Institution', 
   'Wedding', 
   'Stall Fabrication'
@@ -82,7 +80,7 @@ export const stageWeddingImages = [
   '/lovable-uploads/d0b5272f-95fd-4168-90a7-ffa7afc467ab.png',
 ];
 
-// Government Event specific images
+// Government Event specific images - Now combined with Exhibition images
 export const governmentImages = [
   '/lovable-uploads/1c08e6af-be17-4b8a-9211-5c6e516ea3f8.png', // Cultural performance with backdrop
   '/lovable-uploads/7734053c-3a7b-437d-bd65-09b4a3b3cf55.png', // Government event stage with officials' photos
@@ -94,6 +92,15 @@ export const governmentImages = [
   '/lovable-uploads/f795c471-6a1c-470f-8be9-f61c86a54c9a.png', // Agriculture market stalls
   '/lovable-uploads/2230d4cb-95c1-4476-b0ca-e505c5989060.png', // Night event stage with LED screen
   '/lovable-uploads/a4c78739-c5f0-4529-8120-bda33ba0c277.png', // Outdoor event setup with VVIP section
+  // Adding exhibition images to government images since we're combining them
+  '/lovable-uploads/d3386e6f-2f84-4208-ac13-38d455fb6d4b.png', // Tribal festival entrance with red carpet
+  '/lovable-uploads/b70a899b-62f9-484f-9ddd-76cd6263da6e.png', // Cultural performers lined up at event
+  '/lovable-uploads/af4a9ade-05fa-4e7e-bee1-bcee7a7ca7e2.png', // Exhibition stall with handicrafts
+  '/lovable-uploads/eaf6a6cb-2ea1-4740-bd52-b99110176fba.png', // Cultural dance performance on stage
+  '/lovable-uploads/059ae245-12f3-42fb-a162-372f3118cac5.png', // Exhibition tent with red carpet entrance
+  '/lovable-uploads/baea1173-c1d4-4648-ab0c-eeacaaff8181.png', // Traditional dance with fire pots
+  '/lovable-uploads/148d8538-3b66-4785-a74a-b98800cf6859.png', // Exhibition hall with stalls
+  '/lovable-uploads/3be7990c-3a08-401b-9927-10e1c111846c.png', // Exhibition stalls with jewelry and crafts
 ];
 
 // Institution specific images
@@ -111,7 +118,7 @@ export const institutionImages = [
   '/lovable-uploads/b3ab6db1-4321-411c-ab92-8b22cf31520f.png'  // Shopping festival entrance gate
 ];
 
-// Exhibition specific images
+// Exhibition specific images - We'll keep this array but won't use it directly anymore
 export const exhibitionImages = [
   '/lovable-uploads/d3386e6f-2f84-4208-ac13-38d455fb6d4b.png', // Tribal festival entrance with red carpet
   '/lovable-uploads/b70a899b-62f9-484f-9ddd-76cd6263da6e.png', // Cultural performers lined up at event
@@ -150,8 +157,7 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
       : weddingImages;
   }
   if (activeTab === 'Institution') return institutionImages;
-  if (activeTab === 'Government Event') return governmentImages;
-  if (activeTab === 'Exhibition') return exhibitionImages;
+  if (activeTab === 'Govt. Events - Exhibitions') return governmentImages;
   if (activeTab === 'Stall Fabrication') return stallFabricationImages;
   return placeholderImages;
 };
