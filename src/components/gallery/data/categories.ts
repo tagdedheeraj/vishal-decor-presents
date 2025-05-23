@@ -40,7 +40,8 @@ export const govtEventsSubCategories = [
   'All',
   'UAE President Welcome - Ahmedabad',
   'National Mango Festival - Gandhinagar',
-  'Rann Utsav - Dhordo'
+  'Rann Utsav - Dhordo',
+  'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar'
 ];
 
 // Placeholder images for default usage

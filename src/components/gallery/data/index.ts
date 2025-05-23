@@ -17,7 +17,8 @@ import {
   exhibitionImages,
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
-  rannUtsavImages
+  rannUtsavImages,
+  heritageTourismPolicyLaunchImages
 } from './governmentImages';
 
 // Import other category images
@@ -55,6 +56,7 @@ export {
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
+  heritageTourismPolicyLaunchImages,
   institutionImages,
   stallFabricationImages
 };
@@ -90,8 +92,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Rann Utsav - Dhordo') {
       return rannUtsavImages;
     }
+    if (subCategory === 'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar') {
+      return heritageTourismPolicyLaunchImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages]
+      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages]
       : governmentImages;
   }
   

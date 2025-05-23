@@ -33,6 +33,17 @@ export const rannUtsavImages = [
   '/lovable-uploads/c1f394c0-1649-4477-ae48-26ad2469a5ec.png', // Close-up of official at Rann Utsav event
 ];
 
+// Heritage Tourism Policy Launch images
+export const heritageTourismPolicyLaunchImages = [
+  '/lovable-uploads/6c20c713-e207-4073-9cae-918683844f5e.png', // Officials walking on red carpet at Hotel Leela
+  '/lovable-uploads/0c963038-f62c-4cc3-b9a0-6f859bb9b8e6.png', // Officials lighting lamp ceremony at the event
+  '/lovable-uploads/cc45a188-18ae-4e9e-8556-ade935346722.png', // Event entrance gate with Heritage Tourism Policy banners
+  '/lovable-uploads/b215208e-5c43-47d2-a26b-dd52fb28d8e9.png', // Main stage with LED screen and floral decorations
+  '/lovable-uploads/ac7d00c9-a6a0-457c-8c6c-565f6b6c0c90.png', // Officials seated on stage with event backdrop
+  '/lovable-uploads/a1a6e3cc-bfaa-4618-8ee4-38c9b560992e.png', // Officials holding policy documents at launch
+  '/lovable-uploads/dd550ebd-c01d-41bb-a6e7-fc253da50775.png', // Group photo of officials with signed MoUs
+];
+
 // General government events images (combined with Exhibition images)
 export const governmentImages = [
   '/lovable-uploads/1c08e6af-be17-4b8a-9211-5c6e516ea3f8.png', // Cultural performance with backdrop
