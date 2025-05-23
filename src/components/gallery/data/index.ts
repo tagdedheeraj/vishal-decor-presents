@@ -1,4 +1,3 @@
-
 // Main gallery data index file that exports everything needed
 
 // Import wedding images
@@ -30,6 +29,12 @@ import {
   ambardiLionsSafariParkImages
 } from './governmentImages';
 
+// Import convocation images
+import {
+  convocationImages,
+  gbuConvocationImages
+} from './convocationImages';
+
 // Import other category images
 import {
   institutionImages,
@@ -43,6 +48,7 @@ import {
   getSubCategories,
   weddingSubCategories,
   govtEventsSubCategories,
+  convocationSubCategories,
   placeholderImages 
 } from './categories';
 
@@ -53,6 +59,7 @@ export {
   getSubCategories,
   weddingSubCategories,
   govtEventsSubCategories,
+  convocationSubCategories,
   placeholderImages,
   weddingImages,
   choriWeddingImages,
@@ -75,6 +82,8 @@ export {
   ahmedabadShoppingFestivalImages,
   shaktiPithMohatsavImages,
   ambardiLionsSafariParkImages,
+  convocationImages,
+  gbuConvocationImages,
   institutionImages,
   stallFabricationImages
 };
@@ -143,6 +152,15 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     return subCategory === 'All' || !subCategory 
       ? [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages]
       : governmentImages;
+  }
+  
+  if (activeTab === 'Convocation-Institutional') {
+    if (subCategory === 'GBU') {
+      return gbuConvocationImages;
+    }
+    return subCategory === 'All' || !subCategory
+      ? [...convocationImages, ...gbuConvocationImages]
+      : convocationImages;
   }
   
   if (activeTab === 'Stall Fabrication') return stallFabricationImages;

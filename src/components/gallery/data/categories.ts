@@ -5,13 +5,14 @@
 export const categories = [
   'Govt. Events - Exhibitions', 
   'Institution', 
-  'Wedding', 
+  'Wedding',
+  'Convocation-Institutional',
   'Stall Fabrication'
 ];
 
 // Helper function to check if a category has subcategories
 export const hasSubCategories = (category: string): boolean => {
-  return category === 'Wedding' || category === 'Govt. Events - Exhibitions';
+  return category === 'Wedding' || category === 'Govt. Events - Exhibitions' || category === 'Convocation-Institutional';
 };
 
 // Helper function to get subcategories for a category
@@ -21,6 +22,9 @@ export const getSubCategories = (category: string): string[] => {
   }
   if (category === 'Govt. Events - Exhibitions') {
     return govtEventsSubCategories;
+  }
+  if (category === 'Convocation-Institutional') {
+    return convocationSubCategories;
   }
   return [];
 };
@@ -51,6 +55,12 @@ export const govtEventsSubCategories = [
   'Ahmedabad Shopping Festival - River Front',
   '51 Shaktipith Mohatsav - Ambaji',
   'Ambardi Lions Safari Park - Dhari'
+];
+
+// Convocation-Institutional subcategories
+export const convocationSubCategories = [
+  'All',
+  'GBU'
 ];
 
 // Placeholder images for default usage
