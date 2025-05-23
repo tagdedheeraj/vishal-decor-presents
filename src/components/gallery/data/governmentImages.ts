@@ -1,6 +1,24 @@
 
 // Government events and exhibitions images organized by subcategory
 
+// Azadika Amrut Mohatsav - Baroda specific images
+export const azadikaAmrutMohatsavImages = [
+  '/lovable-uploads/026bc53b-7de8-48d9-819d-f452a40983b0.png',
+  '/lovable-uploads/0c9f7321-7b17-4826-894e-f10fa5c00e92.png',
+  '/lovable-uploads/0d382b66-fd11-436a-b353-d5f9210c0a85.png',
+  '/lovable-uploads/14e39179-ac56-4bfe-94d6-25ffe8e16927.png',
+  '/lovable-uploads/14e4e6f6-f8d2-49e3-995c-5983fc2e5a3d.png',
+  '/lovable-uploads/1cc066d4-1859-44e9-9392-718d5f4ba8c8.png',
+  '/lovable-uploads/20f2de2a-f755-4542-bcce-9af984e74ada.png',
+  '/lovable-uploads/26717dcf-c022-4092-b20d-b6930cc0f846.png',
+  '/lovable-uploads/27319270-def0-4a66-963b-dcecf1487927.png',
+  '/lovable-uploads/2a6dd2ab-6b1e-4da7-9a06-7352b1bffbb8.png',
+  '/lovable-uploads/2df01431-ff19-43d4-a82f-07e1fcfee044.png',
+  '/lovable-uploads/2f6ac047-44ef-4817-8a16-9296f84cf90b.png',
+  '/lovable-uploads/30fdd820-96a2-4407-ae94-406eafd71064.png',
+  '/lovable-uploads/32275733-4e69-4388-924a-99123aad70b8.png',
+];
+
 // UAE President Welcome - Ahmedabad specific images
 export const uaePresidentWelcomeImages = [
   '/lovable-uploads/b867c6bf-d294-4643-8438-b06de3d75bc2.png', // PM Modi and UAE President with crowd

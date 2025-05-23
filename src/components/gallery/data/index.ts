@@ -15,6 +15,7 @@ import {
 import {
   governmentImages,
   exhibitionImages,
+  azadikaAmrutMohatsavImages,
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
@@ -58,6 +59,7 @@ export {
   stageWeddingImages,
   governmentImages,
   exhibitionImages,
+  azadikaAmrutMohatsavImages,
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
@@ -93,6 +95,9 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
   if (activeTab === 'Institution') return institutionImages;
   
   if (activeTab === 'Govt. Events - Exhibitions') {
+    if (subCategory === 'Azadika Amrut Mohatsav - Baroda') {
+      return azadikaAmrutMohatsavImages;
+    }
     if (subCategory === 'UAE President Welcome - Ahmedabad') {
       return uaePresidentWelcomeImages;
     }
@@ -121,7 +126,7 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
       return narivandnaUtsavImages;
     }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages]
+      ? [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages]
       : governmentImages;
   }
   

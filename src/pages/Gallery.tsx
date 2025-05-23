@@ -7,7 +7,7 @@ import {
   getDisplayImages, 
   hasSubCategories, 
   getSubCategories 
-} from '@/components/gallery/GalleryData';
+} from '@/components/gallery/data/index';
 import { Button } from '@/components/ui/button';
 
 const Gallery = () => {
