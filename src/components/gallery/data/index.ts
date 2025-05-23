@@ -26,7 +26,8 @@ import {
   namasteTrumpRoadShowImages,
   narivandnaUtsavImages,
   ahmedabadShoppingFestivalImages,
-  shaktiPithMohatsavImages
+  shaktiPithMohatsavImages,
+  ambardiLionsSafariParkImages
 } from './governmentImages';
 
 // Import other category images
@@ -73,6 +74,7 @@ export {
   narivandnaUtsavImages,
   ahmedabadShoppingFestivalImages,
   shaktiPithMohatsavImages,
+  ambardiLionsSafariParkImages,
   institutionImages,
   stallFabricationImages
 };
@@ -135,8 +137,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === '51 Shaktipith Mohatsav - Ambaji') {
       return shaktiPithMohatsavImages;
     }
+    if (subCategory === 'Ambardi Lions Safari Park - Dhari') {
+      return ambardiLionsSafariParkImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages]
+      ? [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages]
       : governmentImages;
   }
   

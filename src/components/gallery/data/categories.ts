@@ -49,7 +49,8 @@ export const govtEventsSubCategories = [
   'Namaste Trump Road Show - Ahmedabad',
   'Narivandna Utsav - Ahmedabad',
   'Ahmedabad Shopping Festival - River Front',
-  '51 Shaktipith Mohatsav - Ambaji'
+  '51 Shaktipith Mohatsav - Ambaji',
+  'Ambardi Lions Safari Park - Dhari'
 ];
 
 // Placeholder images for default usage

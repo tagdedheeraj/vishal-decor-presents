@@ -1,3 +1,4 @@
+
 // Government events and exhibitions images organized by subcategory
 
 // Azadika Amrut Mohatsav - Baroda specific images
@@ -111,6 +112,17 @@ export const ahmedabadShoppingFestivalImages = [
 // 51 Shaktipith Mohatsav - Ambaji images
 export const shaktiPithMohatsavImages = [
   // This will be populated with images when they are uploaded
+];
+
+// Ambardi Lions Safari Park - Dhari images
+export const ambardiLionsSafariParkImages = [
+  '/lovable-uploads/f13144c5-1af6-4524-b6b6-4d08b7fabfed.png', // Official unveiling inaugural plaque at Ambardi Safari Park
+  '/lovable-uploads/d5e8754a-9f33-4437-97fd-3ee9926569ba.png', // Officials cutting ribbon at safari park inauguration
+  '/lovable-uploads/24731ec4-9183-49f1-bdcc-d1ad3bd15458.png', // Officials walking through safari park entrance gate
+  '/lovable-uploads/60b1b00b-dc51-4b83-b0d1-4ef24ba24ab9.png', // Officials with safari guide hats at park inspection
+  '/lovable-uploads/666526d4-69cb-4d17-b192-7dafb8977144.png', // Group photo of officials and security personnel at park pavilion
+  '/lovable-uploads/de96c720-8aca-4270-8d4f-24b54bd358b8.png', // Official in safari vehicle touring the park
+  '/lovable-uploads/07f99edb-e538-4df2-99d7-ee2c39eb8b27.png', // Official in front of Ambardi lion sculpture display
 ];
 
 // General government events images (combined with Exhibition images)
