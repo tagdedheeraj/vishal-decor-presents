@@ -35,7 +35,8 @@ import {
   convocationImages,
   gbuConvocationImages,
   iimaConvocationImages,
-  iitConvocationImages
+  iitConvocationImages,
+  ediFashionShowImages
 } from './convocationImages';
 
 // Import other category images
@@ -89,6 +90,7 @@ export {
   gbuConvocationImages,
   iimaConvocationImages,
   iitConvocationImages,
+  ediFashionShowImages,
   institutionImages,
   stallFabricationImages
 };
@@ -169,8 +171,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'IIT') {
       return iitConvocationImages;
     }
+    if (subCategory === 'EDI Fashion Show') {
+      return ediFashionShowImages;
+    }
     return subCategory === 'All' || !subCategory
-      ? [...convocationImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages]
+      ? [...convocationImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages, ...ediFashionShowImages]
       : convocationImages;
   }
   

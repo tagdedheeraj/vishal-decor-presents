@@ -62,7 +62,8 @@ export const convocationSubCategories = [
   'All',
   'GBU',
   'IIMA',
-  'IIT'
+  'IIT',
+  'EDI Fashion Show'
 ];
 
 // Placeholder images for default usage

@@ -33,6 +33,11 @@ export const iitConvocationImages = [
   '/lovable-uploads/78d533ef-b84f-4f98-a1e9-c37fc65126e0.png'
 ];
 
+// EDI Fashion Show specific images
+export const ediFashionShowImages = [
+  // New images will be added here by the user
+];
+
 // General convocation images
 export const convocationImages = [
   // Will be populated with general convocation images later
