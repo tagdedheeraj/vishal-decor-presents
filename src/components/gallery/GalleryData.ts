@@ -1,3 +1,4 @@
+
 // Gallery data categories and images
 
 export const categories = [
@@ -19,7 +20,8 @@ export const weddingSubCategories = [
 // New sub-categories for Government Events - Exhibitions
 export const govtEventsSubCategories = [
   'All',
-  'UAE President Welcome - Ahmedabad'
+  'UAE President Welcome - Ahmedabad',
+  'National Mango Festival - Gandhinagar'
 ];
 
 export const placeholderImages = [
@@ -91,6 +93,19 @@ export const uaePresidentWelcomeImages = [
   '/lovable-uploads/b867c6bf-d294-4643-8438-b06de3d75bc2.png', // PM Modi and UAE President with crowd
   '/lovable-uploads/1ee0fbfc-4bbe-4c19-9e46-0ba15c1e3d9c.png', // PM Modi and UAE President with cultural performers
   '/lovable-uploads/8473a8b3-333b-4560-8ed6-57f7b2458ef8.png', // PM Modi and UAE President with guard of honor
+];
+
+// National Mango Festival - Gandhinagar images
+export const nationalMangoFestivalImages = [
+  '/lovable-uploads/10706e0d-45b4-42e2-9fca-c48c4a64b047.png', // Officials lighting a lamp at the Mango Festival
+  '/lovable-uploads/0807ab77-162a-44d9-b6a5-b49666f9965e.png', // Officials presenting a fruit basket at the event
+  '/lovable-uploads/76730d4d-2330-4c89-9007-779f7b2bdcd6.png', // Cultural performers at the Mango Festival with official
+  '/lovable-uploads/2da1ea64-10b2-44d0-9817-120c34408f03.png', // Officials at the award ceremony with mango-themed backdrop
+  '/lovable-uploads/dd1c25a5-3f9c-425a-af5f-9c7c5503865c.png', // Official at the entrance gate with mango-shaped balloons
+  '/lovable-uploads/3354fb8c-130e-440e-a6c7-ac8a4ef21f02.png', // Ribbon cutting ceremony at the festival
+  '/lovable-uploads/28dd3a88-4d26-4cd7-b7b7-9b279a5a7d9c.png', // Officials examining mangoes at the exhibition
+  '/lovable-uploads/8462f63d-b92f-459c-a899-9bb7d78edf1f.png', // Official holding a mango at exhibition stall
+  '/lovable-uploads/ab42ed00-9350-4248-ab4a-49030f39b3dc.png', // Official speaking at podium with festival backdrop
 ];
 
 // Government Event specific images - Now combined with Exhibition images
@@ -174,8 +189,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'UAE President Welcome - Ahmedabad') {
       return uaePresidentWelcomeImages;
     }
+    if (subCategory === 'National Mango Festival - Gandhinagar') {
+      return nationalMangoFestivalImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages]
+      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages]
       : governmentImages;
   }
   if (activeTab === 'Stall Fabrication') return stallFabricationImages;
