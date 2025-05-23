@@ -43,7 +43,7 @@ const ImageSlider: React.FC = () => {
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(goToNext, 3000); // Changed from 5000 to 3000 ms (3 seconds)
+    const slideInterval = setInterval(goToNext, 4000); // Changed from 3000 to 4000 ms (4 seconds)
     return () => clearInterval(slideInterval);
   }, [currentIndex]);
 
