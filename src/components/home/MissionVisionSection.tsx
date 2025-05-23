@@ -26,7 +26,16 @@ const MissionVisionSection = () => {
   }, []);
 
   return (
-    <section id="mission-vision-section" className="py-20 bg-orange-500">
+    <section 
+      id="mission-vision-section" 
+      className="py-20 relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/1e373ac6-4c61-4a7e-9a12-c2e02e89c839.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 
