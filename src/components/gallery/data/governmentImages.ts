@@ -1,4 +1,3 @@
-
 // Government events and exhibitions images organized by subcategory
 
 // Azadika Amrut Mohatsav - Baroda specific images
@@ -99,6 +98,19 @@ export const narivandnaUtsavImages = [
   '/lovable-uploads/cb684b19-e1f2-4cb2-bfdc-62e7b67300ac.png', // Officials at ceremony with red backdrop
   '/lovable-uploads/2ffead4e-630a-45c6-8384-55bf87151179.png', // Award presentation ceremony
   '/lovable-uploads/47bac68f-66fb-4d44-9ea4-4ccd4fe2a723.png', // Official speaking at podium with floral decoration
+];
+
+// Ahmedabad Shopping Festival - River Front images
+export const ahmedabadShoppingFestivalImages = [
+  '/lovable-uploads/d863855e-e900-4bcb-a1df-edfb0f0bcf9f.png', // Shopping Festival Banner
+  '/lovable-uploads/6f82a47a-f977-4f1f-b8fa-2f6be95a5b26.png', // PM Modi speaking at event with yellow and orange decoration 
+  '/lovable-uploads/7532e8ba-292c-4660-aa9f-4b091ad6d6f5.png', // PM Modi with officials cutting red ribbon
+  '/lovable-uploads/7e312c43-cc5a-4e50-9585-dc7f2f437dce.png', // PM Modi visiting booths at shopping festival
+];
+
+// 51 Shaktipith Mohatsav - Ambaji images
+export const shaktiPithMohatsavImages = [
+  // This will be populated with images when they are uploaded
 ];
 
 // General government events images (combined with Exhibition images)

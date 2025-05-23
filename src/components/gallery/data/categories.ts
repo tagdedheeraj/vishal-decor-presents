@@ -47,7 +47,9 @@ export const govtEventsSubCategories = [
   'Indo - Japan Culture Road Show - Ahmedabd',
   'Madhavpur Ghed Festival - Madhavpur',
   'Namaste Trump Road Show - Ahmedabad',
-  'Narivandna Utsav - Ahmedabad'
+  'Narivandna Utsav - Ahmedabad',
+  'Ahmedabad Shopping Festival - River Front',
+  '51 Shaktipith Mohatsav - Ambaji'
 ];
 
 // Placeholder images for default usage

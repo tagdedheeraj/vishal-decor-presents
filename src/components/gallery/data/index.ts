@@ -24,7 +24,9 @@ import {
   indoJapanCultureRoadShowImages,
   madhavpurGhedFestivalImages,
   namasteTrumpRoadShowImages,
-  narivandnaUtsavImages
+  narivandnaUtsavImages,
+  ahmedabadShoppingFestivalImages,
+  shaktiPithMohatsavImages
 } from './governmentImages';
 
 // Import other category images
@@ -69,6 +71,8 @@ export {
   madhavpurGhedFestivalImages,
   namasteTrumpRoadShowImages,
   narivandnaUtsavImages,
+  ahmedabadShoppingFestivalImages,
+  shaktiPithMohatsavImages,
   institutionImages,
   stallFabricationImages
 };
@@ -125,8 +129,14 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Narivandna Utsav - Ahmedabad') {
       return narivandnaUtsavImages;
     }
+    if (subCategory === 'Ahmedabad Shopping Festival - River Front') {
+      return ahmedabadShoppingFestivalImages;
+    }
+    if (subCategory === '51 Shaktipith Mohatsav - Ambaji') {
+      return shaktiPithMohatsavImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages]
+      ? [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages]
       : governmentImages;
   }
   
