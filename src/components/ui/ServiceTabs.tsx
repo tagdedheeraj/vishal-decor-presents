@@ -46,16 +46,16 @@ const ServiceTabs: React.FC<ServiceTabsProps> = ({ activeTab = 'government', ser
               Corporate
             </Link>
             <Link 
-              to="/services/stall-design-fabrication" 
-              className={`px-6 py-4 whitespace-nowrap text-center ${location.pathname === '/services/stall-design-fabrication' ? 'border-b-2 border-gold font-medium' : ''}`}
-            >
-              Stall Design Fabrication
-            </Link>
-            <Link 
               to="/services/wedding" 
               className={`px-6 py-4 whitespace-nowrap text-center ${location.pathname === '/services/wedding' ? 'border-b-2 border-gold font-medium' : ''}`}
             >
               Wedding
+            </Link>
+            <Link 
+              to="/services/stall-design-fabrication" 
+              className={`px-6 py-4 whitespace-nowrap text-center ${location.pathname === '/services/stall-design-fabrication' ? 'border-b-2 border-gold font-medium' : ''}`}
+            >
+              Stall Design Fabrication
             </Link>
             <Link 
               to="/services/other-event" 

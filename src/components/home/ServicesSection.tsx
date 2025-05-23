@@ -58,24 +58,24 @@ const ServicesSection = () => {
               delay: 100
             },
             {
+              title: "Wedding",
+              icon: <Image size={28} className="text-white" />,
+              description: "Creating captivating wedding exhibition booths and decorations.",
+              link: "/services/wedding",
+              delay: 200
+            },
+            {
               title: "Stall Design Fabrication",
               icon: <Layers size={28} className="text-white" />,
               description: "Innovative exhibition design and stall fabrication services.",
               link: "/services/stall-design-fabrication",
-              delay: 200
+              delay: 300
             },
             {
               title: "Other Event",
               icon: <Music size={28} className="text-white" />,
               description: "Comprehensive solutions for various event types.",
               link: "/services/other-event",
-              delay: 300
-            },
-            {
-              title: "Wedding",
-              icon: <Image size={28} className="text-white" />,
-              description: "Creating captivating wedding exhibition booths and decorations.",
-              link: "/services/wedding",
               delay: 400
             },
           ].map((service, index) => (

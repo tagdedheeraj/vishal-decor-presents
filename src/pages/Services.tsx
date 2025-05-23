@@ -60,6 +60,11 @@ const Services = () => {
               link="/services/corporate"
             />
             <ServiceCard 
+              title="Wedding" 
+              description="We specialize in crafting captivating and immersive wedding exhibition booths that" 
+              link="/services/wedding"
+            />
+            <ServiceCard 
               title="Stall Design Fabrication" 
               description="Innovative is Engaged in providing stall fabrication services such as exhibition" 
               link="/services/stall-design-fabrication"
@@ -68,11 +73,6 @@ const Services = () => {
               title="Other Event" 
               description="We specialize in crafting captivating and immersive wedding exhibition booths that" 
               link="/services/other-event"
-            />
-            <ServiceCard 
-              title="Wedding" 
-              description="We specialize in crafting captivating and immersive wedding exhibition booths that" 
-              link="/services/wedding"
             />
           </div>
         </div>
