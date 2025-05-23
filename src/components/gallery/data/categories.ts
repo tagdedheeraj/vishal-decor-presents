@@ -44,7 +44,8 @@ export const govtEventsSubCategories = [
   'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar',
   'Indo - Israel Meet - Dholera',
   'Indo - Japan Culture Road Show - Ahmedabd',
-  'Madhavpur Ghed Festival - Madhavpur'
+  'Madhavpur Ghed Festival - Madhavpur',
+  'Namaste Trump Road Show - Ahmedabad'
 ];
 
 // Placeholder images for default usage

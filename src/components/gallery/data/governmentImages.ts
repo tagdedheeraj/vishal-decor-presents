@@ -1,3 +1,4 @@
+
 // Government events and exhibitions images organized by subcategory
 
 // UAE President Welcome - Ahmedabad specific images
@@ -61,6 +62,11 @@ export const madhavpurGhedFestivalImages = [
   '/lovable-uploads/270536e3-6493-4d95-8fbc-23aafb72b856.png', // Event poster with PM Modi and state dignitaries
   '/lovable-uploads/e3bcfc74-5783-4bf2-a7f0-18cf5cf71f7e.png', // Officials speaking at festival podium collage
   '/lovable-uploads/462559f6-ceb5-4437-b413-4e60cb3543fb.png', // Lamp lighting and inauguration ceremony collage
+];
+
+// Namaste Trump Road Show - Ahmedabad images
+export const namasteTrumpRoadShowImages = [
+  '/lovable-uploads/f3ad1d87-4862-46c2-946b-9b6c9bdbc1f4.png', // Namaste Trump event poster with stadium and crowd
 ];
 
 // General government events images (combined with Exhibition images)

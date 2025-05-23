@@ -21,7 +21,8 @@ import {
   heritageTourismPolicyLaunchImages,
   indoIsraelMeetDholeraImages,
   indoJapanCultureRoadShowImages,
-  madhavpurGhedFestivalImages
+  madhavpurGhedFestivalImages,
+  namasteTrumpRoadShowImages
 } from './governmentImages';
 
 // Import other category images
@@ -63,6 +64,7 @@ export {
   indoIsraelMeetDholeraImages,
   indoJapanCultureRoadShowImages,
   madhavpurGhedFestivalImages,
+  namasteTrumpRoadShowImages,
   institutionImages,
   stallFabricationImages
 };
@@ -110,8 +112,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Madhavpur Ghed Festival - Madhavpur') {
       return madhavpurGhedFestivalImages;
     }
+    if (subCategory === 'Namaste Trump Road Show - Ahmedabad') {
+      return namasteTrumpRoadShowImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages]
+      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages]
       : governmentImages;
   }
   
