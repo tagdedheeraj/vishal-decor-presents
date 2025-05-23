@@ -10,14 +10,28 @@ interface ServiceGalleryProps {
 
 const ServiceGallery: React.FC<ServiceGalleryProps> = ({ serviceCategory }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const images = getDisplayImages(serviceCategory);
 
   const handleImageClick = (index: number) => {
     setSelectedImageIndex(index);
+    setIsPopupOpen(true);
   };
 
   const handleClosePopup = () => {
-    setSelectedImageIndex(null);
+    setIsPopupOpen(false);
+  };
+
+  const handlePrevious = () => {
+    setSelectedImageIndex(prev => 
+      prev !== null ? (prev > 0 ? prev - 1 : images.length - 1) : 0
+    );
+  };
+
+  const handleNext = () => {
+    setSelectedImageIndex(prev => 
+      prev !== null ? (prev < images.length - 1 ? prev + 1 : 0) : 0
+    );
   };
 
   return (
@@ -29,13 +43,14 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ serviceCategory }) => {
           activeTab={serviceCategory}
           onImageClick={handleImageClick}
         />
-        {selectedImageIndex !== null && (
-          <ImagePopup
-            images={images}
-            initialIndex={selectedImageIndex}
-            onClose={handleClosePopup}
-          />
-        )}
+        <ImagePopup
+          open={isPopupOpen}
+          onOpenChange={setIsPopupOpen}
+          currentImageIndex={selectedImageIndex || 0}
+          images={images}
+          onPrevious={handlePrevious}
+          onNext={handleNext}
+        />
       </div>
     </div>
   );
