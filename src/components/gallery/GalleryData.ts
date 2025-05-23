@@ -9,6 +9,11 @@ export const categories = [
   'Stall Fabrication'
 ];
 
+export const weddingSubCategories = [
+  'All',
+  'Chori'
+];
+
 export const placeholderImages = [
   'https://images.unsplash.com/photo-1511578314322-379afb476865',
   'https://images.unsplash.com/photo-1540575467063-178a50c2df87',
@@ -26,6 +31,15 @@ export const weddingImages = [
   '/lovable-uploads/c8285544-6645-47ce-a8f7-c3c65ed8f624.png',
   '/lovable-uploads/81b6a9d2-9928-4627-baa9-7df766babd25.png',
   '/lovable-uploads/391a7656-4feb-4201-9de0-e764fac1262b.png',
+];
+
+// Chori specific wedding images
+export const choriWeddingImages = [
+  '/lovable-uploads/5d756438-0a33-4705-b03f-90b09040d288.png',
+  '/lovable-uploads/4a143b0a-6a48-43f9-8606-d923afa7d6f6.png',
+  '/lovable-uploads/09a734b8-3ec0-47cf-9b09-c1b939984648.png',
+  '/lovable-uploads/7fbc566a-e3fa-4bfa-862c-96ee90caf47f.png',
+  '/lovable-uploads/86260f3c-48d7-41a6-9a5c-6fad423d0e41.png',
 ];
 
 // Government Event specific images
@@ -78,11 +92,29 @@ export const stallFabricationImages = [
 ];
 
 // Helper function to get images based on active tab
-export const getDisplayImages = (activeTab: string): string[] => {
-  if (activeTab === 'Wedding') return weddingImages;
+export const getDisplayImages = (activeTab: string, subCategory?: string): string[] => {
+  if (activeTab === 'Wedding') {
+    if (subCategory === 'Chori') {
+      return choriWeddingImages;
+    }
+    return subCategory === 'All' || !subCategory ? [...weddingImages, ...choriWeddingImages] : weddingImages;
+  }
   if (activeTab === 'Institution') return institutionImages;
   if (activeTab === 'Government Event') return governmentImages;
   if (activeTab === 'Exhibition') return exhibitionImages;
   if (activeTab === 'Stall Fabrication') return stallFabricationImages;
   return placeholderImages;
+};
+
+// Helper function to check if a category has subcategories
+export const hasSubCategories = (category: string): boolean => {
+  return category === 'Wedding';
+};
+
+// Helper function to get subcategories for a category
+export const getSubCategories = (category: string): string[] => {
+  if (category === 'Wedding') {
+    return weddingSubCategories;
+  }
+  return [];
 };

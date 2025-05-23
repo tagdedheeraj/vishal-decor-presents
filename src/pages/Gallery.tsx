@@ -1,17 +1,34 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GalleryTabs from '@/components/gallery/GalleryTabs';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
 import ImagePopup from '@/components/gallery/ImagePopup';
-import { categories, getDisplayImages } from '@/components/gallery/GalleryData';
+import { 
+  categories, 
+  getDisplayImages, 
+  hasSubCategories, 
+  getSubCategories 
+} from '@/components/gallery/GalleryData';
 import { Button } from '@/components/ui/button';
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('Government Event');
+  const [activeSubCategory, setActiveSubCategory] = useState<string>('All');
   const [popupOpen, setPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const displayImages = getDisplayImages(activeTab);
+  // Handle category change
+  const handleCategoryChange = (category: string) => {
+    setActiveTab(category);
+    // Reset sub-category when changing main category
+    setActiveSubCategory('All');
+  };
+
+  // Get sub-categories if available for the current tab
+  const subCategories = hasSubCategories(activeTab) ? getSubCategories(activeTab) : [];
+  
+  // Get images based on active tab and sub-category
+  const displayImages = getDisplayImages(activeTab, activeSubCategory);
 
   // Open the popup with the selected image
   const openImagePopup = (index: number) => {
@@ -34,7 +51,6 @@ const Gallery = () => {
   };
 
   return (
-    
     <main>
       {/* Page Header Section */}
       <section className="relative h-[40vh] flex items-center justify-center">
@@ -72,7 +88,10 @@ const Gallery = () => {
           <GalleryTabs 
             categories={categories} 
             activeTab={activeTab} 
-            onTabChange={setActiveTab} 
+            onTabChange={handleCategoryChange}
+            subCategories={subCategories}
+            activeSubCategory={activeSubCategory}
+            onSubCategoryChange={setActiveSubCategory}
           />
 
           {/* Gallery Grid Component */}
