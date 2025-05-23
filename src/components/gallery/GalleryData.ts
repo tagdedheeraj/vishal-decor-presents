@@ -16,6 +16,12 @@ export const weddingSubCategories = [
   'Stage'
 ];
 
+// New sub-categories for Government Events - Exhibitions
+export const govtEventsSubCategories = [
+  'All',
+  'UAE President Welcome - Ahmedabad'
+];
+
 export const placeholderImages = [
   'https://images.unsplash.com/photo-1511578314322-379afb476865',
   'https://images.unsplash.com/photo-1540575467063-178a50c2df87',
@@ -78,6 +84,13 @@ export const stageWeddingImages = [
   '/lovable-uploads/e60fdc90-ba6e-4593-a07d-c44a94246aee.png',
   '/lovable-uploads/5e7a8583-b283-4992-a1d7-359753244af3.png',
   '/lovable-uploads/d0b5272f-95fd-4168-90a7-ffa7afc467ab.png',
+];
+
+// UAE President Welcome - Ahmedabad specific images
+export const uaePresidentWelcomeImages = [
+  '/lovable-uploads/b867c6bf-d294-4643-8438-b06de3d75bc2.png', // PM Modi and UAE President with crowd
+  '/lovable-uploads/1ee0fbfc-4bbe-4c19-9e46-0ba15c1e3d9c.png', // PM Modi and UAE President with cultural performers
+  '/lovable-uploads/8473a8b3-333b-4560-8ed6-57f7b2458ef8.png', // PM Modi and UAE President with guard of honor
 ];
 
 // Government Event specific images - Now combined with Exhibition images
@@ -157,20 +170,30 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
       : weddingImages;
   }
   if (activeTab === 'Institution') return institutionImages;
-  if (activeTab === 'Govt. Events - Exhibitions') return governmentImages;
+  if (activeTab === 'Govt. Events - Exhibitions') {
+    if (subCategory === 'UAE President Welcome - Ahmedabad') {
+      return uaePresidentWelcomeImages;
+    }
+    return subCategory === 'All' || !subCategory 
+      ? [...governmentImages, ...uaePresidentWelcomeImages]
+      : governmentImages;
+  }
   if (activeTab === 'Stall Fabrication') return stallFabricationImages;
   return placeholderImages;
 };
 
 // Helper function to check if a category has subcategories
 export const hasSubCategories = (category: string): boolean => {
-  return category === 'Wedding';
+  return category === 'Wedding' || category === 'Govt. Events - Exhibitions';
 };
 
 // Helper function to get subcategories for a category
 export const getSubCategories = (category: string): string[] => {
   if (category === 'Wedding') {
     return weddingSubCategories;
+  }
+  if (category === 'Govt. Events - Exhibitions') {
+    return govtEventsSubCategories;
   }
   return [];
 };
