@@ -1,4 +1,3 @@
-
 // Gallery data categories and images
 
 export const categories = [
@@ -11,7 +10,8 @@ export const categories = [
 
 export const weddingSubCategories = [
   'All',
-  'Chori'
+  'Chori',
+  'Gate'
 ];
 
 export const placeholderImages = [
@@ -40,6 +40,15 @@ export const choriWeddingImages = [
   '/lovable-uploads/09a734b8-3ec0-47cf-9b09-c1b939984648.png',
   '/lovable-uploads/7fbc566a-e3fa-4bfa-862c-96ee90caf47f.png',
   '/lovable-uploads/86260f3c-48d7-41a6-9a5c-6fad423d0e41.png',
+];
+
+// Gate specific wedding images
+export const gateWeddingImages = [
+  '/lovable-uploads/d0c0f04a-c9ea-44b6-814e-1e29609a1525.png',
+  '/lovable-uploads/6e570f12-03be-459e-8343-342e011375bc.png',
+  '/lovable-uploads/94f7143a-18af-46f5-8441-3fbcfc49d0a1.png',
+  '/lovable-uploads/39b7e484-ff48-44aa-9420-7b4668f7187c.png',
+  '/lovable-uploads/30fdd820-96a2-4407-ae94-406eafd71064.png',
 ];
 
 // Government Event specific images
@@ -88,7 +97,7 @@ export const stallFabricationImages = [
   '/lovable-uploads/b43417b2-73f0-46af-ace2-c23bafcdd95c.png', // Gujarat Offshore Wind Blocks exhibit with windmill models
   '/lovable-uploads/340f60f8-d5de-45ea-a0a9-1eb14a8dc91f.png', // Gujarat Power Corporation exhibition booth with hydrogen station model
   '/lovable-uploads/a1f7d92c-78f6-4dd1-9658-56dfff94c576.png', // Energy exhibition stall with India map display and solar panels
-  '/lovable-uploads/9a3bd467-02d8-455f-b78e-711d4b927fb3.png', // Gujarat Power Corporation booth with visitors viewing displays
+  '/lovable-uploads/9a3bd467-02d8-455f-b78e-711d4b927fb3.png', // Gujarat Power Corporation booth with visitors viewing displays.
 ];
 
 // Helper function to get images based on active tab
@@ -96,8 +105,10 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
   if (activeTab === 'Wedding') {
     if (subCategory === 'Chori') {
       return choriWeddingImages;
+    } else if (subCategory === 'Gate') {
+      return gateWeddingImages;
     }
-    return subCategory === 'All' || !subCategory ? [...weddingImages, ...choriWeddingImages] : weddingImages;
+    return subCategory === 'All' || !subCategory ? [...weddingImages, ...choriWeddingImages, ...gateWeddingImages] : weddingImages;
   }
   if (activeTab === 'Institution') return institutionImages;
   if (activeTab === 'Government Event') return governmentImages;
