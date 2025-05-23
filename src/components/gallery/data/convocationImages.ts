@@ -16,6 +16,15 @@ export const gbuConvocationImages = [
   '/lovable-uploads/2f6ac047-44ef-4817-8a16-9296f84cf90b.png'
 ];
 
+// IIMA specific images
+export const iimaConvocationImages = [
+  '/lovable-uploads/6e6f8774-7069-4ad7-a074-e9a2e5fada7d.png',
+  '/lovable-uploads/cdeb8991-7169-45be-bf0d-ba813a4f9b12.png',
+  '/lovable-uploads/b0d1eab3-cab4-4a94-9991-d2ccf160cbed.png',
+  '/lovable-uploads/bd5c3616-293a-4497-b35a-780758d77174.png',
+  '/lovable-uploads/7da2080a-a6bf-4c33-a90a-975fe9afb3c6.png'
+];
+
 // General convocation images
 export const convocationImages = [
   // Will be populated with general convocation images later

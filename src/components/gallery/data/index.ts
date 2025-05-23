@@ -1,3 +1,4 @@
+
 // Main gallery data index file that exports everything needed
 
 // Import wedding images
@@ -32,7 +33,8 @@ import {
 // Import convocation images
 import {
   convocationImages,
-  gbuConvocationImages
+  gbuConvocationImages,
+  iimaConvocationImages
 } from './convocationImages';
 
 // Import other category images
@@ -84,6 +86,7 @@ export {
   ambardiLionsSafariParkImages,
   convocationImages,
   gbuConvocationImages,
+  iimaConvocationImages,
   institutionImages,
   stallFabricationImages
 };
@@ -158,8 +161,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'GBU') {
       return gbuConvocationImages;
     }
+    if (subCategory === 'IIMA') {
+      return iimaConvocationImages;
+    }
     return subCategory === 'All' || !subCategory
-      ? [...convocationImages, ...gbuConvocationImages]
+      ? [...convocationImages, ...gbuConvocationImages, ...iimaConvocationImages]
       : convocationImages;
   }
   

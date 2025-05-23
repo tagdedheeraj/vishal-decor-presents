@@ -60,7 +60,8 @@ export const govtEventsSubCategories = [
 // Convocation-Institutional subcategories
 export const convocationSubCategories = [
   'All',
-  'GBU'
+  'GBU',
+  'IIMA'
 ];
 
 // Placeholder images for default usage
