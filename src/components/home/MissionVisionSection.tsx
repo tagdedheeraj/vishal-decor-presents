@@ -31,7 +31,7 @@ const MissionVisionSection = () => {
       className="py-20 relative"
       style={{
         backgroundImage: `linear-gradient(rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.7)), url('/lovable-uploads/1e373ac6-4c61-4a7e-9a12-c2e02e89c839.png')`,
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}
