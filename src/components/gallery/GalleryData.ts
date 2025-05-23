@@ -1,3 +1,4 @@
+
 // Gallery data categories and images
 
 export const categories = [
@@ -13,7 +14,8 @@ export const weddingSubCategories = [
   'Chori',
   'Gate',
   'Mandap',
-  'Passage'
+  'Passage',
+  'Stage'
 ];
 
 export const placeholderImages = [
@@ -67,6 +69,17 @@ export const passageWeddingImages = [
   '/lovable-uploads/711dc60e-6b45-4ee9-9372-b09d33affd84.png',
   '/lovable-uploads/0c9f7321-7b17-4826-894e-f10fa5c00e92.png',
   '/lovable-uploads/d56cdf0d-916f-489f-a577-5dc3152e92e2.png',
+];
+
+// Stage specific wedding images
+export const stageWeddingImages = [
+  '/lovable-uploads/fba4c6ac-201d-4650-b0b7-385d0566d1cf.png',
+  '/lovable-uploads/990786d7-71a0-4369-8ab4-3eb200457a4c.png',
+  '/lovable-uploads/e9b5c6e9-a587-485f-b424-82466af7373c.png',
+  '/lovable-uploads/b527429a-caff-4f7a-a95c-a0c6fe55c2a0.png',
+  '/lovable-uploads/e60fdc90-ba6e-4593-a07d-c44a94246aee.png',
+  '/lovable-uploads/5e7a8583-b283-4992-a1d7-359753244af3.png',
+  '/lovable-uploads/d0b5272f-95fd-4168-90a7-ffa7afc467ab.png',
 ];
 
 // Government Event specific images
@@ -129,9 +142,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
       return mandapWeddingImages;
     } else if (subCategory === 'Passage') {
       return passageWeddingImages;
+    } else if (subCategory === 'Stage') {
+      return stageWeddingImages;
     }
     return subCategory === 'All' || !subCategory 
-      ? [...weddingImages, ...choriWeddingImages, ...gateWeddingImages, ...mandapWeddingImages, ...passageWeddingImages] 
+      ? [...weddingImages, ...choriWeddingImages, ...gateWeddingImages, ...mandapWeddingImages, ...passageWeddingImages, ...stageWeddingImages] 
       : weddingImages;
   }
   if (activeTab === 'Institution') return institutionImages;
