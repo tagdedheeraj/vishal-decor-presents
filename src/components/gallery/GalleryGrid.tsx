@@ -29,13 +29,15 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({ images, activeTab, onImageCli
           <div className="relative pb-[75%]">
             {/* Show skeleton while loading */}
             {!loadedImages[index] && (
-              <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+                <div className="w-10 h-10 border-4 border-gold border-t-transparent rounded-full animate-spin"></div>
+              </div>
             )}
             
             <img
               src={img}
               alt={`${activeTab} image ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${
                 loadedImages[index] ? 'opacity-100' : 'opacity-0'
               }`}
               loading="lazy"
@@ -43,7 +45,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({ images, activeTab, onImageCli
               decoding="async"
             />
             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity flex items-center justify-center">
-              <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+              <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 <p className="text-white text-lg font-bold">{activeTab}</p>
               </div>
             </div>

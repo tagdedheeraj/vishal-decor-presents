@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceTabs from '@/components/ui/ServiceTabs';
+import ServiceGallery from '@/components/services/ServiceGallery';
 
 const ServiceGovernment = () => {
   const serviceContent = {
@@ -25,6 +26,9 @@ const ServiceGovernment = () => {
 
       {/* Service Content */}
       <ServiceTabs activeTab="government" serviceContent={serviceContent} />
+      
+      {/* Gallery Section */}
+      <ServiceGallery serviceCategory="Govt. Events - Exhibitions" />
     </main>
   );
 };

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceTabs from '@/components/ui/ServiceTabs';
+import ServiceGallery from '@/components/services/ServiceGallery';
 
 const ServiceOtherEvent = () => {
   const serviceContent = {
@@ -25,6 +26,9 @@ const ServiceOtherEvent = () => {
 
       {/* Service Content */}
       <ServiceTabs activeTab="other-event" serviceContent={serviceContent} />
+      
+      {/* Gallery Section */}
+      <ServiceGallery serviceCategory="Other Events" />
     </main>
   );
 };
