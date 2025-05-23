@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import GalleryTabs from '@/components/gallery/GalleryTabs';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
