@@ -1,4 +1,3 @@
-
 // Gallery data categories and images
 
 export const categories = [
@@ -21,7 +20,8 @@ export const weddingSubCategories = [
 export const govtEventsSubCategories = [
   'All',
   'UAE President Welcome - Ahmedabad',
-  'National Mango Festival - Gandhinagar'
+  'National Mango Festival - Gandhinagar',
+  'Rann Utsav - Dhordo'
 ];
 
 export const placeholderImages = [
@@ -108,6 +108,18 @@ export const nationalMangoFestivalImages = [
   '/lovable-uploads/ab42ed00-9350-4248-ab4a-49030f39b3dc.png', // Official speaking at podium with festival backdrop
 ];
 
+// Rann Utsav - Dhordo images
+export const rannUtsavImages = [
+  '/lovable-uploads/d3f64f30-51f9-4072-8154-085a0dea0734.png', // Rann Utsav entrance gate with green lighting
+  '/lovable-uploads/5db7de65-2a7e-4c9b-8b62-35bfd6345852.png', // Rann Utsav entrance gate with blue lighting
+  '/lovable-uploads/941cbc63-dc13-429e-9aca-e9f1dd8da4ab.png', // Tourism Destinations of Gujarat pavilion at Rann Utsav
+  '/lovable-uploads/8f0952c7-6ea3-4620-b272-11d4a645aff9.png', // Indoor cultural event tent with Gujarat map LED display
+  '/lovable-uploads/342be8bf-0031-4064-a042-ef9a431f7bef.png', // Outdoor event seating with white chairs and red carpet
+  '/lovable-uploads/24eb9f55-252f-411e-835c-009170755ce3.png', // Officials at Rann Utsav standing on white desert
+  '/lovable-uploads/f8dcea46-aed6-4e9a-9461-e48cc814d6ee.png', // Officials seated at Rann Utsav
+  '/lovable-uploads/c1f394c0-1649-4477-ae48-26ad2469a5ec.png', // Close-up of official at Rann Utsav event
+];
+
 // Government Event specific images - Now combined with Exhibition images
 export const governmentImages = [
   '/lovable-uploads/1c08e6af-be17-4b8a-9211-5c6e516ea3f8.png', // Cultural performance with backdrop
@@ -192,8 +204,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'National Mango Festival - Gandhinagar') {
       return nationalMangoFestivalImages;
     }
+    if (subCategory === 'Rann Utsav - Dhordo') {
+      return rannUtsavImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages]
+      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages]
       : governmentImages;
   }
   if (activeTab === 'Stall Fabrication') return stallFabricationImages;
