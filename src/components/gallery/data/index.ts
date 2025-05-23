@@ -22,7 +22,8 @@ import {
   indoIsraelMeetDholeraImages,
   indoJapanCultureRoadShowImages,
   madhavpurGhedFestivalImages,
-  namasteTrumpRoadShowImages
+  namasteTrumpRoadShowImages,
+  narivandnaUtsavImages
 } from './governmentImages';
 
 // Import other category images
@@ -65,6 +66,7 @@ export {
   indoJapanCultureRoadShowImages,
   madhavpurGhedFestivalImages,
   namasteTrumpRoadShowImages,
+  narivandnaUtsavImages,
   institutionImages,
   stallFabricationImages
 };
@@ -115,8 +117,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Namaste Trump Road Show - Ahmedabad') {
       return namasteTrumpRoadShowImages;
     }
+    if (subCategory === 'Narivandna Utsav - Ahmedabad') {
+      return narivandnaUtsavImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages]
+      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages]
       : governmentImages;
   }
   

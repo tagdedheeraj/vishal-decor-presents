@@ -45,7 +45,8 @@ export const govtEventsSubCategories = [
   'Indo - Israel Meet - Dholera',
   'Indo - Japan Culture Road Show - Ahmedabd',
   'Madhavpur Ghed Festival - Madhavpur',
-  'Namaste Trump Road Show - Ahmedabad'
+  'Namaste Trump Road Show - Ahmedabad',
+  'Narivandna Utsav - Ahmedabad'
 ];
 
 // Placeholder images for default usage

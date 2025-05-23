@@ -41,24 +41,28 @@ const GalleryTabs: React.FC<GalleryTabsProps> = ({
       {/* Sub Category Tabs - Only show if subCategories are provided */}
       {subCategories && subCategories.length > 0 && (
         <div className="flex justify-center">
-          <Tabs 
-            defaultValue={activeSubCategory || "All"} 
-            value={activeSubCategory}
-            onValueChange={onSubCategoryChange}
-            className="w-full max-w-md"
-          >
-            <TabsList className="w-full justify-center bg-gray-50 p-1">
-              {subCategories.map((subCategory) => (
-                <TabsTrigger 
-                  key={subCategory} 
-                  value={subCategory}
-                  className={`${activeSubCategory === subCategory ? 'bg-orange-500 text-white' : ''}`}
-                >
-                  {subCategory}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </Tabs>
+          <div className="w-full max-w-4xl overflow-x-auto pb-3">
+            <Tabs 
+              defaultValue={activeSubCategory || "All"} 
+              value={activeSubCategory}
+              onValueChange={onSubCategoryChange}
+              className="w-full"
+            >
+              <TabsList className="w-full h-auto flex-wrap bg-gray-50 p-1 justify-start sm:justify-center">
+                {subCategories.map((subCategory) => (
+                  <TabsTrigger 
+                    key={subCategory} 
+                    value={subCategory}
+                    className={`py-2 px-3 text-xs sm:text-sm whitespace-nowrap my-1 mx-0.5 ${
+                      activeSubCategory === subCategory ? 'bg-orange-500 text-white' : ''
+                    }`}
+                  >
+                    {subCategory}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
+          </div>
         </div>
       )}
     </div>

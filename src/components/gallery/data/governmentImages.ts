@@ -69,6 +69,20 @@ export const namasteTrumpRoadShowImages = [
   '/lovable-uploads/f3ad1d87-4862-46c2-946b-9b6c9bdbc1f4.png', // Namaste Trump event poster with stadium and crowd
 ];
 
+// Narivandna Utsav - Ahmedabad images
+export const narivandnaUtsavImages = [
+  '/lovable-uploads/876e1622-b303-4c0b-a5d7-ec0826057606.png', // Official in white shirt at ceremony with floral backdrop
+  '/lovable-uploads/7200ebaa-630f-4d14-93dc-446d0cc7edd3.png', // Woman in blue saree at ceremony
+  '/lovable-uploads/bb3cc729-9d0e-447d-98a6-ff701fa40f47.png', // Official in gray vest speaking at event
+  '/lovable-uploads/58a9f348-4a0e-409e-9264-81a8ae99e22a.png', // Officials lighting lamp at ceremony
+  '/lovable-uploads/c650518d-df76-496b-b844-86c30707de3c.png', // Woman presenting shawl to official at event
+  '/lovable-uploads/a0d8b803-47cf-4c54-8a2c-0354859620cf.png', // Woman speaking at podium with floral arrangement
+  '/lovable-uploads/b3300afc-6b83-4029-b9ec-3365e9f5de96.png', // Officials conversing at event
+  '/lovable-uploads/cb684b19-e1f2-4cb2-bfdc-62e7b67300ac.png', // Officials at ceremony with red backdrop
+  '/lovable-uploads/2ffead4e-630a-45c6-8384-55bf87151179.png', // Award presentation ceremony
+  '/lovable-uploads/47bac68f-66fb-4d44-9ea4-4ccd4fe2a723.png', // Official speaking at podium with floral decoration
+];
+
 // General government events images (combined with Exhibition images)
 export const governmentImages = [
   '/lovable-uploads/1c08e6af-be17-4b8a-9211-5c6e516ea3f8.png', // Cultural performance with backdrop
