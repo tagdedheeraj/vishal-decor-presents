@@ -12,7 +12,8 @@ export const weddingSubCategories = [
   'All',
   'Chori',
   'Gate',
-  'Mandap'
+  'Mandap',
+  'Passage'
 ];
 
 export const placeholderImages = [
@@ -58,6 +59,14 @@ export const mandapWeddingImages = [
   '/lovable-uploads/7eddd52a-42a7-4604-8fa5-90f5727b3ad4.png',
   '/lovable-uploads/58ec6b00-674f-4264-a90c-f46625e7fd10.png',
   '/lovable-uploads/44751bc4-1b57-480b-b670-27774a5f727e.png',
+];
+
+// Passage specific wedding images
+export const passageWeddingImages = [
+  '/lovable-uploads/a4e26af2-23b0-4ea5-b36c-e86d90ece99b.png',
+  '/lovable-uploads/711dc60e-6b45-4ee9-9372-b09d33affd84.png',
+  '/lovable-uploads/0c9f7321-7b17-4826-894e-f10fa5c00e92.png',
+  '/lovable-uploads/d56cdf0d-916f-489f-a577-5dc3152e92e2.png',
 ];
 
 // Government Event specific images
@@ -118,9 +127,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
       return gateWeddingImages;
     } else if (subCategory === 'Mandap') {
       return mandapWeddingImages;
+    } else if (subCategory === 'Passage') {
+      return passageWeddingImages;
     }
     return subCategory === 'All' || !subCategory 
-      ? [...weddingImages, ...choriWeddingImages, ...gateWeddingImages, ...mandapWeddingImages] 
+      ? [...weddingImages, ...choriWeddingImages, ...gateWeddingImages, ...mandapWeddingImages, ...passageWeddingImages] 
       : weddingImages;
   }
   if (activeTab === 'Institution') return institutionImages;
