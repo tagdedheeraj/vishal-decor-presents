@@ -44,6 +44,12 @@ export const heritageTourismPolicyLaunchImages = [
   '/lovable-uploads/dd550ebd-c01d-41bb-a6e7-fc253da50775.png', // Group photo of officials with signed MoUs
 ];
 
+// Indo - Israel Meet - Dholera images
+export const indoIsraelMeetDholeraImages = [
+  '/lovable-uploads/ede50151-67dd-47ce-9e06-cf2193cfdb02.png', // Event poster with PM Modi and PM Netanyahu
+  '/lovable-uploads/848f967d-2ef7-4158-8632-7d49c62f26e2.png', // Leaders handshake at ceremony with floral backdrop
+];
+
 // General government events images (combined with Exhibition images)
 export const governmentImages = [
   '/lovable-uploads/1c08e6af-be17-4b8a-9211-5c6e516ea3f8.png', // Cultural performance with backdrop

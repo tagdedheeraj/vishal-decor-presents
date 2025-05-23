@@ -18,7 +18,8 @@ import {
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
-  heritageTourismPolicyLaunchImages
+  heritageTourismPolicyLaunchImages,
+  indoIsraelMeetDholeraImages
 } from './governmentImages';
 
 // Import other category images
@@ -57,6 +58,7 @@ export {
   nationalMangoFestivalImages,
   rannUtsavImages,
   heritageTourismPolicyLaunchImages,
+  indoIsraelMeetDholeraImages,
   institutionImages,
   stallFabricationImages
 };
@@ -95,8 +97,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar') {
       return heritageTourismPolicyLaunchImages;
     }
+    if (subCategory === 'Indo - Israel Meet - Dholera') {
+      return indoIsraelMeetDholeraImages;
+    }
     return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages]
+      ? [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages]
       : governmentImages;
   }
   
