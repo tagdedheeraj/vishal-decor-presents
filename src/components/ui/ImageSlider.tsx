@@ -10,13 +10,19 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/lovable-uploads/5a3c62dd-5bd8-4a07-9574-cb922241681e.png',
+    image: '/lovable-uploads/95682f42-d41f-4b33-a8ad-8f3ba75ae4b4.png', // Slider-1
   },
   {
-    image: '/lovable-uploads/88967152-7df3-4af1-8122-7acc4318b6a0.png',
+    image: '/lovable-uploads/6a761729-28ce-4e7e-a789-865d8b8c6ae8.png', // Slider-2
   },
   {
-    image: '/lovable-uploads/c485ea0b-405d-473c-a210-dbeba829db16.png',
+    image: '/lovable-uploads/f51d081f-f9dd-42ce-a931-22a23a37bda5.png', // Slider-3
+  },
+  {
+    image: '/lovable-uploads/fba4980f-6ac4-4ad9-ae5c-8c89485617d2.png', // Slider-4
+  },
+  {
+    image: '/lovable-uploads/5030415c-450a-4b43-b6bb-c2d1f0780d09.png', // Slider-5
   },
 ];
 
