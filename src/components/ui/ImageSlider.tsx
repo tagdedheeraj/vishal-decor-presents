@@ -13,6 +13,9 @@ const slides: Slide[] = [
     image: '/lovable-uploads/8b55598d-7489-468d-b4d8-7b6f69854a6e.png', // New first image
   },
   {
+    image: '/lovable-uploads/4d5ec722-ae05-46fe-8dd3-d74a0e74c1c2.png', // New second image
+  },
+  {
     image: '/lovable-uploads/95682f42-d41f-4b33-a8ad-8f3ba75ae4b4.png', // Slider-1
   },
   {
