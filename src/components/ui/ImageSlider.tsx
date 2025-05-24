@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -22,6 +23,21 @@ const slides: Slide[] = [
   },
   {
     image: '/lovable-uploads/f60d16c4-01be-4e4c-a80a-9efe1da4c2f8.png', // New fifth image
+  },
+  {
+    image: '/lovable-uploads/95682f42-d41f-4b33-a8ad-8f3ba75ae4b4.png', // Slider-1
+  },
+  {
+    image: '/lovable-uploads/6a761729-28ce-4e7e-a789-865d8b8c6ae8.png', // Slider-2
+  },
+  {
+    image: '/lovable-uploads/f51d081f-f9dd-42ce-a931-22a23a37bda5.png', // Slider-3
+  },
+  {
+    image: '/lovable-uploads/fba4980f-6ac4-4ad9-ae5c-8c89485617d2.png', // Slider-4
+  },
+  {
+    image: '/lovable-uploads/5030415c-450a-4b43-b6bb-c2d1f0780d09.png', // Slider-5
   },
 ];
 
