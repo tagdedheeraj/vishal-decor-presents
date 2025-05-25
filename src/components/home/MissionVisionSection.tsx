@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Target, Lightbulb, Book } from 'lucide-react';
 
@@ -36,6 +35,7 @@ const MissionVisionSection = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
+      
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 
