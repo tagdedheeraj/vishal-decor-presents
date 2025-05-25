@@ -1,4 +1,3 @@
-
 // Government events and exhibitions images organized by subcategory
 
 // Azadika Amrut Mohatsav - Baroda specific images
@@ -14,7 +13,6 @@ export const azadikaAmrutMohatsavImages = [
   '/lovable-uploads/27319270-def0-4a66-963b-dcecf1487927.png',
   '/lovable-uploads/2a6dd2ab-6b1e-4da7-9a06-7352b1bffbb8.png',
   '/lovable-uploads/2df01431-ff19-43d4-a82f-07e1fcfee044.png',
-  '/lovable-uploads/2f6ac047-44ef-4817-8a16-9296f84cf90b.png',
   '/lovable-uploads/30fdd820-96a2-4407-ae94-406eafd71064.png',
   '/lovable-uploads/32275733-4e69-4388-924a-99123aad70b8.png',
 ];
