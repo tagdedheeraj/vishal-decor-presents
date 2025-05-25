@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React, { useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface GalleryTabsProps {
   categories: string[];
@@ -19,6 +19,40 @@ const GalleryTabs: React.FC<GalleryTabsProps> = ({
   activeSubCategory,
   onSubCategoryChange
 }) => {
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Check scroll position and update button states
+  const checkScrollButtons = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  // Scroll left function
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+      setTimeout(checkScrollButtons, 300);
+    }
+  };
+
+  // Scroll right function
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+      setTimeout(checkScrollButtons, 300);
+    }
+  };
+
+  // Initialize scroll buttons when component mounts or sub-categories change
+  React.useEffect(() => {
+    setTimeout(checkScrollButtons, 100);
+  }, [subCategories]);
+
   return (
     <div className="space-y-8">
       {/* Main Category Tabs */}
@@ -38,7 +72,7 @@ const GalleryTabs: React.FC<GalleryTabsProps> = ({
         ))}
       </div>
 
-      {/* Sub Category Tabs - Enhanced Professional Style */}
+      {/* Sub Category Tabs with Slider for Govt. Events - Exhibitions */}
       {subCategories && subCategories.length > 0 && (
         <div className="flex justify-center mb-12">
           <div className="w-full max-w-7xl">
@@ -48,21 +82,69 @@ const GalleryTabs: React.FC<GalleryTabsProps> = ({
                 <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full"></div>
               </div>
               
-              <div className="flex flex-wrap gap-3 justify-center">
-                {subCategories.map((subCategory) => (
-                  <button
-                    key={subCategory}
-                    onClick={() => onSubCategoryChange?.(subCategory)}
-                    className={`px-5 py-3 text-sm font-medium rounded-xl transition-all duration-300 whitespace-nowrap border ${
-                      activeSubCategory === subCategory
-                        ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25 transform scale-105 border-orange-500'
-                        : 'bg-white text-gray-600 border-gray-200 hover:bg-orange-50 hover:text-orange-700 hover:border-orange-300 hover:shadow-md hover:transform hover:scale-102'
-                    }`}
+              {/* Slider Container for Govt. Events - Exhibitions */}
+              {activeTab === 'Govt. Events - Exhibitions' ? (
+                <div className="relative">
+                  {/* Left Arrow */}
+                  {canScrollLeft && (
+                    <button
+                      onClick={scrollLeft}
+                      className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors"
+                    >
+                      <ChevronLeft className="w-5 h-5 text-gray-600" />
+                    </button>
+                  )}
+                  
+                  {/* Scrollable Container */}
+                  <div
+                    ref={scrollContainerRef}
+                    className="flex gap-3 overflow-x-auto scrollbar-hide px-8"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    onScroll={checkScrollButtons}
                   >
-                    {subCategory}
-                  </button>
-                ))}
-              </div>
+                    {subCategories.map((subCategory) => (
+                      <button
+                        key={subCategory}
+                        onClick={() => onSubCategoryChange?.(subCategory)}
+                        className={`px-5 py-3 text-sm font-medium rounded-xl transition-all duration-300 whitespace-nowrap border flex-shrink-0 ${
+                          activeSubCategory === subCategory
+                            ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25 transform scale-105 border-orange-500'
+                            : 'bg-white text-gray-600 border-gray-200 hover:bg-orange-50 hover:text-orange-700 hover:border-orange-300 hover:shadow-md hover:transform hover:scale-102'
+                        }`}
+                      >
+                        {subCategory}
+                      </button>
+                    ))}
+                  </div>
+                  
+                  {/* Right Arrow */}
+                  {canScrollRight && (
+                    <button
+                      onClick={scrollRight}
+                      className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors"
+                    >
+                      <ChevronRight className="w-5 h-5 text-gray-600" />
+                    </button>
+                  )}
+                </div>
+              ) : (
+                /* Regular flex layout for other categories */
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {subCategories.map((subCategory) => (
+                    <button
+                      key={subCategory}
+                      onClick={() => onSubCategoryChange?.(subCategory)}
+                      className={`px-5 py-3 text-sm font-medium rounded-xl transition-all duration-300 whitespace-nowrap border ${
+                        activeSubCategory === subCategory
+                          ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25 transform scale-105 border-orange-500'
+                          : 'bg-white text-gray-600 border-gray-200 hover:bg-orange-50 hover:text-orange-700 hover:border-orange-300 hover:shadow-md hover:transform hover:scale-102'
+                      }`}
+                    >
+                      {subCategory}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
