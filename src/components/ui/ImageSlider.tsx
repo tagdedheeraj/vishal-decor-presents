@@ -49,7 +49,7 @@ const ImageSlider: React.FC = () => {
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(goToNext, 4000); // Changed from 3000 to 4000 ms (4 seconds)
+    const slideInterval = setInterval(goToNext, 4000); // Auto-slide every 4 seconds
     return () => clearInterval(slideInterval);
   }, [currentIndex]);
 
@@ -68,6 +68,7 @@ const ImageSlider: React.FC = () => {
             style={{ 
               backgroundImage: `url(${slide.image})`,
               backgroundPosition: 'center center',
+              backgroundSize: 'cover',
               transform: index === currentIndex ? 'scale(1.05)' : 'scale(1)',
             }}
           />
