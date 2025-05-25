@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
@@ -23,6 +22,7 @@ const Footer = () => {
               </p>
             </div>
             
+            {/* Social icons - removed LinkedIn */}
             <div className="flex space-x-3 mt-6">
               <Button variant="ghost" size="icon" className="rounded-full bg-orange-DEFAULT hover:bg-orange-dark h-8 w-8 p-1">
                 <Facebook size={16} className="text-white" />
@@ -32,9 +32,6 @@ const Footer = () => {
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full bg-orange-DEFAULT hover:bg-orange-dark h-8 w-8 p-1">
                 <Twitter size={16} className="text-white" />
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full bg-orange-DEFAULT hover:bg-orange-dark h-8 w-8 p-1">
-                <Linkedin size={16} className="text-white" />
               </Button>
             </div>
           </div>

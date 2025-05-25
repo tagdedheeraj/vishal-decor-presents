@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Menu, X, Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -80,19 +79,13 @@ const Header = () => {
             </Link>
           </nav>
           
-          {/* Social Media Icons */}
+          {/* Social Media Icons - removed LinkedIn and Youtube */}
           <div className="hidden lg:flex items-center space-x-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
               <Facebook size={20} />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
               <Instagram size={20} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
-              <Youtube size={20} />
             </a>
           </div>
           
@@ -161,19 +154,13 @@ const Header = () => {
               Contact
             </Link>
             
-            {/* Social icons for mobile */}
+            {/* Social icons for mobile - removed LinkedIn and Youtube */}
             <div className="flex items-center space-x-4 px-4 mt-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
                 <Instagram size={20} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-black transition-colors">
-                <Youtube size={20} />
               </a>
             </div>
           </nav>
