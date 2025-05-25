@@ -38,30 +38,27 @@ const GalleryTabs: React.FC<GalleryTabsProps> = ({
         ))}
       </div>
 
-      {/* Sub Category Tabs - Only show if subCategories are provided */}
+      {/* Sub Category Tabs - Professional Style */}
       {subCategories && subCategories.length > 0 && (
-        <div className="flex justify-center">
-          <div className="w-full max-w-4xl overflow-x-auto pb-3">
-            <Tabs 
-              defaultValue={activeSubCategory || "All"} 
-              value={activeSubCategory}
-              onValueChange={onSubCategoryChange}
-              className="w-full"
-            >
-              <TabsList className="w-full h-auto flex-wrap bg-gray-50 p-1 justify-start sm:justify-center">
+        <div className="flex justify-center mb-8">
+          <div className="w-full max-w-6xl">
+            <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {subCategories.map((subCategory) => (
-                  <TabsTrigger 
-                    key={subCategory} 
-                    value={subCategory}
-                    className={`py-2 px-3 text-xs sm:text-sm whitespace-nowrap my-1 mx-0.5 ${
-                      activeSubCategory === subCategory ? 'bg-orange-500 text-white' : ''
+                  <button
+                    key={subCategory}
+                    onClick={() => onSubCategoryChange?.(subCategory)}
+                    className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 whitespace-nowrap ${
+                      activeSubCategory === subCategory
+                        ? 'bg-orange-500 text-white shadow-md transform scale-105'
+                        : 'bg-gray-50 text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:shadow-sm'
                     }`}
                   >
                     {subCategory}
-                  </TabsTrigger>
+                  </button>
                 ))}
-              </TabsList>
-            </Tabs>
+              </div>
+            </div>
           </div>
         </div>
       )}
