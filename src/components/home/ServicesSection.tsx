@@ -29,7 +29,7 @@ const ServicesSection = () => {
   return (
     <section 
       id="services-section" 
-      className="py-20 bg-orange-500 overflow-hidden"
+      className="py-20 bg-navy overflow-hidden"
     >
       <div className="container mx-auto px-4">
         <div 
