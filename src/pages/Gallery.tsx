@@ -12,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 
 const Gallery = () => {
-  const [activeTab, setActiveTab] = useState('Wedding');
+  const [activeTab, setActiveTab] = useState('Govt. Events - Exhibitions');
   const [activeSubCategory, setActiveSubCategory] = useState<string>('All');
   const [popupOpen, setPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
