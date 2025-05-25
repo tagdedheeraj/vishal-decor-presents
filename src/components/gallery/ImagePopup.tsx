@@ -42,7 +42,7 @@ const ImagePopup: React.FC<ImagePopupProps> = ({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent 
-        className="max-w-4xl p-0 bg-black/95 border-none" 
+        className="max-w-4xl p-0 bg-transparent border-none shadow-none" 
         onKeyDown={handleKeyDown}
         onInteractOutside={() => onOpenChange(false)}
       >
