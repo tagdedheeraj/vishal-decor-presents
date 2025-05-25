@@ -1,10 +1,8 @@
-
 // Gallery main categories and helper functions
 
 // Main gallery categories
 export const categories = [
   'Govt. Events - Exhibitions', 
-  'Institution', 
   'Wedding',
   'Convocation-Institutional',
   'Stall Fabrication'
