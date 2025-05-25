@@ -50,13 +50,6 @@ const IntroductionSection = () => {
               >
                 Our Introductions
               </h2>
-              <h3 
-                className={`text-3xl md:text-4xl font-bold mb-6 transition-all duration-700 delay-500 transform ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-              >
-                WELCOME TO VISHAL DECOR & EVENT PVT LTD
-              </h3>
             </div>
             <p 
               className={`mb-4 transition-all duration-700 delay-700 transform ${

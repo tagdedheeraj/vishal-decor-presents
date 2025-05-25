@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -63,9 +64,10 @@ const ImageSlider: React.FC = () => {
           }`}
         >
           <div 
-            className="absolute inset-0 bg-cover bg-center transform transition-transform duration-2000"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat transform transition-transform duration-2000"
             style={{ 
               backgroundImage: `url(${slide.image})`,
+              backgroundPosition: 'center center',
               transform: index === currentIndex ? 'scale(1.05)' : 'scale(1)',
             }}
           />
