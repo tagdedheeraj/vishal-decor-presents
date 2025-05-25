@@ -29,13 +29,7 @@ const ServicesSection = () => {
   return (
     <section 
       id="services-section" 
-      className="py-20 relative"
-      style={{
-        backgroundImage: `linear-gradient(rgba(255, 165, 0, 0.7), rgba(255, 165, 0, 0.7)), url('/lovable-uploads/a21230be-2140-4e8a-9b06-22b4690507b3.png')`,
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
+      className="py-20 bg-orange-500 overflow-hidden"
     >
       <div className="container mx-auto px-4">
         <div 
