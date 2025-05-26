@@ -1,3 +1,4 @@
+
 // Government events and exhibitions images organized by subcategory
 
 // Azadika Amrut Mohatsav - Baroda specific images
@@ -109,7 +110,16 @@ export const ahmedabadShoppingFestivalImages = [
 
 // 51 Shaktipith Mohatsav - Ambaji images
 export const shaktiPithMohatsavImages = [
-  // This will be populated with images when they are uploaded
+  '/lovable-uploads/8978125d-9ecb-4a76-951b-29097a15b457.png', // Officials seated in decorated vehicle at ceremony
+  '/lovable-uploads/e5272e28-31ca-4055-965c-3c417487fcce.png', // Officials lighting ceremonial lamp at Shaktipith event
+  '/lovable-uploads/79511812-1e32-4ddb-83a7-903a6d070eb7.png', // Official holding ceremonial vessel at event
+  '/lovable-uploads/6f3c2cf2-2232-402f-8a5a-9ae6cb846090.png', // Officials performing aarti ceremony at Shaktipith festival
+  '/lovable-uploads/6172a508-f9a1-4c97-9210-3b2149a0ceb5.png', // Official speaking at podium with temple backdrop
+  '/lovable-uploads/ed5716ae-01d8-4b62-a74f-5ae61c193d17.png', // Official addressing audience at Shaktipith Mohatsav
+  '/lovable-uploads/1f91f96b-be7d-458b-a304-4b46a3159a30.png', // Cultural performers on stage at event
+  '/lovable-uploads/22b5e686-e8c0-4aa3-96d1-410d32b91986.png', // Musical performance at Shaktipith festival with divine backdrop
+  '/lovable-uploads/fd1b0c41-574d-4b36-903a-5cd224707172.png', // Stage setup with spiritual theme and performers
+  '/lovable-uploads/07429d07-e9de-4278-8a20-4127cf8eb634.png', // Traditional dance performers with ceremonial pots
 ];
 
 // Ambardi Lions Safari Park - Dhari images
