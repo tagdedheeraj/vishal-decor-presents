@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
@@ -22,6 +22,23 @@ const ImagePopup: React.FC<ImagePopupProps> = ({
   onNext,
 }) => {
   const [isLoading, setIsLoading] = useState(true);
+
+  // Preload adjacent images for faster navigation
+  useEffect(() => {
+    if (open && images.length > 1) {
+      const preloadImage = (src: string) => {
+        const img = new Image();
+        img.src = src;
+      };
+
+      // Preload next and previous images
+      const nextIndex = (currentImageIndex + 1) % images.length;
+      const prevIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+      
+      preloadImage(images[nextIndex]);
+      preloadImage(images[prevIndex]);
+    }
+  }, [open, currentImageIndex, images]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowLeft') {
@@ -71,8 +88,10 @@ const ImagePopup: React.FC<ImagePopupProps> = ({
               className={`max-h-full max-w-full object-contain ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity`}
               onLoad={handleImageLoad}
               onError={handleImageLoad}
-              loading="lazy"
+              loading="eager"
               decoding="async"
+              fetchPriority="high"
+              sizes="100vw"
             />
             
             {/* Navigation buttons */}

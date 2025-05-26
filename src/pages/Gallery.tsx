@@ -41,6 +41,15 @@ const Gallery = () => {
   // Get images based on active tab and sub-category
   const displayImages = getDisplayImages(activeTab, activeSubCategory);
 
+  // Preload first few images of the current category for faster initial load
+  useEffect(() => {
+    const preloadImages = displayImages.slice(0, 6);
+    preloadImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [displayImages]);
+
   // Open the popup with the selected image
   const openImagePopup = (index: number) => {
     setCurrentImageIndex(index);
@@ -70,6 +79,8 @@ const Gallery = () => {
             src="/lovable-uploads/a4af9d91-6680-43f1-99c1-e11d3eb2d1dd.png" 
             alt="Decorated venue seating" 
             className="w-full h-full object-cover opacity-50"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
