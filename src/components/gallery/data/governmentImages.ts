@@ -108,7 +108,7 @@ export const ahmedabadShoppingFestivalImages = [
   '/lovable-uploads/d62d013e-3073-42ad-ad04-969b1febfb6f.png', // Ahmedabad Shopping Festival banner with event details
 ];
 
-// 51 Shaktipith Mohatsav - Ambaji images
+// 51 Shaktipith Mohatsav - Ambaji images (removed the requested images)
 export const shaktiPithMohatsavImages = [
   '/lovable-uploads/8978125d-9ecb-4a76-951b-29097a15b457.png', // Officials seated in decorated vehicle at ceremony
   '/lovable-uploads/e5272e28-31ca-4055-965c-3c417487fcce.png', // Officials lighting ceremonial lamp at Shaktipith event
@@ -120,14 +120,7 @@ export const shaktiPithMohatsavImages = [
   '/lovable-uploads/22b5e686-e8c0-4aa3-96d1-410d32b91986.png', // Musical performance at Shaktipith festival with divine backdrop
   '/lovable-uploads/fd1b0c41-574d-4b36-903a-5cd224707172.png', // Stage setup with spiritual theme and performers
   '/lovable-uploads/07429d07-e9de-4278-8a20-4127cf8eb634.png', // Traditional dance performers with ceremonial pots
-  '/lovable-uploads/44751bc4-1b57-480b-b670-27774a5f727e.png', // Cultural performers at festival with traditional costumes
   '/lovable-uploads/95682f42-d41f-4b33-a8ad-8f3ba75ae4b4.png', // Officials and visitors at Shaktipith celebration
-  '/lovable-uploads/88055602-b115-4e04-b73b-32a8c0c05e84.png', // Traditional costume performers at festival
-  '/lovable-uploads/80b51345-67cb-4af8-9739-ec4b36c04bff.png', // Cultural showcase at Shaktipith Mohatsav
-  '/lovable-uploads/7eddd52a-42a7-4604-8fa5-90f5727b3ad4.png', // Official at prayer ceremony with traditional backdrop
-  '/lovable-uploads/869f9cf0-854a-46e7-9acd-12a401956d54.png', // Group photo of officials at Shaktipith festival
-  '/lovable-uploads/7da2080a-a6bf-4c33-a90a-975fe9afb3c6.png', // VIP seating area at Shaktipith Mohatsav
-  '/lovable-uploads/78d533ef-b84f-4f98-a1e9-c37fc65126e0.png', // Festival entrance decoration at Shaktipith event
 ];
 
 // Ambardi Lions Safari Park - Dhari images
