@@ -117,6 +117,7 @@ const Gallery = () => {
           <GalleryGrid 
             images={[...displayImages]} 
             activeTab={activeTab} 
+            activeSubCategory={activeSubCategory}
             onImageClick={openImagePopup} 
           />
         </div>
