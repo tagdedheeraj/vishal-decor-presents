@@ -138,6 +138,9 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Dinosaur Park Inauguration - Balasinor') {
       return dinosaurParkInaugurationImages;
     }
+    if (subCategory === 'Azadika Amrut Mohatsav - Baroda') {
+      return azadikaAmrutMohatsavImages;
+    }
     if (subCategory === 'UAE President Welcome - Ahmedabad') {
       return uaePresidentWelcomeImages;
     }
@@ -172,7 +175,7 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
       return ambardiLionsSafariParkImages;
     }
     // Default to all government images when no subcategory
-    return [...governmentImages, ...birsaMundaJanmaJayantiImages, ...dinosaurParkInaugurationImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
+    return [...governmentImages, ...azadikaAmrutMohatsavImages, ...birsaMundaJanmaJayantiImages, ...dinosaurParkInaugurationImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
   }
   
   if (activeTab === 'Convocation-Institutional') {

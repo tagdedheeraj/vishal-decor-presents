@@ -1,3 +1,4 @@
+
 // Government events and exhibitions images organized by subcategory
 
 // Birsa Munda Janma Jayanti - Ahmedabad specific images
@@ -12,7 +13,13 @@ export const birsaMundaJanmaJayantiImages = [
 
 // Azadika Amrut Mohatsav - Baroda specific images
 export const azadikaAmrutMohatsavImages = [
-  // All previous images have been removed as requested
+  '/lovable-uploads/16a28f97-f38b-4993-b906-1d57fc13eb4a.png', // Officials cutting red ribbon at ceremony with lady in red saree
+  '/lovable-uploads/e426976b-b24a-4e62-88dc-41604150f725.png', // Officials lighting ceremonial lamp at event
+  '/lovable-uploads/78e9f561-106f-4682-9463-bc7cddaf6444.png', // Officials seated at VIP area during ceremony
+  '/lovable-uploads/98c2b90a-a4d8-4403-92a9-9eb55d5fdcc9.png', // Official receiving Ganesha statue from lady in red saree
+  '/lovable-uploads/3e6cddd3-d2f4-420d-af4b-3530263baba2.png', // Officials exchanging commemorative item with BJP logo
+  '/lovable-uploads/b7baff84-0a0f-4aa8-baa8-ff59d33bf08e.png', // Lady speaking at podium with officials' photos backdrop
+  '/lovable-uploads/2971bdee-2cc8-43b9-a8bc-f0dcdb8352b2.png', // Officials standing at ceremony with red LED backdrop
 ];
 
 // UAE President Welcome - Ahmedabad specific images
