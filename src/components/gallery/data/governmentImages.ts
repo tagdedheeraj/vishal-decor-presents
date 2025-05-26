@@ -1,3 +1,4 @@
+
 // Government events and exhibitions images organized by subcategory
 
 // Birsa Munda Janma Jayanti - Ahmedabad specific images
@@ -35,16 +36,16 @@ export const nationalMangoFestivalImages = [
   '/lovable-uploads/7b317a16-4e8b-48fa-9b65-5e73bb5ec3a0.png', // Official at mango-themed entrance gate with decorative balloons
 ];
 
-// Rann Utsav - Dhordo images
+// Rann Utsav - Dhordo images (updated with new photos)
 export const rannUtsavImages = [
-  '/lovable-uploads/d3f64f30-51f9-4072-8154-085a0dea0734.png', // Rann Utsav entrance gate with green lighting
-  '/lovable-uploads/5db7de65-2a7e-4c9b-8b62-35bfd6345852.png', // Rann Utsav entrance gate with blue lighting
-  '/lovable-uploads/941cbc63-dc13-429e-9aca-e9f1dd8da4ab.png', // Tourism Destinations of Gujarat pavilion at Rann Utsav
-  '/lovable-uploads/8f0952c7-6ea3-4620-b272-11d4a645aff9.png', // Indoor cultural event tent with Gujarat map LED display
-  '/lovable-uploads/342be8bf-0031-4064-a042-ef9a431f7bef.png', // Outdoor event seating with white chairs and red carpet
-  '/lovable-uploads/24eb9f55-252f-411e-835c-009170755ce3.png', // Officials at Rann Utsav standing on white desert
-  '/lovable-uploads/f8dcea46-aed6-4e9a-9461-e48cc814d6ee.png', // Officials seated at Rann Utsav
-  '/lovable-uploads/c1f394c0-1649-4477-ae48-26ad2469a5ec.png', // Close-up of official at Rann Utsav event
+  '/lovable-uploads/b292cd37-b11f-4a5e-becd-8edcc7cafbfc.png', // Outdoor event seating with white chairs and red carpet at Rann Utsav
+  '/lovable-uploads/4f41c2e4-49aa-47d5-b271-53f75045f1cb.png', // Official seated at Rann Utsav event
+  '/lovable-uploads/12a0ca86-9dfa-4d64-a7e1-1460aaf8c043.png', // Officials seated at VIP area during Rann Utsav
+  '/lovable-uploads/0e24b979-7487-4c2e-87fd-958daa11c455.png', // Officials standing on white desert at Rann Utsav
+  '/lovable-uploads/f461786a-4e57-4e48-b52e-789d9cf024b5.png', // Rann Utsav entrance gate with green lighting
+  '/lovable-uploads/f27a3773-24a4-4ce4-965b-20eb9e9a5559.png', // Rann Utsav entrance gate with blue lighting
+  '/lovable-uploads/eac8011d-ab8c-4713-af4e-09224d5893ce.png', // Tourism Destinations of Gujarat pavilion at Rann Utsav
+  '/lovable-uploads/6eea52de-e10f-40a2-b0bd-b90f7220bd08.png', // Indoor cultural event tent with Gujarat map LED display
 ];
 
 // Indo - Israel Meet - Dholera images
