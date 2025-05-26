@@ -1,3 +1,4 @@
+
 // Gallery main categories and helper functions
 
 // Main gallery categories
@@ -36,20 +37,20 @@ export const weddingSubCategories = [
   'Stage'
 ];
 
-// Government Events - Exhibitions subcategories (removed 'All', 'Azadika Amrut Mohatsav - Baroda', and 'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar')
+// Government Events - Exhibitions subcategories (reordered as requested)
 export const govtEventsSubCategories = [
+  '51 Shaktipith Mohatsav - Ambaji',
+  'Ahmedabad Shopping Festival - River Front',
+  'Ambardi Lions Safari Park - Dhari',
   'Birsa Munda Janma Jayanti - Ahmedabad',
-  'UAE President Welcome - Ahmedabad',
-  'National Mango Festival - Gandhinagar',
-  'Rann Utsav - Dhordo',
   'Indo - Israel Meet - Dholera',
   'Indo - Japan Culture Road Show - Ahmedabd',
   'Madhavpur Ghed Festival - Madhavpur',
   'Namaste Trump Road Show - Ahmedabad',
   'Narivandna Utsav - Ahmedabad',
-  'Ahmedabad Shopping Festival - River Front',
-  '51 Shaktipith Mohatsav - Ambaji',
-  'Ambardi Lions Safari Park - Dhari'
+  'National Mango Festival - Gandhinagar',
+  'Rann Utsav - Dhordo',
+  'UAE President Welcome - Ahmedabad'
 ];
 
 // Convocation-Institutional subcategories (removed 'All')
