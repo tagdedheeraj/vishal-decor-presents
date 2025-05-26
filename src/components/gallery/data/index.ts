@@ -195,7 +195,7 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     return [...convocationImages, ...ediFashionShowImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages];
   }
   
-  if (activeTab === 'Stall Fabrication') return stallFabricationImages;
+  if (activeTab === 'Stall Design & Fabrication') return stallFabricationImages;
   
   return placeholderImages;
 };

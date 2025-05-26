@@ -6,7 +6,7 @@ export const categories = [
   'Govt. Events - Exhibitions',
   'Convocation-Institutional', 
   'Wedding',
-  'Stall Fabrication'
+  'Stall Design & Fabrication'
 ];
 
 // Helper function to check if a category has subcategories

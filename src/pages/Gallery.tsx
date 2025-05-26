@@ -94,6 +94,14 @@ const Gallery = () => {
             onSubCategoryChange={setActiveSubCategory}
           />
 
+          {/* Sub Category Title */}
+          {activeSubCategory && (
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-800">{activeSubCategory}</h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto mt-2 rounded-full"></div>
+            </div>
+          )}
+
           {/* Gallery Grid Component */}
           <GalleryGrid 
             images={displayImages} 

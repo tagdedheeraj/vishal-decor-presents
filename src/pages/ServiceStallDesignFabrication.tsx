@@ -28,7 +28,7 @@ const ServiceStallDesignFabrication = () => {
       <ServiceTabs activeTab="stall-design-fabrication" serviceContent={serviceContent} />
       
       {/* Gallery Section */}
-      <ServiceGallery serviceCategory="Stall Fabrication" />
+      <ServiceGallery serviceCategory="Stall Design & Fabrication" />
     </main>
   );
 };
