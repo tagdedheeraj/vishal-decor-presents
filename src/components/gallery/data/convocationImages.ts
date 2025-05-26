@@ -6,7 +6,13 @@ export const gbuConvocationImages = [
   '/lovable-uploads/ebc74307-6791-48e0-95cc-2a7607abe2ed.png',
   '/lovable-uploads/8a813c8f-316b-4e13-8d43-df7da00cd6a3.png',
   '/lovable-uploads/4506fb9a-1c10-4b23-bb46-3ba9c0599de8.png',
-  '/lovable-uploads/d14b7944-f359-483a-9890-139b48e19ce5.png'
+  '/lovable-uploads/d14b7944-f359-483a-9890-139b48e19ce5.png',
+  '/lovable-uploads/db3c6fbb-de02-419b-b3fa-aadea4caa118.png',
+  '/lovable-uploads/a1d5de1f-4945-4e22-8387-b0f27d48258f.png',
+  '/lovable-uploads/6a0c7ef5-e16c-49bc-b123-f21e0bae1037.png',
+  '/lovable-uploads/0c0be2f3-de2c-4623-8ea7-733cfedde8df.png',
+  '/lovable-uploads/252b7506-312e-49b3-aba1-0fc1947f26c0.png',
+  '/lovable-uploads/bd41a017-3afe-474b-8065-38ae3492796b.png'
 ];
 
 // IIMA specific images
