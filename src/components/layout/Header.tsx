@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Facebook, Instagram } from 'lucide-react';
@@ -33,7 +34,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/fb0e2e81-768f-474e-a868-a068ec13db8c.png" 
+              src="/lovable-uploads/1face62d-af96-494a-b6f5-583fe597a063.png" 
               alt="Vishal Decor Logo" 
               className="h-12" 
             />
