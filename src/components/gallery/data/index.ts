@@ -19,7 +19,6 @@ import {
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
-  heritageTourismPolicyLaunchImages,
   indoIsraelMeetDholeraImages,
   indoJapanCultureRoadShowImages,
   madhavpurGhedFestivalImages,
@@ -91,7 +90,6 @@ export {
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
-  heritageTourismPolicyLaunchImages,
   indoIsraelMeetDholeraImages,
   indoJapanCultureRoadShowImages,
   madhavpurGhedFestivalImages,
@@ -168,7 +166,7 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Ambardi Lions Safari Park - Dhari') {
       return ambardiLionsSafariParkImages;
     }
-    // Default to all government images when no subcategory (removed heritageTourismPolicyLaunchImages)
+    // Default to all government images when no subcategory
     return [...governmentImages, ...birsaMundaJanmaJayantiImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
   }
   
