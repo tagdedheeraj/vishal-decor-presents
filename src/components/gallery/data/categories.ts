@@ -1,3 +1,4 @@
+
 // Gallery main categories and helper functions
 
 // Main gallery categories
@@ -27,9 +28,8 @@ export const getSubCategories = (category: string): string[] => {
   return [];
 };
 
-// Wedding subcategories
+// Wedding subcategories (removed 'All')
 export const weddingSubCategories = [
-  'All',
   'Chori',
   'Gate',
   'Mandap',
@@ -37,9 +37,8 @@ export const weddingSubCategories = [
   'Stage'
 ];
 
-// Government Events - Exhibitions subcategories
+// Government Events - Exhibitions subcategories (removed 'All')
 export const govtEventsSubCategories = [
-  'All',
   'Azadika Amrut Mohatsav - Baroda',
   'UAE President Welcome - Ahmedabad',
   'National Mango Festival - Gandhinagar',
@@ -55,9 +54,8 @@ export const govtEventsSubCategories = [
   'Ambardi Lions Safari Park - Dhari'
 ];
 
-// Convocation-Institutional subcategories
+// Convocation-Institutional subcategories (removed 'All')
 export const convocationSubCategories = [
-  'All',
   'GBU',
   'IIMA',
   'IIT',

@@ -121,9 +121,8 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     } else if (subCategory === 'Stage') {
       return stageWeddingImages;
     }
-    return subCategory === 'All' || !subCategory 
-      ? [...weddingImages, ...choriWeddingImages, ...gateWeddingImages, ...mandapWeddingImages, ...passageWeddingImages, ...stageWeddingImages] 
-      : weddingImages;
+    // Default to all wedding images when no subcategory or invalid subcategory
+    return [...weddingImages, ...choriWeddingImages, ...gateWeddingImages, ...mandapWeddingImages, ...passageWeddingImages, ...stageWeddingImages];
   }
   
   if (activeTab === 'Institution') return institutionImages;
@@ -170,9 +169,8 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Ambardi Lions Safari Park - Dhari') {
       return ambardiLionsSafariParkImages;
     }
-    return subCategory === 'All' || !subCategory 
-      ? [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages]
-      : governmentImages;
+    // Default to all government images when no subcategory or invalid subcategory
+    return [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
   }
   
   if (activeTab === 'Convocation-Institutional') {
@@ -188,9 +186,8 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'EDI Fashion Show') {
       return ediFashionShowImages;
     }
-    return subCategory === 'All' || !subCategory
-      ? [...convocationImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages, ...ediFashionShowImages]
-      : convocationImages;
+    // Default to all convocation images when no subcategory or invalid subcategory
+    return [...convocationImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages, ...ediFashionShowImages];
   }
   
   if (activeTab === 'Stall Fabrication') return stallFabricationImages;

@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('Govt. Events - Exhibitions');
-  const [activeSubCategory, setActiveSubCategory] = useState<string>('All');
+  const [activeSubCategory, setActiveSubCategory] = useState<string>('');
   const [popupOpen, setPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -21,7 +21,7 @@ const Gallery = () => {
   const handleCategoryChange = (category: string) => {
     setActiveTab(category);
     // Reset sub-category when changing main category
-    setActiveSubCategory('All');
+    setActiveSubCategory('');
   };
 
   // Get sub-categories if available for the current tab
