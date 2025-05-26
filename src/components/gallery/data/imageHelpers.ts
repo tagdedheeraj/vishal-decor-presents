@@ -39,9 +39,10 @@ import {
 import { institutionImages, stallFabricationImages } from './otherImages';
 import { corporateImages, otherEventsImages } from './imageCollections';
 import { placeholderImages } from './categories';
+import type { MainCategory, WeddingSubCategory, GovernmentSubCategory, ConvocationSubCategory } from './types';
 
 // Helper function to get wedding images based on subcategory
-const getWeddingImages = (subCategory?: string): string[] => {
+const getWeddingImages = (subCategory?: WeddingSubCategory): readonly string[] => {
   if (subCategory === 'Chori') {
     return choriWeddingImages;
   } else if (subCategory === 'Gate') {
@@ -54,11 +55,11 @@ const getWeddingImages = (subCategory?: string): string[] => {
     return stageWeddingImages;
   }
   // Default to all wedding images when no subcategory or invalid subcategory
-  return [...weddingImages, ...choriWeddingImages, ...gateWeddingImages, ...mandapWeddingImages, ...passageWeddingImages, ...stageWeddingImages];
+  return [...weddingImages, ...choriWeddingImages, ...gateWeddingImages, ...mandapWeddingImages, ...passageWeddingImages, ...stageWeddingImages] as const;
 };
 
 // Helper function to get government event images based on subcategory
-const getGovernmentImages = (subCategory?: string): string[] => {
+const getGovernmentImages = (subCategory?: GovernmentSubCategory): readonly string[] => {
   if (subCategory === 'Birsa Munda Janma Jayanti - Ahmedabad') {
     return birsaMundaJanmaJayantiImages;
   }
@@ -102,11 +103,11 @@ const getGovernmentImages = (subCategory?: string): string[] => {
     return ambardiLionsSafariParkImages;
   }
   // Default to all government images when no subcategory
-  return [...governmentImages, ...azadikaAmrutMohatsavImages, ...birsaMundaJanmaJayantiImages, ...dinosaurParkInaugurationImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
+  return [...governmentImages, ...azadikaAmrutMohatsavImages, ...birsaMundaJanmaJayantiImages, ...dinosaurParkInaugurationImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages] as const;
 };
 
 // Helper function to get convocation images based on subcategory
-const getConvocationImages = (subCategory?: string): string[] => {
+const getConvocationImages = (subCategory?: ConvocationSubCategory): readonly string[] => {
   if (subCategory === 'EDI Fashion Show') {
     return ediFashionShowImages;
   }
@@ -120,13 +121,13 @@ const getConvocationImages = (subCategory?: string): string[] => {
     return iitConvocationImages;
   }
   // Default to all convocation images when no subcategory or invalid subcategory
-  return [...convocationImages, ...ediFashionShowImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages];
+  return [...convocationImages, ...ediFashionShowImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages] as const;
 };
 
 // Main helper function to get images based on active tab and subcategory
-export const getDisplayImages = (activeTab: string, subCategory?: string): string[] => {
+export const getDisplayImages = (activeTab: MainCategory, subCategory?: string): readonly string[] => {
   if (activeTab === 'Wedding') {
-    return getWeddingImages(subCategory);
+    return getWeddingImages(subCategory as WeddingSubCategory);
   }
   
   if (activeTab === 'Institution') return institutionImages;
@@ -134,11 +135,11 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
   if (activeTab === 'Other Events') return otherEventsImages;
   
   if (activeTab === 'Govt. Events - Exhibitions') {
-    return getGovernmentImages(subCategory);
+    return getGovernmentImages(subCategory as GovernmentSubCategory);
   }
   
   if (activeTab === 'Convocation-Institutional') {
-    return getConvocationImages(subCategory);
+    return getConvocationImages(subCategory as ConvocationSubCategory);
   }
   
   if (activeTab === 'Stall Design & Fabrication') return stallFabricationImages;

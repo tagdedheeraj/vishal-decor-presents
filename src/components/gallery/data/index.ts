@@ -11,5 +11,8 @@ export * from './imageCollections';
 // Export categories and helper functions
 export * from './categories';
 
+// Export types
+export * from './types';
+
 // Export the main display function
 export { getDisplayImages } from './imageHelpers';
