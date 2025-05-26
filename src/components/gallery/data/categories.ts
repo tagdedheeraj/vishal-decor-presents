@@ -1,4 +1,3 @@
-
 // Gallery main categories and helper functions
 
 // Main gallery categories
@@ -37,13 +36,12 @@ export const weddingSubCategories = [
   'Stage'
 ];
 
-// Government Events - Exhibitions subcategories (removed 'All' and 'Azadika Amrut Mohatsav - Baroda')
+// Government Events - Exhibitions subcategories (removed 'All', 'Azadika Amrut Mohatsav - Baroda', and 'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar')
 export const govtEventsSubCategories = [
   'Birsa Munda Janma Jayanti - Ahmedabad',
   'UAE President Welcome - Ahmedabad',
   'National Mango Festival - Gandhinagar',
   'Rann Utsav - Dhordo',
-  'Heritage Tourism Policy Launch - Hotel Leela - Gandhinagar',
   'Indo - Israel Meet - Dholera',
   'Indo - Japan Culture Road Show - Ahmedabd',
   'Madhavpur Ghed Festival - Madhavpur',
