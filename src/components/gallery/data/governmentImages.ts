@@ -1,4 +1,5 @@
 
+
 // Government events and exhibitions images organized by subcategory
 
 // Azadika Amrut Mohatsav - Baroda specific images
@@ -102,10 +103,10 @@ export const narivandnaUtsavImages = [
 
 // Ahmedabad Shopping Festival - River Front images
 export const ahmedabadShoppingFestivalImages = [
-  '/lovable-uploads/d863855e-e900-4bcb-a1df-edfb0f0bcf9f.png', // Shopping Festival Banner
-  '/lovable-uploads/6f82a47a-f977-4f1f-b8fa-2f6be95a5b26.png', // PM Modi speaking at event with yellow and orange decoration 
-  '/lovable-uploads/7532e8ba-292c-4660-aa9f-4b091ad6d6f5.png', // PM Modi with officials cutting red ribbon
-  '/lovable-uploads/7e312c43-cc5a-4e50-9585-dc7f2f437dce.png', // PM Modi visiting booths at shopping festival
+  '/lovable-uploads/75ab97fe-39e0-4aff-9124-49f89ac56942.png', // Officials cutting ribbon at shopping festival inauguration
+  '/lovable-uploads/05179d75-7f36-41ff-bf04-2fa39f775034.png', // Main stage with LED screen and decorative yellow ceiling
+  '/lovable-uploads/a1af19f1-f231-4f50-acf8-d006293c7860.png', // Officials visiting shopping festival stalls and exhibitions
+  '/lovable-uploads/d62d013e-3073-42ad-ad04-969b1febfb6f.png', // Ahmedabad Shopping Festival banner with event details
 ];
 
 // 51 Shaktipith Mohatsav - Ambaji images
@@ -167,3 +168,4 @@ export const exhibitionImages = [
   '/lovable-uploads/148d8538-3b66-4785-a74a-b98800cf6859.png', // Exhibition hall with stalls
   '/lovable-uploads/3be7990c-3a08-401b-9927-10e1c111846c.png', // Exhibition stalls with jewelry and crafts
 ];
+
