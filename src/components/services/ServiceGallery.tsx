@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { getDisplayImages } from '@/components/gallery/data';
+import { MainCategory } from '@/components/gallery/data/types';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
 import ImagePopup from '@/components/gallery/ImagePopup';
 
@@ -11,7 +12,7 @@ interface ServiceGalleryProps {
 const ServiceGallery: React.FC<ServiceGalleryProps> = ({ serviceCategory }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const images = getDisplayImages(serviceCategory);
+  const images = getDisplayImages(serviceCategory as MainCategory);
 
   const handleImageClick = (index: number) => {
     setSelectedImageIndex(index);
@@ -39,7 +40,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ serviceCategory }) => {
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-center mb-8">Gallery</h2>
         <GalleryGrid
-          images={images}
+          images={[...images]}
           activeTab={serviceCategory}
           onImageClick={handleImageClick}
         />
@@ -47,7 +48,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ serviceCategory }) => {
           open={isPopupOpen}
           onOpenChange={setIsPopupOpen}
           currentImageIndex={selectedImageIndex || 0}
-          images={images}
+          images={[...images]}
           onPrevious={handlePrevious}
           onNext={handleNext}
         />

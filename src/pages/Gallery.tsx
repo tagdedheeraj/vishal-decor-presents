@@ -9,17 +9,18 @@ import {
   hasSubCategories, 
   getSubCategories 
 } from '@/components/gallery/data/index';
+import { MainCategory } from '@/components/gallery/data/types';
 import { Button } from '@/components/ui/button';
 
 const Gallery = () => {
-  const [activeTab, setActiveTab] = useState('Govt. Events - Exhibitions');
+  const [activeTab, setActiveTab] = useState<MainCategory>('Govt. Events - Exhibitions');
   const [activeSubCategory, setActiveSubCategory] = useState<string>('');
   const [popupOpen, setPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Handle category change
   const handleCategoryChange = (category: string) => {
-    setActiveTab(category);
+    setActiveTab(category as MainCategory);
     // Reset sub-category when changing main category
     setActiveSubCategory('');
   };
@@ -86,10 +87,10 @@ const Gallery = () => {
 
           {/* Gallery Tabs Component */}
           <GalleryTabs 
-            categories={categories} 
+            categories={[...categories]} 
             activeTab={activeTab} 
             onTabChange={handleCategoryChange}
-            subCategories={subCategories}
+            subCategories={[...subCategories]}
             activeSubCategory={activeSubCategory}
             onSubCategoryChange={setActiveSubCategory}
           />
@@ -104,7 +105,7 @@ const Gallery = () => {
 
           {/* Gallery Grid Component */}
           <GalleryGrid 
-            images={displayImages} 
+            images={[...displayImages]} 
             activeTab={activeTab} 
             onImageClick={openImagePopup} 
           />
@@ -116,7 +117,7 @@ const Gallery = () => {
         open={popupOpen}
         onOpenChange={setPopupOpen}
         currentImageIndex={currentImageIndex}
-        images={displayImages}
+        images={[...displayImages]}
         onPrevious={goToPreviousImage}
         onNext={goToNextImage}
       />
