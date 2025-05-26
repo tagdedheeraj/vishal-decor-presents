@@ -2,7 +2,11 @@
 
 // GBU specific images
 export const gbuConvocationImages = [
-  // All GBU images have been removed
+  '/lovable-uploads/c0e12c6b-860a-4657-a41f-ee07c85ebf83.png',
+  '/lovable-uploads/ebc74307-6791-48e0-95cc-2a7607abe2ed.png',
+  '/lovable-uploads/8a813c8f-316b-4e13-8d43-df7da00cd6a3.png',
+  '/lovable-uploads/4506fb9a-1c10-4b23-bb46-3ba9c0599de8.png',
+  '/lovable-uploads/d14b7944-f359-483a-9890-139b48e19ce5.png'
 ];
 
 // IIMA specific images
