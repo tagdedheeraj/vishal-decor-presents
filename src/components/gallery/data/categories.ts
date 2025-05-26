@@ -3,9 +3,9 @@
 
 // Main gallery categories
 export const categories = [
-  'Govt. Events - Exhibitions', 
+  'Govt. Events - Exhibitions',
+  'Convocation-Institutional', 
   'Wedding',
-  'Convocation-Institutional',
   'Stall Fabrication'
 ];
 
