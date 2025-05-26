@@ -130,9 +130,6 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
   if (activeTab === 'Other Events') return otherEventsImages;
   
   if (activeTab === 'Govt. Events - Exhibitions') {
-    if (subCategory === 'Azadika Amrut Mohatsav - Baroda') {
-      return azadikaAmrutMohatsavImages;
-    }
     if (subCategory === 'UAE President Welcome - Ahmedabad') {
       return uaePresidentWelcomeImages;
     }
@@ -169,8 +166,8 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Ambardi Lions Safari Park - Dhari') {
       return ambardiLionsSafariParkImages;
     }
-    // Default to all government images when no subcategory or invalid subcategory
-    return [...governmentImages, ...azadikaAmrutMohatsavImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
+    // Default to all government images when no subcategory or invalid subcategory (removed azadikaAmrutMohatsavImages)
+    return [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
   }
   
   if (activeTab === 'Convocation-Institutional') {
