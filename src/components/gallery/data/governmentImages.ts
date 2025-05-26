@@ -1,4 +1,3 @@
-
 // Government events and exhibitions images organized by subcategory
 
 // Birsa Munda Janma Jayanti - Ahmedabad specific images
@@ -128,6 +127,17 @@ export const ambardiLionsSafariParkImages = [
   '/lovable-uploads/5d641e47-c189-4de3-b031-f18064d70601.png', // Officials with safari guide hats at park inspection
   '/lovable-uploads/409d82b7-1d33-4284-b0ba-f80d955be1e2.png', // Group photo of officials and security personnel at park pavilion
   '/lovable-uploads/081a2a74-276f-4e42-965d-d441902a6802.png', // Official in front of Ambardi lion sculpture display
+];
+
+// Dinosaur Park Inauguration - Balasinor specific images
+export const dinosaurParkInaugurationImages = [
+  '/lovable-uploads/55efa53d-9d02-4ce7-8c13-8406334de6dd.png', // Officials walking together at dinosaur park inauguration
+  '/lovable-uploads/46cb4c17-549f-4b60-b094-472b74f38bab.png', // Award ceremony at Bhumipujan Samaroh with officials and floral decorations
+  '/lovable-uploads/0ba6c0e6-99d2-4aea-b994-b19dcffaa4aa.png', // Official speaking at podium with colorful flower arrangement at ceremony
+  '/lovable-uploads/0e14ed30-fc2e-482a-8d66-8fd3350bb22b.png', // Senior official addressing audience at Bhumipujan Samaroh with floral backdrop
+  '/lovable-uploads/eda21d2f-0098-4940-99e0-6e0b6f69f419.png', // Officials walking on red carpet at dinosaur park inauguration event
+  '/lovable-uploads/99b9b22e-23c9-4a72-98d7-f7f3d8f4ddc6.png', // Officials walking past dinosaur statue on red carpet at park inauguration
+  '/lovable-uploads/05e4d887-0698-41d1-976f-b3d75cf435dd.png', // Officials cutting red ribbon at dinosaur park inauguration ceremony
 ];
 
 // General government events images (combined with Exhibition images)

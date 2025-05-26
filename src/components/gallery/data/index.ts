@@ -1,4 +1,3 @@
-
 // Main gallery data index file that exports everything needed
 
 // Import wedding images
@@ -17,6 +16,7 @@ import {
   exhibitionImages,
   azadikaAmrutMohatsavImages,
   birsaMundaJanmaJayantiImages,
+  dinosaurParkInaugurationImages,
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
@@ -88,6 +88,7 @@ export {
   exhibitionImages,
   azadikaAmrutMohatsavImages,
   birsaMundaJanmaJayantiImages,
+  dinosaurParkInaugurationImages,
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
@@ -134,6 +135,9 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Birsa Munda Janma Jayanti - Ahmedabad') {
       return birsaMundaJanmaJayantiImages;
     }
+    if (subCategory === 'Dinosaur Park Inauguration - Balasinor') {
+      return dinosaurParkInaugurationImages;
+    }
     if (subCategory === 'UAE President Welcome - Ahmedabad') {
       return uaePresidentWelcomeImages;
     }
@@ -168,7 +172,7 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
       return ambardiLionsSafariParkImages;
     }
     // Default to all government images when no subcategory
-    return [...governmentImages, ...birsaMundaJanmaJayantiImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
+    return [...governmentImages, ...birsaMundaJanmaJayantiImages, ...dinosaurParkInaugurationImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
   }
   
   if (activeTab === 'Convocation-Institutional') {

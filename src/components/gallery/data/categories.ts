@@ -1,4 +1,3 @@
-
 // Gallery main categories and helper functions
 
 // Main gallery categories
@@ -37,12 +36,13 @@ export const weddingSubCategories = [
   'Stage'
 ];
 
-// Government Events - Exhibitions subcategories (reordered as requested)
+// Government Events - Exhibitions subcategories (added Dinosaur Park Inauguration - Balasinor)
 export const govtEventsSubCategories = [
   '51 Shaktipith Mohatsav - Ambaji',
   'Ahmedabad Shopping Festival - River Front',
   'Ambardi Lions Safari Park - Dhari',
   'Birsa Munda Janma Jayanti - Ahmedabad',
+  'Dinosaur Park Inauguration - Balasinor',
   'Indo - Israel Meet - Dholera',
   'Indo - Japan Culture Road Show - Ahmedabd',
   'Madhavpur Ghed Festival - Madhavpur',
