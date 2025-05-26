@@ -18,10 +18,20 @@ const Gallery = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Set default subcategory on component mount
+  useEffect(() => {
+    if (hasSubCategories(activeTab) && !activeSubCategory) {
+      const subCategories = getSubCategories(activeTab);
+      if (subCategories.length > 0) {
+        setActiveSubCategory(subCategories[0]);
+      }
+    }
+  }, [activeTab, activeSubCategory]);
+
   // Handle category change
   const handleCategoryChange = (category: string) => {
     setActiveTab(category as MainCategory);
-    // Reset sub-category when changing main category
+    // Reset sub-category when changing main category, useEffect will set the first one
     setActiveSubCategory('');
   };
 
