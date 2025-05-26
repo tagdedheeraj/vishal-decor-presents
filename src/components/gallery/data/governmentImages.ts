@@ -120,7 +120,6 @@ export const shaktiPithMohatsavImages = [
   '/lovable-uploads/22b5e686-e8c0-4aa3-96d1-410d32b91986.png', // Musical performance at Shaktipith festival with divine backdrop
   '/lovable-uploads/fd1b0c41-574d-4b36-903a-5cd224707172.png', // Stage setup with spiritual theme and performers
   '/lovable-uploads/07429d07-e9de-4278-8a20-4127cf8eb634.png', // Traditional dance performers with ceremonial pots
-  '/lovable-uploads/95682f42-d41f-4b33-a8ad-8f3ba75ae4b4.png', // Officials and visitors at Shaktipith celebration
 ];
 
 // Ambardi Lions Safari Park - Dhari images
