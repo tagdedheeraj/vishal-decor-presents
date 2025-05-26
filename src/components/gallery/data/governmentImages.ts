@@ -1,3 +1,4 @@
+
 // Government events and exhibitions images organized by subcategory
 
 // Birsa Munda Janma Jayanti - Ahmedabad specific images
@@ -47,17 +48,6 @@ export const rannUtsavImages = [
   '/lovable-uploads/c1f394c0-1649-4477-ae48-26ad2469a5ec.png', // Close-up of official at Rann Utsav event
 ];
 
-// Heritage Tourism Policy Launch images
-export const heritageTourismPolicyLaunchImages = [
-  '/lovable-uploads/6c20c713-e207-4073-9cae-918683844f5e.png', // Officials walking on red carpet at Hotel Leela
-  '/lovable-uploads/0c963038-f62c-4cc3-b9a0-6f859bb9b8e6.png', // Officials lighting lamp ceremony at the event
-  '/lovable-uploads/cc45a188-18ae-4e9e-8556-ade935346722.png', // Event entrance gate with Heritage Tourism Policy banners
-  '/lovable-uploads/b215208e-5c43-47d2-a26b-dd52fb28d8e9.png', // Main stage with LED screen and floral decorations
-  '/lovable-uploads/ac7d00c9-a6a0-457c-8c6c-565f6b6c0c90.png', // Officials seated on stage with event backdrop
-  '/lovable-uploads/a1a6e3cc-bfaa-4618-8ee4-38c9b560992e.png', // Officials holding policy documents at launch
-  '/lovable-uploads/dd550ebd-c01d-41bb-a6e7-fc253da50775.png', // Group photo of officials with signed MoUs
-];
-
 // Indo - Israel Meet - Dholera images
 export const indoIsraelMeetDholeraImages = [
   '/lovable-uploads/ede50151-67dd-47ce-9e06-cf2193cfdb02.png', // Event poster with PM Modi and PM Netanyahu
@@ -83,18 +73,18 @@ export const namasteTrumpRoadShowImages = [
   '/lovable-uploads/f3ad1d87-4862-46c2-946b-9b6c9bdbc1f4.png', // Namaste Trump event poster with stadium and crowd
 ];
 
-// Narivandna Utsav - Ahmedabad images
+// Narivandna Utsav - Ahmedabad images (updated with new photos)
 export const narivandnaUtsavImages = [
-  '/lovable-uploads/876e1622-b303-4c0b-a5d7-ec0826057606.png', // Official in white shirt at ceremony with floral backdrop
-  '/lovable-uploads/7200ebaa-630f-4d14-93dc-446d0cc7edd3.png', // Woman in blue saree at ceremony
-  '/lovable-uploads/bb3cc729-9d0e-447d-98a6-ff701fa40f47.png', // Official in gray vest speaking at event
-  '/lovable-uploads/58a9f348-4a0e-409e-9264-81a8ae99e22a.png', // Officials lighting lamp at ceremony
-  '/lovable-uploads/c650518d-df76-496b-b844-86c30707de3c.png', // Woman presenting shawl to official at event
-  '/lovable-uploads/a0d8b803-47cf-4c54-8a2c-0354859620cf.png', // Woman speaking at podium with floral arrangement
-  '/lovable-uploads/b3300afc-6b83-4029-b9ec-3365e9f5de96.png', // Officials conversing at event
-  '/lovable-uploads/cb684b19-e1f2-4cb2-bfdc-62e7b67300ac.png', // Officials at ceremony with red backdrop
-  '/lovable-uploads/2ffead4e-630a-45c6-8384-55bf87151179.png', // Award presentation ceremony
-  '/lovable-uploads/47bac68f-66fb-4d44-9ea4-4ccd4fe2a723.png', // Official speaking at podium with floral decoration
+  '/lovable-uploads/fa0fde54-d1dd-47c9-95c7-95cca2b01c77.png', // Official presenting award with peacock decoration at ceremony
+  '/lovable-uploads/410fb6fb-978e-4d9c-ba5a-08c7a8e53d0d.png', // Official receiving purple shawl from woman at ceremony
+  '/lovable-uploads/cf64fccf-1188-48de-afec-1df944c0c8d3.png', // Award presentation ceremony with officials and women in traditional dress
+  '/lovable-uploads/a77860b2-f130-4ae4-8074-065823a5aaf1.png', // Official in white shirt seated at ceremonial event with floral backdrop
+  '/lovable-uploads/8b30dd6c-455a-4fee-968a-5b92bf77f490.png', // Woman in light blue saree seated at ceremony with floral backdrop
+  '/lovable-uploads/164eca11-4a11-4ffb-a246-4eb67f255fda.png', // Official in gray vest smiling at ceremony with floral backdrop
+  '/lovable-uploads/ee1fbba1-41a3-44d0-a33b-fa55400e699a.png', // Two officials in conversation at ceremony
+  '/lovable-uploads/23cbf55c-f87e-47e7-ac0a-66114760091e.png', // Officials standing at ceremony with red curtain backdrop
+  '/lovable-uploads/9d5a7eb6-c9f1-4932-a580-daae1fd8bee5.png', // Official speaking at podium with microphone and floral arrangement
+  '/lovable-uploads/55ab3511-8b92-40ee-8689-7b72b262f881.png', // Woman in light blue saree speaking at podium with floral arrangement
 ];
 
 // Ahmedabad Shopping Festival - River Front images
