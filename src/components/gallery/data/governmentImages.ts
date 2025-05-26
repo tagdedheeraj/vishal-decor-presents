@@ -1,4 +1,3 @@
-
 // Government events and exhibitions images organized by subcategory
 
 // Birsa Munda Janma Jayanti - Ahmedabad specific images
@@ -23,17 +22,17 @@ export const uaePresidentWelcomeImages = [
   '/lovable-uploads/8473a8b3-333b-4560-8ed6-57f7b2458ef8.png', // PM Modi and UAE President with guard of honor
 ];
 
-// National Mango Festival - Gandhinagar images
+// National Mango Festival - Gandhinagar images (updated with new photos)
 export const nationalMangoFestivalImages = [
-  '/lovable-uploads/10706e0d-45b4-42e2-9fca-c48c4a64b047.png', // Officials lighting a lamp at the Mango Festival
-  '/lovable-uploads/0807ab77-162a-44d9-b6a5-b49666f9965e.png', // Officials presenting a fruit basket at the event
-  '/lovable-uploads/76730d4d-2330-4c89-9007-779f7b2bdcd6.png', // Cultural performers at the Mango Festival with official
-  '/lovable-uploads/2da1ea64-10b2-44d0-9817-120c34408f03.png', // Officials at the award ceremony with mango-themed backdrop
-  '/lovable-uploads/dd1c25a5-3f9c-425a-af5f-9c7c5503865c.png', // Official at the entrance gate with mango-shaped balloons
-  '/lovable-uploads/3354fb8c-130e-440e-a6c7-ac8a4ef21f02.png', // Ribbon cutting ceremony at the festival
-  '/lovable-uploads/28dd3a88-4d26-4cd7-b7b7-9b279a5a7d9c.png', // Officials examining mangoes at the exhibition
-  '/lovable-uploads/8462f63d-b92f-459c-a899-9bb7d78edf1f.png', // Official holding a mango at exhibition stall
-  '/lovable-uploads/ab42ed00-9350-4248-ab4a-49030f39b3dc.png', // Official speaking at podium with festival backdrop
+  '/lovable-uploads/7168b0e8-4246-48b7-b98d-f333098dc7e5.png', // Officials cutting red ribbon at festival inauguration
+  '/lovable-uploads/79ce6879-f8df-46c8-8bc9-5a9f81807249.png', // Officials lighting ceremonial lamp at mango festival
+  '/lovable-uploads/803aaada-b49e-4ee9-9f28-0f3674577b35.png', // Officials presenting fruit basket at mango festival ceremony
+  '/lovable-uploads/68315db8-93a4-4afa-a2c7-de9ce3e424cb.png', // Award ceremony at National Mango Festival with officials
+  '/lovable-uploads/3dce5559-cafe-4213-9390-38308a263881.png', // Official speaking at podium with mango festival backdrop
+  '/lovable-uploads/47663036-382c-4528-a9f4-fcbca4e12f67.png', // Cultural performers with traditional costumes at mango festival
+  '/lovable-uploads/6ed996da-4bd5-440f-92b5-14e4cc8b1bd7.png', // Officials examining mango displays at festival
+  '/lovable-uploads/a4fad83e-6bf0-4f70-b726-a6b18b7a1cb3.png', // Official holding mango at exhibition stall
+  '/lovable-uploads/7b317a16-4e8b-48fa-9b65-5e73bb5ec3a0.png', // Official at mango-themed entrance gate with decorative balloons
 ];
 
 // Rann Utsav - Dhordo images
