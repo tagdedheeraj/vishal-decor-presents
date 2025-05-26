@@ -1,4 +1,3 @@
-
 // Government events and exhibitions images organized by subcategory
 
 // Birsa Munda Janma Jayanti - Ahmedabad specific images
@@ -11,7 +10,7 @@ export const birsaMundaJanmaJayantiImages = [
   '/lovable-uploads/303502a6-419b-4f21-b0e4-9e4dd972d2bf.png', // Event venue with Birsa Munda tribute and red carpet setup
 ];
 
-// Azadika Amrut Mohatsav - Baroda specific images
+// Azadika Amrut Mohatsav - Baroda specific images (updated with new photos)
 export const azadikaAmrutMohatsavImages = [
   '/lovable-uploads/16a28f97-f38b-4993-b906-1d57fc13eb4a.png', // Officials cutting red ribbon at ceremony with lady in red saree
   '/lovable-uploads/e426976b-b24a-4e62-88dc-41604150f725.png', // Officials lighting ceremonial lamp at event
@@ -20,6 +19,13 @@ export const azadikaAmrutMohatsavImages = [
   '/lovable-uploads/3e6cddd3-d2f4-420d-af4b-3530263baba2.png', // Officials exchanging commemorative item with BJP logo
   '/lovable-uploads/b7baff84-0a0f-4aa8-baa8-ff59d33bf08e.png', // Lady speaking at podium with officials' photos backdrop
   '/lovable-uploads/2971bdee-2cc8-43b9-a8bc-f0dcdb8352b2.png', // Officials standing at ceremony with red LED backdrop
+  '/lovable-uploads/d5b3ff30-cb7b-4ef6-a7e7-26c28afc7006.png', // Official speaking at podium with floral arrangements and ceremonial backdrop
+  '/lovable-uploads/7341a98e-75f7-4302-a4a1-0f36812cab2e.png', // Officials and dignitaries standing at ceremony with Gujarati banners
+  '/lovable-uploads/48e285e5-4ac5-42d8-b0d8-5fee6557a28e.png', // Officials holding FAQ books at ceremony with lady in red saree
+  '/lovable-uploads/3edee73a-cc07-4c2a-b5fd-d0f9ea0c3012.png', // Officials displaying FAQ books at Azadika Amrut Mohatsav ceremony
+  '/lovable-uploads/f48cd355-ff6c-4da5-859f-4ffb2f3fda53.png', // Official with man in wheelchair receiving assistance at ceremony
+  '/lovable-uploads/bfcf200f-6d0c-425d-af0d-40f2a21e8f08.png', // Official visiting exhibition stall with colorful handicrafts and lady in red saree
+  '/lovable-uploads/a22e9db3-6cd1-49af-b94e-1027e34c48d9.png', // Official receiving traditional handicraft item from person in patterned shirt
 ];
 
 // UAE President Welcome - Ahmedabad specific images
