@@ -1,4 +1,15 @@
+
 // Government events and exhibitions images organized by subcategory
+
+// Birsa Munda Janma Jayanti - Ahmedabad specific images
+export const birsaMundaJanmaJayantiImages = [
+  '/lovable-uploads/f9e231e8-7a21-4560-9b02-3cf598267136.png', // Event entrance gate with officials' photos and Birsa Munda tribute
+  '/lovable-uploads/f802afda-bdc9-4d0f-b1ee-62b37d9b775d.png', // Ganesha statue with garlands and ceremonial display
+  '/lovable-uploads/9478d132-e529-4ed5-9e06-ebac93671f01.png', // Officials cutting red ribbon at ceremony inauguration
+  '/lovable-uploads/d19bd8e4-fb9c-4e18-8427-0e8fcdb6a238.png', // Amdavad Haat entrance gate with Birsa Munda banners
+  '/lovable-uploads/2883df51-3a76-4e3f-bd4e-b62a16d86ae1.png', // Decorated entrance with tribal theme and red carpet
+  '/lovable-uploads/303502a6-419b-4f21-b0e4-9e4dd972d2bf.png', // Event venue with Birsa Munda tribute and red carpet setup
+];
 
 // Azadika Amrut Mohatsav - Baroda specific images
 export const azadikaAmrutMohatsavImages = [

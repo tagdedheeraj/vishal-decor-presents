@@ -15,6 +15,7 @@ import {
   governmentImages,
   exhibitionImages,
   azadikaAmrutMohatsavImages,
+  birsaMundaJanmaJayantiImages,
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
@@ -86,6 +87,7 @@ export {
   governmentImages,
   exhibitionImages,
   azadikaAmrutMohatsavImages,
+  birsaMundaJanmaJayantiImages,
   uaePresidentWelcomeImages,
   nationalMangoFestivalImages,
   rannUtsavImages,
@@ -130,6 +132,9 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
   if (activeTab === 'Other Events') return otherEventsImages;
   
   if (activeTab === 'Govt. Events - Exhibitions') {
+    if (subCategory === 'Birsa Munda Janma Jayanti - Ahmedabad') {
+      return birsaMundaJanmaJayantiImages;
+    }
     if (subCategory === 'UAE President Welcome - Ahmedabad') {
       return uaePresidentWelcomeImages;
     }
@@ -166,8 +171,8 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
     if (subCategory === 'Ambardi Lions Safari Park - Dhari') {
       return ambardiLionsSafariParkImages;
     }
-    // Default to all government images when no subcategory or invalid subcategory (removed azadikaAmrutMohatsavImages)
-    return [...governmentImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
+    // Default to all government images when no subcategory or invalid subcategory (added birsaMundaJanmaJayantiImages)
+    return [...governmentImages, ...birsaMundaJanmaJayantiImages, ...uaePresidentWelcomeImages, ...nationalMangoFestivalImages, ...rannUtsavImages, ...heritageTourismPolicyLaunchImages, ...indoIsraelMeetDholeraImages, ...indoJapanCultureRoadShowImages, ...madhavpurGhedFestivalImages, ...namasteTrumpRoadShowImages, ...narivandnaUtsavImages, ...ahmedabadShoppingFestivalImages, ...shaktiPithMohatsavImages, ...ambardiLionsSafariParkImages];
   }
   
   if (activeTab === 'Convocation-Institutional') {

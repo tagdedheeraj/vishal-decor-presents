@@ -39,6 +39,7 @@ export const weddingSubCategories = [
 
 // Government Events - Exhibitions subcategories (removed 'All' and 'Azadika Amrut Mohatsav - Baroda')
 export const govtEventsSubCategories = [
+  'Birsa Munda Janma Jayanti - Ahmedabad',
   'UAE President Welcome - Ahmedabad',
   'National Mango Festival - Gandhinagar',
   'Rann Utsav - Dhordo',
