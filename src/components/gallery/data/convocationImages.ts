@@ -1,4 +1,5 @@
 
+
 // Convocation-Institutional images organized by subcategory
 
 // GBU specific images
@@ -27,13 +28,14 @@ export const iimaConvocationImages = [
 
 // IIT specific images
 export const iitConvocationImages = [
-  '/lovable-uploads/869f9cf0-854a-46e7-9acd-12a401956d54.png',
-  '/lovable-uploads/ace2ae2a-2d6d-4d48-b925-d6375fa3d86d.png',
-  '/lovable-uploads/ae22fdb0-7772-4819-a63d-13cf42c8db5f.png',
-  '/lovable-uploads/78d533ef-b84f-4f98-a1e9-c37fc65126e0.png'
+  '/lovable-uploads/1669402b-b341-4d12-8f08-8eb60a122011.png',
+  '/lovable-uploads/7a08cf62-1ab4-4807-ae4a-21ea043da80c.png',
+  '/lovable-uploads/279eca15-3dd7-457e-ac13-5d5a7be59030.png',
+  '/lovable-uploads/2442b1ed-e71e-415a-a04d-5f21f8a0854a.png'
 ];
 
 // General convocation images
 export const convocationImages = [
   // Will be populated with general convocation images later
 ];
+
