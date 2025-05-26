@@ -1,4 +1,3 @@
-
 // Government events and exhibitions images organized by subcategory
 
 // Birsa Munda Janma Jayanti - Ahmedabad specific images
@@ -72,11 +71,11 @@ export const indoJapanCultureRoadShowImages = [
   '/lovable-uploads/94fdd288-e961-4ae7-a86f-644386e6e175.png', // PM Modi, PM Shinzo Abe and wife at historical monument
 ];
 
-// Madhavpur Ghed Festival - Madhavpur images
+// Madhavpur Ghed Festival - Madhavpur images (updated with new photos)
 export const madhavpurGhedFestivalImages = [
-  '/lovable-uploads/270536e3-6493-4d95-8fbc-23aafb72b856.png', // Event poster with PM Modi and state dignitaries
-  '/lovable-uploads/e3bcfc74-5783-4bf2-a7f0-18cf5cf71f7e.png', // Officials speaking at festival podium collage
-  '/lovable-uploads/462559f6-ceb5-4437-b413-4e60cb3543fb.png', // Lamp lighting and inauguration ceremony collage
+  '/lovable-uploads/52f48400-30ea-45e4-9a2b-adc6c60b1592.png', // Madhavpur Ghed Festival 2022 poster with PM Modi and state officials
+  '/lovable-uploads/ddcd3327-3a33-4569-aad8-97ada68b61be.png', // Four-panel collage of lamp lighting ceremonies and official interactions
+  '/lovable-uploads/834f237f-e9c6-4e24-b558-358044e93ae0.png', // Six-panel collage of officials speaking at podiums and ceremonies
 ];
 
 // Namaste Trump Road Show - Ahmedabad images
