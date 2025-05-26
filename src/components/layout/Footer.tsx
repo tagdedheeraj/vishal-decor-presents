@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
@@ -13,7 +14,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img 
-                src="/lovable-uploads/42ad349b-3839-422e-8813-126713cc104e.png" 
+                src="/lovable-uploads/c84c3afc-1bd6-4e33-83b0-50d54b3cb554.png" 
                 alt="Vishal Decor Logo" 
                 className="h-16 w-auto mb-3"
               />
