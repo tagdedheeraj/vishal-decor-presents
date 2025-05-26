@@ -86,7 +86,7 @@ const ServiceGovernment = () => {
       {/* Service Content */}
       <ServiceTabs activeTab="government" serviceContent={serviceContent} />
       
-      {/* Gallery Section with only Govt. Events - Exhibitions */}
+      {/* Gallery Section with Govt. Events - Exhibitions using GalleryTabs */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -94,35 +94,15 @@ const ServiceGovernment = () => {
             <p className="text-xl text-gray-600">Explore our government event portfolio</p>
           </div>
 
-          {/* Sub-category Navigation only */}
-          {subCategories.length > 0 && (
-            <div className="flex justify-center mb-12">
-              <div className="w-full max-w-7xl">
-                <div className="bg-gradient-to-r from-gray-50 to-white border border-gray-200 rounded-2xl shadow-lg p-6">
-                  <div className="text-center mb-6">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Browse Categories</h3>
-                    <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full"></div>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-3 justify-center">
-                    {subCategories.map((subCategory) => (
-                      <button
-                        key={subCategory}
-                        onClick={() => setActiveSubCategory(subCategory)}
-                        className={`px-5 py-3 text-sm font-medium rounded-xl transition-all duration-300 whitespace-nowrap border ${
-                          activeSubCategory === subCategory
-                            ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25 transform scale-105 border-orange-500'
-                            : 'bg-white text-gray-600 border-gray-200 hover:bg-orange-50 hover:text-orange-700 hover:border-orange-300 hover:shadow-md hover:transform hover:scale-102'
-                        }`}
-                      >
-                        {subCategory}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          {/* Use GalleryTabs component with slider functionality for subcategories */}
+          <GalleryTabs 
+            categories={[activeTab]} 
+            activeTab={activeTab} 
+            onTabChange={() => {}} // No category change needed as we only have one
+            subCategories={[...subCategories]}
+            activeSubCategory={activeSubCategory}
+            onSubCategoryChange={setActiveSubCategory}
+          />
 
           {/* Sub Category Title */}
           {activeSubCategory && (
