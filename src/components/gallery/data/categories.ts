@@ -53,8 +53,9 @@ export const govtEventsSubCategories = [
   'UAE President Welcome - Ahmedabad'
 ];
 
-// Convocation-Institutional subcategories (removed 'All' and 'EDI Fashion Show')
+// Convocation-Institutional subcategories (added EDI Fashion Show)
 export const convocationSubCategories = [
+  'EDI Fashion Show',
   'GBU',
   'IIMA',
   'IIT'

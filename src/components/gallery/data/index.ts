@@ -1,3 +1,4 @@
+
 // Main gallery data index file that exports everything needed
 
 // Import wedding images
@@ -32,6 +33,7 @@ import {
 // Import convocation images
 import {
   convocationImages,
+  ediFashionShowImages,
   gbuConvocationImages,
   iimaConvocationImages,
   iitConvocationImages
@@ -98,6 +100,7 @@ export {
   shaktiPithMohatsavImages,
   ambardiLionsSafariParkImages,
   convocationImages,
+  ediFashionShowImages,
   gbuConvocationImages,
   iimaConvocationImages,
   iitConvocationImages,
@@ -169,6 +172,9 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
   }
   
   if (activeTab === 'Convocation-Institutional') {
+    if (subCategory === 'EDI Fashion Show') {
+      return ediFashionShowImages;
+    }
     if (subCategory === 'GBU') {
       return gbuConvocationImages;
     }
@@ -179,7 +185,7 @@ export const getDisplayImages = (activeTab: string, subCategory?: string): strin
       return iitConvocationImages;
     }
     // Default to all convocation images when no subcategory or invalid subcategory
-    return [...convocationImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages];
+    return [...convocationImages, ...ediFashionShowImages, ...gbuConvocationImages, ...iimaConvocationImages, ...iitConvocationImages];
   }
   
   if (activeTab === 'Stall Fabrication') return stallFabricationImages;
