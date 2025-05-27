@@ -13,7 +13,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/lovable-uploads/a3780f61-2522-4927-87c0-f1202f362116.png',
+    image: '/lovable-uploads/ad2e6f6c-c88e-4688-89fa-a5713ce8f774.png',
   },
   {
     image: '/lovable-uploads/4d5ec722-ae05-46fe-8dd3-d74a0e74c1c2.png',
