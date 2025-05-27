@@ -100,7 +100,7 @@ const ImageSlider: React.FC = () => {
               ) : (
                 <>
                   <p className="text-xl md:text-2xl uppercase tracking-wider mb-2 font-light">WELCOME TO</p>
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">VISHAL DECOR & EVENT PVT LTD</h1>
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">VISHAL DECOR AND EVENTS PVT LTD</h1>
                   <div className="w-24 h-0.5 bg-orange mx-auto mb-3"></div>
                   <p className="text-lg md:text-xl uppercase tracking-wide font-light">STEP BEYOND YOUR EXPECTATIONS</p>
                 </>
