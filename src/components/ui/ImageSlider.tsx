@@ -87,7 +87,6 @@ const ImageSlider: React.FC = () => {
               transform: index === currentIndex ? 'scale(1.05)' : 'scale(1)',
             }}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50" />
           
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
             <div className={`${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}>
