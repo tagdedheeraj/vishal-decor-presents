@@ -133,7 +133,7 @@ export const ambardiLionsSafariParkImages = [
   '/lovable-uploads/081a2a74-276f-4e42-965d-d441902a6802.png', // Official in front of Ambardi lion sculpture display
 ];
 
-// Dinosaur Park Inauguration - Balasinor specific images
+// Dinosaur Park Inauguration - Balasinor specific images (updated with new photos)
 export const dinosaurParkInaugurationImages = [
   '/lovable-uploads/55efa53d-9d02-4ce7-8c13-8406334de6dd.png', // Officials walking together at dinosaur park inauguration
   '/lovable-uploads/46cb4c17-549f-4b60-b094-472b74f38bab.png', // Award ceremony at Bhumipujan Samaroh with officials and floral decorations
@@ -142,6 +142,11 @@ export const dinosaurParkInaugurationImages = [
   '/lovable-uploads/eda21d2f-0098-4940-99e0-6e0b6f69f419.png', // Officials walking on red carpet at dinosaur park inauguration event
   '/lovable-uploads/99b9b22e-23c9-4a72-98d7-f7f3d8f4ddc6.png', // Officials walking past dinosaur statue on red carpet at park inauguration
   '/lovable-uploads/05e4d887-0698-41d1-976f-b3d75cf435dd.png', // Officials cutting red ribbon at dinosaur park inauguration ceremony
+  '/lovable-uploads/84094127-1c9a-413b-ba72-a6b2db6e2a81.png', // Official unveiling commemorative plaque with red cloth at dinosaur park
+  '/lovable-uploads/4fe04af8-9c2f-4cae-9cb3-719a653e7e68.png', // Officials examining dinosaur fossil displays at museum
+  '/lovable-uploads/d9d11e83-5979-4daa-99ef-6c580790bfee.png', // Official in immersive dinosaur habitat projection room
+  '/lovable-uploads/991e5de6-996b-412b-95bb-54969f6d908c.png', // Officials and dignitaries watching 3D dinosaur presentation with special glasses
+  '/lovable-uploads/47bb529a-89dd-4a97-8348-09c3607f988e.png', // Official signing visitor book with dinosaur skeleton display in background
 ];
 
 // General government events images (combined with Exhibition images)
