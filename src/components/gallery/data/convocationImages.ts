@@ -1,7 +1,6 @@
-
 // Convocation-Institutional images organized by subcategory
 
-// EDI Fashion Show specific images
+// EDI Fashion Show specific images (updated with new photos)
 export const ediFashionShowImages = [
   '/lovable-uploads/d6d0c4f4-052e-4c2f-8cd4-049ee694cf22.png',
   '/lovable-uploads/38223263-3d02-42c7-bf77-ab851b7d6704.png',
@@ -9,7 +8,14 @@ export const ediFashionShowImages = [
   '/lovable-uploads/cbfc3758-e389-4177-bb44-b0e206c3529c.png',
   '/lovable-uploads/9e7abca6-47bf-4850-9cf1-52ecef90d76b.png',
   '/lovable-uploads/aacd574e-a31c-4977-a591-25834adbf1b8.png',
-  '/lovable-uploads/97020e5e-1d78-4989-92b2-9f373ae8765d.png'
+  '/lovable-uploads/97020e5e-1d78-4989-92b2-9f373ae8765d.png',
+  '/lovable-uploads/bb2f24df-5fb1-4b9d-8656-53533deecef7.png', // Hastkala Shopping Festival entrance with LED lights and event signage
+  '/lovable-uploads/2d8cadbd-e815-488b-a0f2-6008d78410f0.png', // Illuminated cone-shaped decorative structures at festival venue
+  '/lovable-uploads/05432042-7b39-4121-849c-6c0b3aa90c40.png', // Night flower stall with decorative lights and floral arrangements
+  '/lovable-uploads/7c49c472-cb03-437f-9e91-4666d7e976e1.png', // Ganesha statue display with LED backdrop at festival venue
+  '/lovable-uploads/d0392d70-8a0b-4e72-86ab-3e76632f13ea.png', // Traditional architecture pavilion with orange lighting and event seating
+  '/lovable-uploads/d449e2e0-daa2-49d7-9aa2-63e9256832ea.png', // Textile stall displaying colorful fabrics and traditional sarees
+  '/lovable-uploads/34de852a-2fbc-4802-b211-3079292026e1.png', // Fashion show stage with LED screen displaying event branding
 ];
 
 // GBU specific images
