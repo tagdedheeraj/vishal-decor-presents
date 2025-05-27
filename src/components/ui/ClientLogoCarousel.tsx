@@ -78,11 +78,11 @@ const ClientLogoCarousel = () => {
   }
   
   return (
-    <div className="overflow-hidden h-64 relative">
+    <div className="overflow-hidden h-48 relative">
       <div className={`transition-all duration-500 ease-in-out absolute w-full
             ${animating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
         {/* First row */}
-        <div className="flex flex-row justify-between gap-4 mb-6">
+        <div className="flex flex-row justify-between gap-4 mb-4">
           {firstRowLogos.map((logo, logoIndex) => (
             <div key={`${currentIndex}-row1-${logoIndex}`} className="w-1/5">
               <ClientLogo src={logo.src} alt={logo.alt} />
