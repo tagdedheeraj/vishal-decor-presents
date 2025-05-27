@@ -1,3 +1,4 @@
+
 // Convocation-Institutional images organized by subcategory
 
 // EDI Fashion Show specific images (updated with new photos)
@@ -40,11 +41,11 @@ export const gbuConvocationImages = [
 
 // IIMA specific images
 export const iimaConvocationImages = [
-  '/lovable-uploads/7532e8ba-292c-4660-aa9f-4b091ad6d6f5.png',
-  '/lovable-uploads/32275733-4e69-4388-924a-99123aad70b8.png',
-  '/lovable-uploads/f9e231e8-7a21-4560-9b02-3cf598267136.png',
-  '/lovable-uploads/b215208e-5c43-47d2-a26b-dd52fb28d8e9.png',
-  '/lovable-uploads/cc45a188-18ae-4e9e-8556-ade935346722.png'
+  '/lovable-uploads/5ce80785-1a4d-4e3f-b3ac-dc38311dc5a7.png',
+  '/lovable-uploads/504e33f1-9375-4125-9356-14887800263e.png',
+  '/lovable-uploads/97bd4e61-6816-437f-bfc5-65da6f1da4a1.png',
+  '/lovable-uploads/e22460e9-c109-4dd8-8ecc-17541e436e8e.png',
+  '/lovable-uploads/0ed0a7ae-1f7e-4f81-ba81-970ed2e3b05a.png'
 ];
 
 // IIT specific images
