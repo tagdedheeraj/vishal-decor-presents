@@ -35,6 +35,9 @@ const slides: Slide[] = [
   },
   {
     image: '/lovable-uploads/f60d16c4-01be-4e4c-a80a-9efe1da4c2f8.png',
+    title: 'CREATIVE STRUCTURE',
+    subtitle: 'YOUR BRAND, OUR BUILD',
+    description: 'RESULTS THAT SPEAK'
   },
 ];
 
