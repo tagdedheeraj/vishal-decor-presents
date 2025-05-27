@@ -20,5 +20,9 @@ export const stallFabricationImages = [
   '/lovable-uploads/b43417b2-73f0-46af-ace2-c23bafcdd95c.png', // Gujarat Offshore Wind Blocks exhibit with windmill models
   '/lovable-uploads/340f60f8-d5de-45ea-a0a9-1eb14a8dc91f.png', // Gujarat Power Corporation exhibition booth with hydrogen station model
   '/lovable-uploads/a1f7d92c-78f6-4dd1-9658-56dfff94c576.png', // Energy exhibition stall with India map display and solar panels
-  '/lovable-uploads/9a3bd467-02d8-455f-b78e-711d4b927fb3.png', // Gujarat Power Corporation booth with visitors viewing displays.
+  '/lovable-uploads/9a3bd467-02d8-455f-b78e-711d4b927fb3.png', // Gujarat Power Corporation booth with visitors viewing displays
+  '/lovable-uploads/f741379c-8a4c-4d27-9581-1b6a41b8ac0a.png', // Gujarat Tourism exhibition stall with carved wooden backdrop and displays
+  '/lovable-uploads/7255611b-4217-4226-bea5-04e94a92e3e6.png', // Gujarat Tourism pavilion with ornate pillars and central meeting area
+  '/lovable-uploads/186c4686-cf51-4f8a-bc15-f00f108c0218.png', // Gujarat Tourism comprehensive exhibition stall with multiple tourism sections
+  '/lovable-uploads/fc4b73da-1461-46ac-a3ba-36f9b052a5ed.png'   // Gujarat Tourism booth showcasing Caravan Tourism and MICE Tourism sections
 ];
