@@ -16,6 +16,11 @@ export const ediFashionShowImages = [
   '/lovable-uploads/d0392d70-8a0b-4e72-86ab-3e76632f13ea.png', // Traditional architecture pavilion with orange lighting and event seating
   '/lovable-uploads/d449e2e0-daa2-49d7-9aa2-63e9256832ea.png', // Textile stall displaying colorful fabrics and traditional sarees
   '/lovable-uploads/34de852a-2fbc-4802-b211-3079292026e1.png', // Fashion show stage with LED screen displaying event branding
+  '/lovable-uploads/00fb7f11-ea30-4280-9cb8-47764e66335f.png', // Fashion show models wearing traditional sarees with geometric LED backdrop
+  '/lovable-uploads/b8fbe016-3d4f-4f52-8561-01955f73c5ae.png', // Models in colorful contemporary outfits on stage with vibrant LED design
+  '/lovable-uploads/2ffbb8ad-e8ca-41fd-b1e7-ec6e5b6f9f84.png', // Outdoor event audience seating with decorative lighting installations
+  '/lovable-uploads/6d230f25-a052-4dcb-bdcb-3d60d1f98cd4.png', // Fashion show stage with Hastkala branding and historical architecture backdrop
+  '/lovable-uploads/052a15d2-3c17-47e5-80b4-3f4fde2df23a.png', // Model showcasing traditional Indian fashion on professional runway stage
 ];
 
 // GBU specific images
