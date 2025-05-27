@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -23,9 +22,9 @@ const slides: Slide[] = [
   },
   {
     image: '/lovable-uploads/b2b08602-76d8-4796-a1b0-3c62fc4150bb.png',
-    title: 'CREATIVE VISION',
-    subtitle: 'TURNING MOMENTS INTO MASTERPIECES',
-    description: 'STYLED TO PERFECTION'
+    title: 'DREAM BIG',
+    subtitle: 'YOUR VISION. OUR INNOVATION.',
+    description: 'DELIVERED FLAWLESSLY'
   },
   {
     image: '/lovable-uploads/d6abd58a-98c8-4f4f-aab9-e4f3b2fe1a89.png',
