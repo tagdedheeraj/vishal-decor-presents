@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -13,7 +12,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/lovable-uploads/ad2e6f6c-c88e-4688-89fa-a5713ce8f774.png',
+    image: '/lovable-uploads/7eddd52a-42a7-4604-8fa5-90f5727b3ad4.png',
   },
   {
     image: '/lovable-uploads/4d5ec722-ae05-46fe-8dd3-d74a0e74c1c2.png',
@@ -23,9 +22,9 @@ const slides: Slide[] = [
   },
   {
     image: '/lovable-uploads/b2b08602-76d8-4796-a1b0-3c62fc4150bb.png',
-    title: 'DREAM BIG',
-    subtitle: 'YOUR VISION. OUR INNOVATION.',
-    description: 'DELIVERED FLAWLESSLY'
+    title: 'CREATIVE VISION',
+    subtitle: 'TURNING MOMENTS INTO MASTERPIECES',
+    description: 'STYLED TO PERFECTION'
   },
   {
     image: '/lovable-uploads/d6abd58a-98c8-4f4f-aab9-e4f3b2fe1a89.png',
