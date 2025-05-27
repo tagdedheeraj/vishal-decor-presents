@@ -34,8 +34,8 @@ const IntroductionSection = () => {
             }`}
           >
             <img 
-              src="/lovable-uploads/80b51345-67cb-4af8-9739-ec4b36c04bff.png" 
-              alt="Vishal Decor & Event Speaker" 
+              src="/lovable-uploads/881e60be-f80c-4e3f-b196-26b3c8bb3e9b.png" 
+              alt="Government Event with Prime Minister" 
               className={`rounded-lg shadow-lg transition-all duration-1000 ${
                 isVisible ? 'filter-none scale-100' : 'blur-sm scale-95'
               }`}
