@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -5,23 +6,32 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
   image: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
 }
 
 const slides: Slide[] = [
   {
-    image: '/lovable-uploads/a3780f61-2522-4927-87c0-f1202f362116.png', // New uploaded image replacing the first one
+    image: '/lovable-uploads/a3780f61-2522-4927-87c0-f1202f362116.png',
   },
   {
-    image: '/lovable-uploads/4d5ec722-ae05-46fe-8dd3-d74a0e74c1c2.png', // New second image
+    image: '/lovable-uploads/4d5ec722-ae05-46fe-8dd3-d74a0e74c1c2.png',
+    title: 'INSPIRED BY IMAGINATION',
+    subtitle: 'WHERE CREATIVITY MEETS PERFECTION',
+    description: 'DESIGNED TO IMPRESS'
   },
   {
-    image: '/lovable-uploads/b2b08602-76d8-4796-a1b0-3c62fc4150bb.png', // New third image
+    image: '/lovable-uploads/b2b08602-76d8-4796-a1b0-3c62fc4150bb.png',
+    title: 'DREAM BIG',
+    subtitle: 'YOUR VISION. OUR INNOVATION.',
+    description: 'DELIVERED FLAWLESSLY'
   },
   {
-    image: '/lovable-uploads/d6abd58a-98c8-4f4f-aab9-e4f3b2fe1a89.png', // New fourth image
+    image: '/lovable-uploads/d6abd58a-98c8-4f4f-aab9-e4f3b2fe1a89.png',
   },
   {
-    image: '/lovable-uploads/f60d16c4-01be-4e4c-a80a-9efe1da4c2f8.png', // New fifth image
+    image: '/lovable-uploads/f60d16c4-01be-4e4c-a80a-9efe1da4c2f8.png',
   },
 ];
 
@@ -75,10 +85,21 @@ const ImageSlider: React.FC = () => {
           
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
             <div className={`${index === currentIndex ? 'animate-fade-in-down' : 'opacity-0'}`}>
-              <p className="text-xl md:text-2xl uppercase tracking-wider mb-2 font-light">WELCOME TO</p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">VISHAL DECOR & EVENT PVT LTD</h1>
-              <div className="w-24 h-0.5 bg-orange mx-auto mb-3"></div>
-              <p className="text-lg md:text-xl uppercase tracking-wide font-light">STEP BEYOND YOUR EXPECTATIONS</p>
+              {slide.title ? (
+                <>
+                  <p className="text-xl md:text-2xl uppercase tracking-wider mb-2 font-light">{slide.title}</p>
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">{slide.subtitle}</h1>
+                  <div className="w-24 h-0.5 bg-orange mx-auto mb-3"></div>
+                  <p className="text-lg md:text-xl uppercase tracking-wide font-light">{slide.description}</p>
+                </>
+              ) : (
+                <>
+                  <p className="text-xl md:text-2xl uppercase tracking-wider mb-2 font-light">WELCOME TO</p>
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">VISHAL DECOR & EVENT PVT LTD</h1>
+                  <div className="w-24 h-0.5 bg-orange mx-auto mb-3"></div>
+                  <p className="text-lg md:text-xl uppercase tracking-wide font-light">STEP BEYOND YOUR EXPECTATIONS</p>
+                </>
+              )}
             </div>
           </div>
         </div>
