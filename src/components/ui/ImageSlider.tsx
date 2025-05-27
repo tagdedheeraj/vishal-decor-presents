@@ -64,9 +64,15 @@ const ImageSlider: React.FC = () => {
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(goToNext, 4000); // Auto-slide every 4 seconds
+    const slideInterval = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const isLastSlide = prevIndex === slides.length - 1;
+        return isLastSlide ? 0 : prevIndex + 1;
+      });
+    }, 4000); // Auto-slide every 4 seconds
+
     return () => clearInterval(slideInterval);
-  }, [currentIndex]);
+  }, []); // Remove currentIndex from dependency array
 
   return (
     <div className="relative w-full h-[100vh] overflow-hidden">
