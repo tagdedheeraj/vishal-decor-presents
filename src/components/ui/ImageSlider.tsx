@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -28,6 +29,9 @@ const slides: Slide[] = [
   },
   {
     image: '/lovable-uploads/d6abd58a-98c8-4f4f-aab9-e4f3b2fe1a89.png',
+    title: 'CREATIVE STRUCTURE',
+    subtitle: 'YOUR BRAND, OUR BUILD',
+    description: 'RESULTS THAT SPEAK'
   },
   {
     image: '/lovable-uploads/f60d16c4-01be-4e4c-a80a-9efe1da4c2f8.png',
