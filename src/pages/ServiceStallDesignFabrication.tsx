@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceTabs from '@/components/ui/ServiceTabs';
-import ServiceGallery from '@/components/services/ServiceGallery';
+import StallDesignGallery from '@/components/services/StallDesignGallery';
 
 const ServiceStallDesignFabrication = () => {
   const serviceContent = {
@@ -28,7 +28,7 @@ const ServiceStallDesignFabrication = () => {
       <ServiceTabs activeTab="stall-design-fabrication" serviceContent={serviceContent} />
       
       {/* Gallery Section */}
-      <ServiceGallery serviceCategory="Stall Design & Fabrication" />
+      <StallDesignGallery />
     </main>
   );
 };
