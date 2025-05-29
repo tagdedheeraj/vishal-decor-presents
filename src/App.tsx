@@ -8,6 +8,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import WhatsAppPopup from "./components/ui/WhatsAppPopup";
 import PageTransition from "./components/layout/PageTransition";
+import MaintenanceChecker from "./components/layout/MaintenanceChecker";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -19,6 +20,7 @@ import ServiceOtherEvent from "./pages/ServiceOtherEvent";
 import Gallery from "./pages/Gallery";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,27 +31,36 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Header />
-        <div className="pt-20">
-          <PageTransition>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/government" element={<ServiceGovernment />} />
-              <Route path="/services/corporate" element={<ServiceCorporate />} />
-              <Route path="/services/stall-design-fabrication" element={<ServiceStallDesignFabrication />} />
-              <Route path="/services/wedding" element={<ServiceWedding />} />
-              <Route path="/services/other-event" element={<ServiceOtherEvent />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/clients" element={<Clients />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </PageTransition>
-        </div>
-        <Footer />
-        <WhatsAppPopup />
+        <MaintenanceChecker>
+          <Routes>
+            <Route path="/admin" element={<Admin />} />
+            <Route path="*" element={
+              <>
+                <Header />
+                <div className="pt-20">
+                  <PageTransition>
+                    <Routes>
+                      <Route path="/" element={<Index />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/services" element={<Services />} />
+                      <Route path="/services/government" element={<ServiceGovernment />} />
+                      <Route path="/services/corporate" element={<ServiceCorporate />} />
+                      <Route path="/services/stall-design-fabrication" element={<ServiceStallDesignFabrication />} />
+                      <Route path="/services/wedding" element={<ServiceWedding />} />
+                      <Route path="/services/other-event" element={<ServiceOtherEvent />} />
+                      <Route path="/gallery" element={<Gallery />} />
+                      <Route path="/clients" element={<Clients />} />
+                      <Route path="/contact" element={<Contact />} />
+                      <Route path="*" element={<NotFound />} />
+                    </Routes>
+                  </PageTransition>
+                </div>
+                <Footer />
+                <WhatsAppPopup />
+              </>
+            } />
+          </Routes>
+        </MaintenanceChecker>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
