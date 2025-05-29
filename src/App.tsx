@@ -25,45 +25,53 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <MaintenanceChecker>
-          <Routes>
-            <Route path="/admin" element={<Admin />} />
-            <Route path="*" element={
-              <>
-                <Header />
-                <div className="pt-20">
-                  <PageTransition>
-                    <Routes>
-                      <Route path="/" element={<Index />} />
-                      <Route path="/about" element={<About />} />
-                      <Route path="/services" element={<Services />} />
-                      <Route path="/services/government" element={<ServiceGovernment />} />
-                      <Route path="/services/corporate" element={<ServiceCorporate />} />
-                      <Route path="/services/stall-design-fabrication" element={<ServiceStallDesignFabrication />} />
-                      <Route path="/services/wedding" element={<ServiceWedding />} />
-                      <Route path="/services/other-event" element={<ServiceOtherEvent />} />
-                      <Route path="/gallery" element={<Gallery />} />
-                      <Route path="/clients" element={<Clients />} />
-                      <Route path="/contact" element={<Contact />} />
-                      <Route path="*" element={<NotFound />} />
-                    </Routes>
-                  </PageTransition>
-                </div>
-                <Footer />
-                <WhatsAppPopup />
-              </>
-            } />
-          </Routes>
-        </MaintenanceChecker>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const MainApp = () => {
+  return (
+    <MaintenanceChecker>
+      <Routes>
+        <Route path="/admin" element={<Admin />} />
+        <Route path="*" element={
+          <>
+            <Header />
+            <div className="pt-20">
+              <PageTransition>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/services/government" element={<ServiceGovernment />} />
+                  <Route path="/services/corporate" element={<ServiceCorporate />} />
+                  <Route path="/services/stall-design-fabrication" element={<ServiceStallDesignFabrication />} />
+                  <Route path="/services/wedding" element={<ServiceWedding />} />
+                  <Route path="/services/other-event" element={<ServiceOtherEvent />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                  <Route path="/clients" element={<Clients />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </PageTransition>
+            </div>
+            <Footer />
+            <WhatsAppPopup />
+          </>
+        } />
+      </Routes>
+    </MaintenanceChecker>
+  );
+};
+
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <MainApp />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
