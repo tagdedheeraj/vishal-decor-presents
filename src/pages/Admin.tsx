@@ -109,13 +109,20 @@ const Admin = () => {
     setIsMaintenanceMode(newStatus);
     localStorage.setItem('maintenance-mode', newStatus.toString());
     
-    // Trigger a storage event to notify other components
+    console.log('Toggling maintenance mode to:', newStatus);
+    
+    // Dispatch multiple events to ensure all components are notified
     window.dispatchEvent(new StorageEvent('storage', {
       key: 'maintenance-mode',
       newValue: newStatus.toString(),
       oldValue: (!newStatus).toString(),
       storageArea: localStorage,
       url: window.location.href
+    }));
+    
+    // Also dispatch a custom event
+    window.dispatchEvent(new CustomEvent('maintenanceToggle', {
+      detail: { isMaintenanceMode: newStatus }
     }));
     
     toast({

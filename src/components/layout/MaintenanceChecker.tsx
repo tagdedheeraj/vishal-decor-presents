@@ -20,14 +20,20 @@ const MaintenanceChecker: React.FC<MaintenanceCheckerProps> = ({ children }) => 
       console.log('Maintenance status:', maintenanceStatus);
       console.log('Admin auth:', adminAuth);
       
-      setIsMaintenanceMode(maintenanceStatus === 'true');
-      setIsAdminAuthenticated(adminAuth === 'true');
+      const isMaintenance = maintenanceStatus === 'true';
+      const isAdmin = adminAuth === 'true';
+      
+      setIsMaintenanceMode(isMaintenance);
+      setIsAdminAuthenticated(isAdmin);
       setIsLoading(false);
+      
+      console.log('Setting states:', { isMaintenance, isAdmin });
     };
 
+    // Initial check
     checkMaintenanceMode();
 
-    // Listen for storage changes to update maintenance mode in real-time
+    // Listen for storage changes
     const handleStorageChange = (e: StorageEvent) => {
       console.log('Storage change detected:', e.key, e.newValue);
       if (e.key === 'maintenance-mode' || e.key === 'admin-authenticated') {
@@ -35,33 +41,35 @@ const MaintenanceChecker: React.FC<MaintenanceCheckerProps> = ({ children }) => 
       }
     };
 
-    // Listen for custom storage events (when triggered from same tab)
-    const handleCustomStorageChange = () => {
-      console.log('Custom storage change detected');
+    // Listen for custom events dispatched from admin panel
+    const handleCustomEvent = (e: CustomEvent) => {
+      console.log('Custom maintenance event detected:', e.detail);
       checkMaintenanceMode();
     };
 
     window.addEventListener('storage', handleStorageChange);
-    window.addEventListener('storage', handleCustomStorageChange);
+    window.addEventListener('maintenanceToggle', handleCustomEvent as EventListener);
     
-    // Also check periodically in case of same-tab changes
-    const interval = setInterval(checkMaintenanceMode, 1000);
+    // Check periodically for same-tab changes
+    const interval = setInterval(checkMaintenanceMode, 2000);
 
     return () => {
       window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener('storage', handleCustomStorageChange);
+      window.removeEventListener('maintenanceToggle', handleCustomEvent as EventListener);
       clearInterval(interval);
     };
   }, []);
 
+  console.log('MaintenanceChecker render:', { isLoading, isMaintenanceMode, isAdminAuthenticated });
+
   // Show loading while checking status
   if (isLoading) {
-    return <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-xl">Loading...</div>
-    </div>;
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-xl">Loading...</div>
+      </div>
+    );
   }
-
-  console.log('Final render decision:', { isMaintenanceMode, isAdminAuthenticated });
 
   // Show maintenance page if maintenance mode is on and user is not admin
   if (isMaintenanceMode && !isAdminAuthenticated) {

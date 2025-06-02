@@ -28,13 +28,15 @@ const queryClient = new QueryClient();
 const AppContent = () => {
   const location = useLocation();
   const isAdminRoute = location.pathname === '/admin';
+  
+  console.log('AppContent render, route:', location.pathname, 'isAdminRoute:', isAdminRoute);
 
-  // If it's admin route, don't wrap with MaintenanceChecker
+  // Admin route should bypass maintenance check
   if (isAdminRoute) {
     return <Admin />;
   }
 
-  // For all other routes, wrap with MaintenanceChecker
+  // All other routes should go through maintenance check
   return (
     <MaintenanceChecker>
       <Header />
