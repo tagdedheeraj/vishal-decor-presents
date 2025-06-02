@@ -8,26 +8,21 @@ interface MaintenanceCheckerProps {
 
 const MaintenanceChecker: React.FC<MaintenanceCheckerProps> = ({ children }) => {
   const [isMaintenanceMode, setIsMaintenanceMode] = useState(false);
-  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const checkMaintenanceMode = () => {
       console.log('Checking maintenance mode...');
       const maintenanceStatus = localStorage.getItem('maintenance-mode');
-      const adminAuth = localStorage.getItem('admin-authenticated');
       
       console.log('Maintenance status:', maintenanceStatus);
-      console.log('Admin auth:', adminAuth);
       
       const isMaintenance = maintenanceStatus === 'true';
-      const isAdmin = adminAuth === 'true';
       
       setIsMaintenanceMode(isMaintenance);
-      setIsAdminAuthenticated(isAdmin);
       setIsLoading(false);
       
-      console.log('Setting states:', { isMaintenance, isAdmin });
+      console.log('Setting maintenance state:', { isMaintenance });
     };
 
     // Initial check
@@ -36,7 +31,7 @@ const MaintenanceChecker: React.FC<MaintenanceCheckerProps> = ({ children }) => 
     // Listen for storage changes
     const handleStorageChange = (e: StorageEvent) => {
       console.log('Storage change detected:', e.key, e.newValue);
-      if (e.key === 'maintenance-mode' || e.key === 'admin-authenticated') {
+      if (e.key === 'maintenance-mode') {
         checkMaintenanceMode();
       }
     };
@@ -60,7 +55,7 @@ const MaintenanceChecker: React.FC<MaintenanceCheckerProps> = ({ children }) => 
     };
   }, []);
 
-  console.log('MaintenanceChecker render:', { isLoading, isMaintenanceMode, isAdminAuthenticated });
+  console.log('MaintenanceChecker render:', { isLoading, isMaintenanceMode });
 
   // Show loading while checking status
   if (isLoading) {
@@ -71,8 +66,8 @@ const MaintenanceChecker: React.FC<MaintenanceCheckerProps> = ({ children }) => 
     );
   }
 
-  // Show maintenance page if maintenance mode is on and user is not admin
-  if (isMaintenanceMode && !isAdminAuthenticated) {
+  // Show maintenance page if maintenance mode is on
+  if (isMaintenanceMode) {
     console.log('Showing maintenance page');
     return <Maintenance />;
   }

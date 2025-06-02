@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import WhatsAppPopup from "./components/ui/WhatsAppPopup";
@@ -25,45 +25,6 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const AppContent = () => {
-  const location = useLocation();
-  const isAdminRoute = location.pathname === '/admin';
-  
-  console.log('AppContent render, route:', location.pathname, 'isAdminRoute:', isAdminRoute);
-
-  // Admin route should bypass maintenance check
-  if (isAdminRoute) {
-    return <Admin />;
-  }
-
-  // All other routes should go through maintenance check
-  return (
-    <MaintenanceChecker>
-      <Header />
-      <div className="pt-20">
-        <PageTransition>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/government" element={<ServiceGovernment />} />
-            <Route path="/services/corporate" element={<ServiceCorporate />} />
-            <Route path="/services/stall-design-fabrication" element={<ServiceStallDesignFabrication />} />
-            <Route path="/services/wedding" element={<ServiceWedding />} />
-            <Route path="/services/other-event" element={<ServiceOtherEvent />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/clients" element={<Clients />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </PageTransition>
-      </div>
-      <Footer />
-      <WhatsAppPopup />
-    </MaintenanceChecker>
-  );
-};
-
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
@@ -72,8 +33,35 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
+            {/* Admin route - completely separate, no maintenance check */}
             <Route path="/admin" element={<Admin />} />
-            <Route path="*" element={<AppContent />} />
+            
+            {/* All other routes - wrapped with maintenance checker */}
+            <Route path="*" element={
+              <MaintenanceChecker>
+                <Header />
+                <div className="pt-20">
+                  <PageTransition>
+                    <Routes>
+                      <Route path="/" element={<Index />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/services" element={<Services />} />
+                      <Route path="/services/government" element={<ServiceGovernment />} />
+                      <Route path="/services/corporate" element={<ServiceCorporate />} />
+                      <Route path="/services/stall-design-fabrication" element={<ServiceStallDesignFabrication />} />
+                      <Route path="/services/wedding" element={<ServiceWedding />} />
+                      <Route path="/services/other-event" element={<ServiceOtherEvent />} />
+                      <Route path="/gallery" element={<Gallery />} />
+                      <Route path="/clients" element={<Clients />} />
+                      <Route path="/contact" element={<Contact />} />
+                      <Route path="*" element={<NotFound />} />
+                    </Routes>
+                  </PageTransition>
+                </div>
+                <Footer />
+                <WhatsAppPopup />
+              </MaintenanceChecker>
+            } />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
