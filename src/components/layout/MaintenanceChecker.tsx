@@ -35,13 +35,21 @@ const MaintenanceChecker: React.FC<MaintenanceCheckerProps> = ({ children }) => 
       }
     };
 
+    // Listen for custom storage events (when triggered from same tab)
+    const handleCustomStorageChange = () => {
+      console.log('Custom storage change detected');
+      checkMaintenanceMode();
+    };
+
     window.addEventListener('storage', handleStorageChange);
+    window.addEventListener('storage', handleCustomStorageChange);
     
     // Also check periodically in case of same-tab changes
-    const interval = setInterval(checkMaintenanceMode, 2000);
+    const interval = setInterval(checkMaintenanceMode, 1000);
 
     return () => {
       window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('storage', handleCustomStorageChange);
       clearInterval(interval);
     };
   }, []);

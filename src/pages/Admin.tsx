@@ -6,8 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { Settings, Shield, Lock, Database, Wifi, WifiOff } from 'lucide-react';
-import { db } from '@/config/firebase';
-import { connectFirestoreEmulator, getFirestore } from 'firebase/firestore';
+import app, { db } from '@/config/firebase';
 
 const Admin = () => {
   const [isMaintenanceMode, setIsMaintenanceMode] = useState(false);
@@ -39,11 +38,13 @@ const Admin = () => {
 
   const checkFirebaseConnection = async () => {
     try {
-      // Try to access Firestore to check connection
-      const firestore = getFirestore();
-      if (firestore) {
+      // Check if Firebase app is initialized
+      if (app && db) {
         setFirebaseConnected(true);
         console.log('Firebase connected successfully');
+      } else {
+        setFirebaseConnected(false);
+        console.log('Firebase not properly initialized');
       }
     } catch (error) {
       console.error('Firebase connection failed:', error);
@@ -107,6 +108,15 @@ const Admin = () => {
     const newStatus = !isMaintenanceMode;
     setIsMaintenanceMode(newStatus);
     localStorage.setItem('maintenance-mode', newStatus.toString());
+    
+    // Trigger a storage event to notify other components
+    window.dispatchEvent(new StorageEvent('storage', {
+      key: 'maintenance-mode',
+      newValue: newStatus.toString(),
+      oldValue: (!newStatus).toString(),
+      storageArea: localStorage,
+      url: window.location.href
+    }));
     
     toast({
       title: newStatus ? "Maintenance Mode Enabled" : "Maintenance Mode Disabled",
