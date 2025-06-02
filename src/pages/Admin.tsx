@@ -11,10 +11,12 @@ import { Settings, Shield, Lock } from 'lucide-react';
 const Admin = () => {
   const [isMaintenanceMode, setIsMaintenanceMode] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const { toast } = useToast();
 
-  const ADMIN_PASSWORD = 'admin123'; // Simple password for demo
+  const ADMIN_USERNAME = 'aadi';
+  const ADMIN_PASSWORD = 'Socilet@123';
 
   useEffect(() => {
     // Check if user is already authenticated
@@ -31,7 +33,7 @@ const Admin = () => {
   }, []);
 
   const handleLogin = () => {
-    if (password === ADMIN_PASSWORD) {
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
       setIsAuthenticated(true);
       localStorage.setItem('admin-authenticated', 'true');
       toast({
@@ -41,7 +43,7 @@ const Admin = () => {
     } else {
       toast({
         title: "Login Failed",
-        description: "Invalid password",
+        description: "Invalid username or password",
         variant: "destructive",
       });
     }
@@ -50,6 +52,7 @@ const Admin = () => {
   const handleLogout = () => {
     setIsAuthenticated(false);
     localStorage.removeItem('admin-authenticated');
+    setUsername('');
     setPassword('');
     toast({
       title: "Logged Out",
@@ -80,12 +83,22 @@ const Admin = () => {
               Admin Panel
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-              Please enter your password to access the admin panel
+              Please enter your credentials to access the admin panel
             </p>
           </div>
           <Card>
             <CardContent className="pt-6">
               <div className="space-y-4">
+                <div>
+                  <Label htmlFor="username">Username</Label>
+                  <Input
+                    id="username"
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    placeholder="Enter username"
+                  />
+                </div>
                 <div>
                   <Label htmlFor="password">Password</Label>
                   <Input
@@ -94,7 +107,7 @@ const Admin = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleLogin()}
-                    placeholder="Enter admin password"
+                    placeholder="Enter password"
                   />
                 </div>
                 <Button onClick={handleLogin} className="w-full bg-orange-500 hover:bg-orange-600">
